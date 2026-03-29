@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serra Studio — Web Design & Management</title>
+  <meta name="description" content="Custom website design + full stack management for small businesses. Starting at $750." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:        #E8A020;
+      --gold-light:  #F5C45A;
+      --gold-dim:    rgba(232,160,32,0.10);
+      --gold-border: rgba(232,160,32,0.25);
+      --navy:        #0E4C8A;
+      --navy-mid:    #1A5FA0;
+      --bg:          #F5F0EB;
+      --bg2:         #EDE7DF;
+      --card:        #FDFAF7;
+      --card2:       #F0E9E0;
+      --border:      #E0D8CC;
+      --text:        #0E1F35;
+      --muted:       #5A6B7E;
+      --white:       #FFFFFF;
+      --radius-sm:   8px;
+      --radius-md:   16px;
+      --radius-lg:   24px;
+      --radius-xl:   36px;
+      --shadow-sm:   0 2px 12px rgba(14,76,138,0.07);
+      --shadow-md:   0 8px 32px rgba(14,76,138,0.10);
+      --shadow-lg:   0 24px 64px rgba(14,76,138,0.13);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 48px;
+      background: rgba(245,240,235,0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white) !important;
+      font-weight: 700 !important;
+      padding: 9px 22px;
+      border-radius: var(--radius-sm);
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .nav-cta:hover { background: var(--navy-mid) !important; transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 96px 48px 80px;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 72px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      padding: 6px 14px;
+      border-radius: 40px;
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse-dot 1.6s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.7); }
+    }
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(38px, 4.5vw, 60px);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 460px;
+      margin-bottom: 36px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 30px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,160,32,0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,160,32,0.45); }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      border: 1.5px solid var(--border);
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .btn-outline:hover { border-color: var(--navy); transform: translateY(-1px); }
+
+    /* ── HERO PREVIEW CARD ── */
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+    .hero-card-header {
+      background: var(--navy);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-card-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 800; color: var(--navy);
+      flex-shrink: 0;
+    }
+    .hero-card-info { flex: 1; }
+    .hero-card-name { font-size: 13px; font-weight: 700; color: var(--white); }
+    .hero-card-status { font-size: 11px; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 5px; margin-top: 2px; }
+    .hero-card-status-dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; }
+    .hero-card-body { padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .preview-site {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .preview-site-bar {
+      background: var(--border);
+      padding: 7px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .preview-dot { width: 7px; height: 7px; border-radius: 50%; }
+    .preview-dot.r { background: #ff6b6b; }
+    .preview-dot.y { background: var(--gold); }
+    .preview-dot.g { background: #4ade80; }
+    .preview-url {
+      flex: 1;
+      background: var(--card);
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: 10px;
+      color: var(--muted);
+      font-family: monospace;
+    }
+    .preview-content {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .preview-bar { height: 8px; border-radius: 4px; background: var(--border); }
+    .preview-bar.short { width: 55%; }
+    .preview-bar.med { width: 78%; }
+    .preview-bar.gold { background: var(--gold-dim); border: 1px solid var(--gold-border); width: 40%; }
+    .preview-label { font-size: 12px; font-weight: 600; color: var(--muted); }
+    .preview-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .preview-stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px;
+      text-align: center;
+    }
+    .preview-stat-num { font-size: 18px; font-weight: 800; color: var(--navy); }
+    .preview-stat-label { font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+    /* ── SECTION BASE ── */
+    .section { max-width: 1200px; margin: 0 auto; padding: 80px 48px; }
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 400;
+      color: var(--navy);
+      letter-spacing: -0.8px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 52px;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── PORTFOLIO ── */
+    #work { background: var(--bg); }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .portfolio-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .portfolio-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .portfolio-thumb {
+      width: 100%;
+      aspect-ratio: 16/10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 40px;
+      font-weight: 400;
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-thumb.cja {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #c9a84c;
+    }
+    .portfolio-thumb.serra {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: var(--gold);
+    }
+    .portfolio-thumb.coming {
+      background: var(--bg2);
+      color: var(--border);
+    }
+    .portfolio-thumb-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .portfolio-thumb-initials {
+      font-family: 'DM Serif Display', serif;
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: -1px;
+    }
+    .portfolio-thumb-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+    .portfolio-info { padding: 20px 22px; }
+    .portfolio-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      padding: 3px 10px;
+      border-radius: 40px;
+      margin-bottom: 10px;
+    }
+    .portfolio-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .portfolio-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .portfolio-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 1px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .portfolio-link:hover { color: var(--gold); border-color: var(--gold); }
+    .portfolio-coming {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--card); }
+    .services-section { background: var(--card); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .service-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .service-icon {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .service-icon svg { width: 24px; height: 24px; stroke: var(--gold); }
+    .service-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .service-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── PRICING ── */
+    #pricing { background: var(--bg); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .pricing-card {
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 44px 40px;
+      position: relative;
+    }
+    .pricing-card.featured {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px var(--gold-dim), var(--shadow-md);
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 18px;
+      border-radius: 40px;
+      white-space: nowrap;
+    }
+    .pricing-tier {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+    .pricing-price {
+      font-family: 'DM Serif Display', serif;
+      font-size: 44px;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1;
+      letter-spacing: -1.5px;
+      margin-bottom: 6px;
+    }
+    .pricing-price sup {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      vertical-align: top;
+      margin-top: 6px;
+      display: inline-block;
+    }
+    .pricing-period {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .pricing-period strong { color: var(--navy); }
+    .pricing-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 24px; }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .pricing-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .pricing-check {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .pricing-check svg { width: 11px; height: 11px; stroke: var(--gold); stroke-width: 2.5; }
+    .pricing-btn {
+      display: block;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    }
+    .pricing-btn.gold {
+      background: var(--gold);
+      color: var(--navy);
+      box-shadow: 0 4px 20px rgba(232,160,32,0.35);
+    }
+    .pricing-btn.gold:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,160,32,0.45); }
+    .pricing-btn.outline {
+      border: 1.5px solid var(--border);
+      color: var(--navy);
+    }
+    .pricing-btn.outline:hover { border-color: var(--navy); transform: translateY(-1px); }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      background: var(--navy);
+      padding: 64px 48px;
+      text-align: center;
+    }
+    .cta-strip h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(26px, 3vw, 40px);
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: -0.8px;
+      margin-bottom: 12px;
+    }
+    .cta-strip p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 32px;
+    }
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,160,32,0.40);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,160,32,0.55); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--navy); }
+    .footer-copy {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .nav { padding: 14px 24px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 64px 24px 48px; gap: 40px; }
+      .hero-card { max-width: 420px; }
+      .section { padding: 64px 24px; }
+      .portfolio-grid { grid-template-columns: 1fr; gap: 16px; }
+      .services-grid { grid-template-columns: 1fr; gap: 16px; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 460px; }
+      .cta-strip { padding: 48px 24px; }
+      footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 640px) {
+      .portfolio-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="/" class="nav-logo"><span>S</span>erra Studio</a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="mailto:cjagroup.us@gmail.com" class="nav-cta">Let's Talk</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section>
+    <div class="hero">
+      <div class="hero-text">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot"></span>
+          Web Design &amp; Management
+        </div>
+        <h1>Websites that work for your business — <em>not just look good.</em></h1>
+        <p class="hero-sub">I build custom websites for small businesses, photographers, and event vendors — and keep them running every month so you never have to think about it.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">See My Work</a>
+          <a href="#pricing" class="btn-outline">View Pricing</a>
+        </div>
+      </div>
+
+      <!-- HERO VISUAL CARD -->
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div class="hero-card-avatar">SS</div>
+          <div class="hero-card-info">
+            <div class="hero-card-name">Your New Website</div>
+            <div class="hero-card-status">
+              <span class="hero-card-status-dot"></span>
+              Live &amp; Fully Managed
+            </div>
+          </div>
+        </div>
+        <div class="hero-card-body">
+          <div class="preview-site">
+            <div class="preview-site-bar">
+              <span class="preview-dot r"></span>
+              <span class="preview-dot y"></span>
+              <span class="preview-dot g"></span>
+              <span class="preview-url">yourbusiness.com</span>
+            </div>
+            <div class="preview-content">
+              <div class="preview-bar gold"></div>
+              <div class="preview-bar short" style="margin-top:4px;"></div>
+              <div class="preview-bar med"></div>
+              <div class="preview-bar" style="width:65%;"></div>
+            </div>
+          </div>
+          <p class="preview-label">Your results at a glance</p>
+          <div class="preview-stats">
+            <div class="preview-stat">
+              <div class="preview-stat-num" style="color:var(--gold);">24/7</div>
+              <div class="preview-stat-label">Always Online</div>
+            </div>
+            <div class="preview-stat">
+              <div class="preview-stat-num">100%</div>
+              <div class="preview-stat-label">Mobile Ready</div>
+            </div>
+            <div class="preview-stat">
+              <div class="preview-stat-num">AI</div>
+              <div class="preview-stat-label">Chat Included</div>
+            </div>
+            <div class="preview-stat">
+              <div class="preview-stat-num" style="color:var(--gold);">$0</div>
+              <div class="preview-stat-label">Tech Headaches</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PORTFOLIO -->
+  <section id="work">
+    <div class="section">
+      <p class="section-eyebrow">Recent Work</p>
+      <h2 class="section-title">Sites I've built</h2>
+      <p class="section-sub">Real projects, real clients. Every site is custom-designed and built from scratch — no templates.</p>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+          <div class="portfolio-thumb cja">
+            <div class="portfolio-thumb-label">
+              <span class="portfolio-thumb-initials">CJA</span>
+              <span class="portfolio-thumb-tagline">Photography</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Photography</span>
+            <div class="portfolio-name">CJA Photography</div>
+            <p class="portfolio-desc">Full website for a photography & videography business — portfolio gallery, services, contact, and client documents.</p>
+            <a href="https://cjaphotoworks.com" target="_blank" rel="noopener" class="portfolio-link">
+              View Site
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-thumb serra">
+            <div class="portfolio-thumb-label">
+              <span class="portfolio-thumb-initials">Serra</span>
+              <span class="portfolio-thumb-tagline">AI Platform</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">SaaS</span>
+            <div class="portfolio-name">Serra AI</div>
+            <p class="portfolio-desc">Landing page for an AI chatbot platform — hero section, pricing cards, FAQ, and live chat demo widget.</p>
+            <a href="https://serrachat.com" target="_blank" rel="noopener" class="portfolio-link">
+              View Site
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-thumb coming">
+            <div class="portfolio-thumb-label">
+              <span class="portfolio-thumb-initials" style="font-size:28px;color:var(--muted);">+</span>
+              <span class="portfolio-thumb-tagline" style="color:var(--muted);">Your Business</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag" style="color:var(--muted);background:var(--bg2);border-color:var(--border);">Available</span>
+            <div class="portfolio-name" style="color:var(--muted);">Your Project Here</div>
+            <p class="portfolio-desc">I'm taking on new clients. Let's build something great for your business — from $750, fully done for you.</p>
+            <span class="portfolio-coming">Spot available — let's talk →</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SERVICES -->
+  <section id="services" class="services-section">
+    <div class="section">
+      <p class="section-eyebrow">What You Get</p>
+      <h2 class="section-title">Everything handled. Nothing missed.</h2>
+      <p class="section-sub">You focus on your business. I handle the tech — design, hosting, updates, and the AI chat that answers your clients 24/7.</p>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <div class="service-title">Custom Design</div>
+          <p class="service-desc">No templates. Every site is built from scratch to match your brand, your industry, and your clients' expectations.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="service-title">Fully Managed</div>
+          <p class="service-desc">Hosting, security, updates, and minor content changes are all included. You'll never need to call a developer again.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <div class="service-title">AI Chat Included</div>
+          <p class="service-desc">Every managed site gets an AI chat widget (powered by Serra AI) — answers client questions automatically, day or night.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="section" style="text-align:center;">
+      <p class="section-eyebrow">Pricing</p>
+      <h2 class="section-title">Simple, transparent pricing</h2>
+      <p class="section-sub" style="margin:0 auto 52px;">One-time design or ongoing management — you choose what works for your business right now.</p>
+
+      <div class="pricing-grid">
+
+        <!-- STARTER -->
+        <div class="pricing-card">
+          <div class="pricing-tier">Starter</div>
+          <div class="pricing-price"><sup>$</sup>750</div>
+          <p class="pricing-period">One-time · Design only</p>
+          <hr class="pricing-divider" />
+          <ul class="pricing-features">
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Custom-designed website (up to 5 pages)
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Mobile-responsive on all devices
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Contact form included
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Delivered deploy-ready
+            </li>
+          </ul>
+          <a href="mailto:cjagroup.us@gmail.com?subject=Serra Studio — Starter Package" class="pricing-btn outline">Get Started</a>
+        </div>
+
+        <!-- FULL STACK -->
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Full Stack</div>
+          <div class="pricing-price"><sup>$</sup>750</div>
+          <p class="pricing-period">Design fee + <strong>$129/mo</strong> management</p>
+          <hr class="pricing-divider" />
+          <ul class="pricing-features">
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Everything in Starter
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Hosting &amp; domain management
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              AI chat widget (Serra AI)
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              2 content updates/month
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              28-day free trial — no charge until day 29
+            </li>
+          </ul>
+          <a href="mailto:cjagroup.us@gmail.com?subject=Serra Studio — Full Stack Package" class="pricing-btn gold">Get Started</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <h2>Ready to have a website that works for you?</h2>
+    <p>No tech knowledge required. I handle everything — you just tell me what your business does.</p>
+    <a href="mailto:cjagroup.us@gmail.com?subject=Serra Studio — Let's Talk" class="btn-cta">
+      Let's Talk
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="/" class="footer-logo"><span>S</span>erra Studio</a>
+    <ul class="footer-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+      <li><a href="/tos">Terms of Service</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 Serra Studio</span>
+  </footer>
+
+</body>
+</html>
