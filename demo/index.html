@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serra Studio — Cinematic Web Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="assets/logo-serra.png" alt="Serra Studio" class="nav-logo-img">
+      </a>
+      <a href="https://serra-studio.vercel.app" class="nav-cta" target="_blank">Start Your Project</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-text">Cinematic Web Design</p>
+      <h1 class="hero-headline">
+        <span class="line" id="heroLine1">Websites that</span>
+        <span class="line line-italic" id="heroLine2">feel alive.</span>
+      </h1>
+      <p class="hero-sub reveal-text">AI-generated visuals. Scroll-linked motion. Hand-crafted for your industry.</p>
+      <a href="#industries" class="hero-btn reveal-text">See your industry</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- THE STACK -->
+  <section class="stack reveal-section">
+    <div class="container">
+      <p class="section-label">How we build</p>
+      <h2 class="section-title">Three tools. One cinematic result.</h2>
+      <div class="stack-grid">
+        <div class="stack-card">
+          <div class="stack-icon">✦</div>
+          <h3>Google Flow</h3>
+          <p>AI-powered mood boards and video loops. We generate your visual direction before writing a single line of code.</p>
+        </div>
+        <div class="stack-card stack-card--featured">
+          <div class="stack-icon">◈</div>
+          <h3>Gemini Image AI</h3>
+          <p>Custom 4K photography generated for your brand. No stock photos. Every image made specifically for your business.</p>
+        </div>
+        <div class="stack-card">
+          <div class="stack-icon">⟡</div>
+          <h3>Cinematic HTML</h3>
+          <p>GSAP scroll animations, parallax, glass morphism, and smooth motion — all hand-crafted in fast, clean code.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRY SWITCHER -->
+  <section class="industries reveal-section" id="industries">
+    <div class="container">
+      <p class="section-label">Built for your world</p>
+      <h2 class="section-title">Click your industry</h2>
+      <div class="industry-tabs">
+        <button class="industry-tab active" data-theme="salon" data-index="0">Salon & Med Spa</button>
+        <button class="industry-tab" data-theme="autobody" data-index="1">Auto Body</button>
+        <button class="industry-tab" data-theme="photographer" data-index="2">Photographer</button>
+        <button class="industry-tab" data-theme="event" data-index="3">Event Vendor</button>
+      </div>
+      <div class="industry-preview">
+        <div class="industry-image-wrap">
+          <img src="assets/hero-salon.jpg" alt="Industry preview" class="industry-img" id="industryImg">
+          <div class="industry-image-overlay"></div>
+        </div>
+        <div class="industry-info">
+          <h3 class="industry-title" id="industryTitle">Salon & Med Spa</h3>
+          <p class="industry-desc" id="industryDesc">Warm, aspirational, and luxurious. We pair Vietnamese-owned salon aesthetics with marble textures, chandelier photography, and glass morphism cards that feel as premium as your services.</p>
+          <ul class="industry-features" id="industryFeatures">
+            <li>Glass morphism navigation</li>
+            <li>AI-generated luxury interiors</li>
+            <li>Scroll-reveal service cards</li>
+            <li>CSS clip-path photo reveals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNIQUE GALLERY (Horizontal Scroll) -->
+  <section class="techniques-section">
+    <div class="techniques-label reveal-section">
+      <div class="container">
+        <p class="section-label">Live demonstrations</p>
+        <h2 class="section-title">Scroll to see each technique →</h2>
+      </div>
+    </div>
+    <div class="h-container" id="hContainer">
+      <div class="h-track" id="hTrack">
+
+        <div class="panel panel--parallax">
+          <div class="panel-bg" style="background-image: url('assets/hero-main.jpg')"></div>
+          <div class="panel-content">
+            <span class="panel-tag">Technique 01</span>
+            <h3>Parallax Hero</h3>
+            <p>Background moves at a different speed than content — creating cinematic depth on every scroll.</p>
+          </div>
+        </div>
+
+        <div class="panel panel--glass">
+          <div class="panel-bg" style="background-image: url('assets/hero-salon.jpg')"></div>
+          <div class="panel-content panel-content--glass">
+            <span class="panel-tag">Technique 02</span>
+            <h3>Glass Morphism</h3>
+            <p>Frosted glass cards that float over imagery — elegant, modern, and perfect for salons and med spas.</p>
+          </div>
+        </div>
+
+        <div class="panel panel--reveal">
+          <div class="panel-bg" style="background-image: url('assets/hero-autobody.jpg')"></div>
+          <div class="panel-content">
+            <span class="panel-tag">Technique 03</span>
+            <h3>Clip-Path Reveal</h3>
+            <p>Images and sections that wipe in with custom geometric shapes — not a fade, a reveal.</p>
+          </div>
+        </div>
+
+        <div class="panel panel--cursor">
+          <div class="panel-bg" style="background-image: url('assets/hero-photographer.jpg')"></div>
+          <div class="panel-content">
+            <span class="panel-tag">Technique 04</span>
+            <h3>Scroll Motion</h3>
+            <p>Every element enters with intention — staggered, directional, physics-based motion tied to your scroll position.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process reveal-section">
+    <div class="container">
+      <p class="section-label">Our process</p>
+      <h2 class="section-title">From intake to live in days.</h2>
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-num">01</div>
+          <h4>Visual Brief</h4>
+          <p>We ask 5 questions, build your mood board in Google Flow, and generate your first hero images — before any code is written.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">02</div>
+          <h4>Asset Generation</h4>
+          <p>Custom AI photography, video loops, and brand textures — all generated specifically for your business.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">03</div>
+          <h4>Cinematic Build</h4>
+          <p>Hand-crafted HTML with scroll animations, motion effects, and industry-tuned design techniques.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">04</div>
+          <h4>Live & Yours</h4>
+          <p>Deployed on fast global infrastructure. You own it. We manage it monthly — or hand it off entirely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="container cta-content">
+      <p class="section-label">Ready?</p>
+      <h2 class="cta-headline">Your clients are judging your website right now.</h2>
+      <p class="cta-sub">Let's make it impossible to ignore.</p>
+      <a href="https://serra-studio.vercel.app" class="cta-btn" target="_blank">Start Your Project — $750</a>
+      <p class="cta-fine">Includes custom AI visuals, cinematic animations, and 30 days of revisions.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Serra Studio. A Serra AI Company.</p>
+      <a href="https://serra-studio.vercel.app" target="_blank">serra-studio.vercel.app</a>
+    </div>
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="scripts/theme-switcher.js"></script>
+  <script src="scripts/animations.js"></script>
+
+</body>
+</html>
