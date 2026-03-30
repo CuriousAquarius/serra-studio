@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Serra Studio — Web Design & Management for Small Businesses</title>
+  <title>Serra Studio: Web Design & Management for Small Businesses</title>
   <meta name="description" content="Custom website design + full stack management for small businesses. AI chat included. Starting at $750." />
-  <meta property="og:title" content="Serra Studio — Web Design & Management" />
+  <meta property="og:title" content="Serra Studio: Web Design & Management" />
   <meta property="og:description" content="Custom websites for small businesses. Design + hosting + AI chat. Starting at $750." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://serra-studio.vercel.app" />
@@ -411,6 +411,163 @@
       font-style: italic;
     }
 
+    /* ── DEMO CARD ── */
+    .demo-card-wrap {
+      padding: 0 48px 56px;
+      max-width: 1296px;
+      margin: 0 auto;
+    }
+    .demo-card {
+      background: #0d1b2e;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 320px;
+      position: relative;
+      box-shadow: 0 32px 80px rgba(14,31,53,0.28);
+    }
+    .demo-card-left {
+      padding: 52px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .demo-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(232,160,32,0.12);
+      border: 1px solid rgba(232,160,32,0.3);
+      padding: 5px 12px;
+      border-radius: 40px;
+      width: fit-content;
+    }
+    .demo-card-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse-gold 1.6s ease-in-out infinite;
+    }
+    @keyframes pulse-gold {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.7); }
+    }
+    .demo-card-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(26px, 2.4vw, 38px);
+      font-weight: 400;
+      color: #f0ece3;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+    }
+    .demo-card-title em {
+      color: var(--gold);
+      font-style: italic;
+    }
+    .demo-card-desc {
+      font-size: 14px;
+      color: rgba(240,236,227,0.55);
+      line-height: 1.7;
+      max-width: 360px;
+    }
+    .demo-card-industries {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .demo-industry-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(240,236,227,0.7);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 5px 12px;
+      border-radius: 40px;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .demo-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: #0d1b2e;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 26px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      width: fit-content;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(232,160,32,0.35);
+    }
+    .demo-card-cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(232,160,32,0.45);
+    }
+    .demo-card-right {
+      position: relative;
+      overflow: hidden;
+    }
+    .demo-img-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      height: 100%;
+      gap: 3px;
+    }
+    .demo-img-cell {
+      overflow: hidden;
+      position: relative;
+    }
+    .demo-img-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+      filter: brightness(0.75) saturate(0.9);
+    }
+    .demo-img-cell:hover img {
+      transform: scale(1.06);
+      filter: brightness(0.9) saturate(1.1);
+    }
+    .demo-img-label {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      pointer-events: none;
+    }
+    .demo-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #0d1b2e 0%, transparent 40%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    @media (max-width: 768px) {
+      .demo-card-wrap { padding: 0 16px 40px; }
+      .demo-card { grid-template-columns: 1fr; }
+      .demo-card-right { height: 220px; }
+      .demo-card-overlay { background: linear-gradient(180deg, transparent 0%, #0d1b2e 90%); }
+      .demo-card-left { padding: 36px 28px; }
+    }
+
     /* ── SERVICES ── */
     #services { background: var(--card); }
     .services-section { background: var(--card); }
@@ -662,53 +819,39 @@
       color: #e63946;
     }
 
-    /* ── ABOUT ── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 64px;
-      align-items: start;
+    /* ── WHY US ── */
+    .why-intro {
+      max-width: 620px;
+      margin-bottom: 48px;
     }
-    .about-body p {
+    .why-intro p {
       font-size: 17px;
       color: var(--muted);
       line-height: 1.8;
-      margin-bottom: 20px;
+      margin-top: 16px;
     }
-    .about-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 8px;
-    }
-    .about-badge {
-      display: inline-flex;
-      align-items: center;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--navy);
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 6px 14px;
-      border-radius: 40px;
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: start;
     }
     .about-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
       padding: 36px 32px;
-      box-shadow: var(--shadow-md);
-      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, transform 0.2s;
     }
+    .about-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
     .about-card-icon {
-      width: 64px; height: 64px;
-      border-radius: 50%;
+      width: 52px; height: 52px;
+      border-radius: var(--radius-md);
       background: var(--gold-dim);
-      border: 2px solid var(--gold-border);
+      border: 1px solid var(--gold-border);
       display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 20px;
-      font-family: 'DM Serif Display', serif;
-      font-size: 28px;
+      margin-bottom: 20px;
       color: var(--gold);
     }
     .about-card h3 {
@@ -723,7 +866,7 @@
       line-height: 1.7;
     }
     @media (max-width: 960px) {
-      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .about-grid { grid-template-columns: 1fr; gap: 20px; }
     }
 
     /* ── PAYMENT TRUST ── */
@@ -823,7 +966,7 @@
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#about">Why Us</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="mailto:cja@serrachat.com" class="nav-cta">Let's Talk</a></li>
     </ul>
@@ -837,8 +980,8 @@
           <span class="hero-eyebrow-dot"></span>
           Web Design &amp; Management
         </div>
-        <h1>Websites that work for your business — <em>not just look good.</em></h1>
-        <p class="hero-sub">Custom websites built for your business — professional design, managed every month, with AI chat that keeps working for your clients around the clock.</p>
+        <h1>Websites that work for your business, <em>not just look good.</em></h1>
+        <p class="hero-sub">Custom websites built for your business: professional design, managed every month, with AI chat that keeps working for your clients around the clock.</p>
         <div class="hero-actions">
           <a href="#work" class="btn-primary">See My Work</a>
           <a href="#pricing" class="btn-outline">View Pricing</a>
@@ -903,7 +1046,7 @@
     <div class="section">
       <p class="section-eyebrow">Recent Work</p>
       <h2 class="section-title">Sites I've built</h2>
-      <p class="section-sub">Real projects, real clients. Every site is custom-designed and built from scratch — with or without a template.</p>
+      <p class="section-sub">Real projects, real clients. Every site is custom-designed and built from scratch, with or without a template.</p>
 
       <div class="portfolio-grid">
 
@@ -917,7 +1060,7 @@
           <div class="portfolio-info">
             <span class="portfolio-tag">Film & Video</span>
             <div class="portfolio-name">Timeless Films</div>
-            <p class="portfolio-desc">Three cinematic design directions for a wedding videography studio — dark & dramatic, ivory editorial, and bold contrast.</p>
+            <p class="portfolio-desc">Three cinematic design directions for a wedding videography studio: dark &amp; dramatic, ivory editorial, and bold contrast.</p>
             <a href="https://timeless-films-demo.vercel.app" target="_blank" rel="noopener" class="portfolio-link">
               View Concepts
               <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -935,7 +1078,7 @@
           <div class="portfolio-info">
             <span class="portfolio-tag">SaaS</span>
             <div class="portfolio-name">Serra AI</div>
-            <p class="portfolio-desc">Landing page for an AI chatbot platform — hero section, pricing cards, FAQ, and live chat demo widget.</p>
+            <p class="portfolio-desc">Landing page for an AI chatbot platform,hero section, pricing cards, FAQ, and live chat demo widget.</p>
             <a href="https://serrachat.com" target="_blank" rel="noopener" class="portfolio-link">
               View Site
               <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -952,8 +1095,8 @@
           </div>
           <div class="portfolio-info">
             <span class="portfolio-tag">Design Concept</span>
-            <div class="portfolio-name">Auto Body Shop — 3 Concepts</div>
-            <p class="portfolio-desc">Three full design directions built for a local auto body client — Clean & Modern, Bold & Industrial, and Premium. Client picks the direction.</p>
+            <div class="portfolio-name">Auto Body Shop,3 Concepts</div>
+            <p class="portfolio-desc">Three full design directions built for a local auto body client: Clean &amp; Modern, Bold &amp; Industrial, and Premium. Client picks the direction.</p>
             <a href="https://autobody-demo.vercel.app" target="_blank" rel="noopener" class="portfolio-link">
               View Concepts
               <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -965,6 +1108,53 @@
     </div>
   </section>
 
+  <!-- DEMO CARD -->
+  <div class="demo-card-wrap">
+    <div class="demo-card">
+      <!-- Left: text -->
+      <div class="demo-card-left">
+        <span class="demo-card-badge">
+          <span class="demo-card-badge-dot"></span>
+          Live Demo
+        </span>
+        <h2 class="demo-card-title">See it built<br>for <em>your industry</em></h2>
+        <p class="demo-card-desc">GSAP animations, parallax scrolling, glass morphism, and AI-generated imagery. All live. Click through 4 real industry builds.</p>
+        <div class="demo-card-industries">
+          <span class="demo-industry-pill">Salon & Med Spa</span>
+          <span class="demo-industry-pill">Auto Body</span>
+          <span class="demo-industry-pill">Photographer</span>
+          <span class="demo-industry-pill">Event Vendor</span>
+        </div>
+        <a href="/demo/" target="_blank" rel="noopener" class="demo-card-cta">
+          Explore the Demo
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <!-- Right: 4-image grid -->
+      <div class="demo-card-right">
+        <div class="demo-card-overlay"></div>
+        <div class="demo-img-grid">
+          <div class="demo-img-cell">
+            <img src="demo/assets/hero-salon.jpg" alt="Salon website design" loading="lazy">
+            <span class="demo-img-label">Salon</span>
+          </div>
+          <div class="demo-img-cell">
+            <img src="demo/assets/hero-autobody.jpg" alt="Auto body website design" loading="lazy">
+            <span class="demo-img-label">Auto Body</span>
+          </div>
+          <div class="demo-img-cell">
+            <img src="demo/assets/hero-photographer.jpg" alt="Photographer website design" loading="lazy">
+            <span class="demo-img-label">Photographer</span>
+          </div>
+          <div class="demo-img-cell">
+            <img src="demo/assets/hero-event.jpg" alt="Event vendor website design" loading="lazy">
+            <span class="demo-img-label">Event Vendor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <hr class="divider" />
 
   <!-- SERVICES -->
@@ -972,7 +1162,7 @@
     <div class="section">
       <p class="section-eyebrow">What You Get</p>
       <h2 class="section-title">Everything handled. Nothing missed.</h2>
-      <p class="section-sub">You focus on your business. I handle the tech — design, hosting, updates, and the AI chat that answers your clients 24/7.</p>
+      <p class="section-sub">You focus on your business. I handle the tech,design, hosting, updates, and the AI chat that answers your clients 24/7.</p>
 
       <div class="services-grid">
 
@@ -1003,7 +1193,7 @@
             </svg>
           </div>
           <div class="service-title">AI Chat Included</div>
-          <p class="service-desc">Every managed site gets an AI chat widget (powered by Serra AI) — answers client questions automatically, day or night.</p>
+          <p class="service-desc">Every managed site gets an AI chat widget (powered by Serra AI) that answers client questions automatically, day or night.</p>
         </div>
 
       </div>
@@ -1012,28 +1202,40 @@
 
   <hr class="divider" />
 
-  <!-- ABOUT -->
+  <!-- WHY US -->
   <section id="about">
     <div class="section">
-      <p class="section-eyebrow">About</p>
-      <h2 class="section-title">You're hiring a person, not an agency.</h2>
+      <p class="section-eyebrow">Why Serra Studio</p>
+      <div class="why-intro">
+        <h2 class="section-title">Your website is the front door to everything you've built.</h2>
+        <p>Most small business owners pour their heart into their work,then send people to a website that doesn't show it. Serra Studio exists to close that gap.</p>
+      </div>
       <div class="about-grid">
-        <div class="about-body">
-          <p>I'm Josef — a Southern California photographer and videographer who got tired of watching small businesses lose clients to bad websites.</p>
-          <p>I started building sites for businesses in my network, and now it's a service I offer to anyone who needs it. When you hire me, you're working directly with me — no account managers, no ticket queues. I take care of your website so you can take care of your customers.</p>
-          <p>Every site I build is custom. No page builders, no templates — just clean, fast code designed around how your clients actually think.</p>
-          <div class="about-badges">
-            <span class="about-badge">Photography & Video</span>
-            <span class="about-badge">Web Design</span>
-            <span class="about-badge">Southern California</span>
-            <span class="about-badge">AI Integration</span>
-          </div>
-        </div>
+
         <div class="about-card">
-          <div class="about-card-icon">J</div>
-          <h3>Josef</h3>
-          <p>Photographer · Videographer · Web Designer<br><br>I've built every site you see in this portfolio — and I'll build yours the same way. Custom, clean, and built to convert.</p>
+          <div class="about-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>No templates, ever</h3>
+          <p>Your business isn't generic, your site shouldn't be either. Every page is hand-coded from scratch around how your clients think and what makes them trust you.</p>
         </div>
+
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Direct line to your designer</h3>
+          <p>No account managers, no ticket queues, no waiting. You talk directly to the person building your site, someone who actually cares how it turns out.</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <h3>Built to convert</h3>
+          <p>Beautiful isn't enough. Every layout decision, every CTA, every word is chosen with one goal: turning the people who find you into clients who hire you.</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1045,7 +1247,7 @@
     <div class="section" style="text-align:center;">
       <p class="section-eyebrow">Pricing</p>
       <h2 class="section-title">Simple, transparent pricing</h2>
-      <p class="section-sub" style="margin:0 auto 52px;">One-time design or ongoing management — you choose what works for your business right now.</p>
+      <p class="section-sub" style="margin:0 auto 52px;">One-time design or ongoing management,you choose what works for your business right now.</p>
 
       <div class="pricing-grid">
 
@@ -1073,7 +1275,7 @@
               Delivered deploy-ready
             </li>
           </ul>
-          <a href="mailto:cja@serrachat.com?subject=Serra Studio — Starter Package Inquiry" class="pricing-btn outline">Let's Talk First</a>
+          <a href="mailto:cja@serrachat.com?subject=Serra Studio: Starter Package Inquiry" class="pricing-btn outline">Let's Talk First</a>
         </div>
 
         <!-- FULL STACK -->
@@ -1106,7 +1308,7 @@
             </li>
             <li class="pricing-feature">
               <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              28-day free trial — no charge until day 29
+              28-day free trial, no charge until day 29
             </li>
           </ul>
           <a href="https://buy.stripe.com/3cIaEZd575TG4Xl1jdbQY06" target="_blank" rel="noopener" class="pricing-btn gold">Get Started</a>
@@ -1149,7 +1351,7 @@
             How long does it take to build my website?
             <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer">Typically 7–14 days from the time I have all your content. I'll send you a checklist of exactly what I need — most clients have everything ready in a day or two.</div>
+          <div class="faq-answer">Typically 7–14 days from the time I have all your content. I'll send you a checklist of exactly what I need,most clients have everything ready in a day or two.</div>
         </div>
         <div class="faq-item">
           <button class="faq-question">
@@ -1163,7 +1365,7 @@
             Do I own the website?
             <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer">Yes. You own your website files. If you ever cancel the monthly plan, I'll hand over all the files — no strings attached, no extra fees.</div>
+          <div class="faq-answer">Yes. You own your website files. If you ever cancel the monthly plan, I'll hand over all the files with no strings attached, no extra fees.</div>
         </div>
         <div class="faq-item">
           <button class="faq-question">
@@ -1174,17 +1376,17 @@
         </div>
         <div class="faq-item">
           <button class="faq-question">
-            What if I just want the design — no monthly fee?
+            What if I just want the design,no monthly fee?
             <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer">That's the Starter plan — $750 one-time. I deliver your site deploy-ready, and you handle hosting yourself. Great option if you already have a developer or hosting setup.</div>
+          <div class="faq-answer">That's the Starter plan,$750 one-time. I deliver your site deploy-ready, and you handle hosting yourself. Great option if you already have a developer or hosting setup.</div>
         </div>
         <div class="faq-item">
           <button class="faq-question">
             Do I need to sign a contract?
             <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer">You agree to our Terms of Service at checkout — that covers both of us clearly and fairly. No confusing paperwork, no surprise clauses.</div>
+          <div class="faq-answer">You agree to our Terms of Service at checkout, which covers both of us clearly and fairly. No confusing paperwork, no surprise clauses.</div>
         </div>
       </div>
     </div>
@@ -1193,8 +1395,8 @@
   <!-- CTA STRIP -->
   <section class="cta-strip">
     <h2>Ready to have a website that works for you?</h2>
-    <p>No tech knowledge required. I handle everything — you just tell me what your business does.</p>
-    <a href="mailto:cja@serrachat.com?subject=Serra Studio — Let's Talk" class="btn-cta">
+    <p>No tech knowledge required. I handle everything,you just tell me what your business does.</p>
+    <a href="mailto:cja@serrachat.com?subject=Serra Studio: Let's Talk" class="btn-cta">
       Let's Talk
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
