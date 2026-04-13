@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start Your Project — Serra Studio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230E4C8A'/><text x='8' y='24' font-size='22' font-family='Georgia,serif' fill='%23E8A020'>S</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:        #E8A020;
+      --gold-light:  #F5C45A;
+      --gold-dim:    rgba(232,160,32,0.10);
+      --gold-border: rgba(232,160,32,0.30);
+      --navy:        #0E4C8A;
+      --bg:          #F5F0EB;
+      --bg2:         #EDE7DF;
+      --card:        #FDFAF7;
+      --border:      #E0D8CC;
+      --text:        #0E1F35;
+      --muted:       #5A6B7E;
+      --radius-md:   16px;
+      --radius-lg:   24px;
+      --shadow-md:   0 8px 32px rgba(14,76,138,0.10);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    .header {
+      padding: 20px 32px;
+      border-bottom: 1px solid var(--border);
+      background: var(--card);
+    }
+    .header a {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .header a span { color: var(--gold); }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 20px;
+    }
+
+    .form-wrap {
+      width: 100%;
+      max-width: 560px;
+    }
+
+    /* PROGRESS */
+    .progress-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 40px;
+    }
+    .progress-bar span {
+      flex: 1;
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      transition: background 0.3s;
+    }
+    .progress-bar span.done { background: var(--gold); }
+
+    /* STEP */
+    .step { display: none; }
+    .step.active { display: block; }
+
+    .step-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .step h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(24px, 5vw, 32px);
+      color: var(--navy);
+      margin-bottom: 32px;
+      line-height: 1.25;
+    }
+
+    /* PILLS */
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .pill {
+      padding: 12px 20px;
+      border: 1.5px solid var(--border);
+      border-radius: 100px;
+      background: var(--card);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.18s;
+      user-select: none;
+    }
+    .pill:hover { border-color: var(--gold); color: var(--navy); }
+    .pill.selected {
+      border-color: var(--gold);
+      background: var(--gold-dim);
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    /* YES/NO */
+    .yn-group {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .yn-group .pill { flex: 1; text-align: center; font-size: 16px; }
+
+    /* TEXT INPUTS */
+    .field {
+      margin-bottom: 20px;
+    }
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .field input,
+    .field textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--card);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.18s;
+    }
+    .field input:focus,
+    .field textarea:focus { border-color: var(--gold); }
+    .field textarea { resize: vertical; min-height: 90px; }
+
+    /* BUTTONS */
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-next {
+      padding: 14px 32px;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.18s, transform 0.12s;
+    }
+    .btn-next:hover { background: #1A5FA0; transform: translateY(-1px); }
+    .btn-next:disabled { opacity: 0.5; cursor: default; transform: none; }
+
+    .btn-back {
+      padding: 14px 20px;
+      background: transparent;
+      color: var(--muted);
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: color 0.18s;
+    }
+    .btn-back:hover { color: var(--text); }
+
+    /* SUCCESS */
+    .success-state {
+      display: none;
+      text-align: center;
+      padding: 24px 0;
+    }
+    .success-state.active { display: block; }
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--gold-dim);
+      border: 2px solid var(--gold-border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 28px;
+    }
+    .success-state h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .success-state p {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 380px;
+      margin: 0 auto 32px;
+    }
+    .success-state a {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ERROR */
+    .error-msg {
+      display: none;
+      margin-top: 12px;
+      color: #c0392b;
+      font-size: 13px;
+    }
+    .error-msg.active { display: block; }
+
+    @media (max-width: 480px) {
+      .header { padding: 16px 20px; }
+      main { padding: 32px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="/"><span>S</span>erra Studio</a>
+  </header>
+
+  <main>
+    <div class="form-wrap">
+
+      <div class="progress-bar" id="progress">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <!-- STEP 1: Business type -->
+      <div class="step active" id="step-1">
+        <p class="step-label">Step 1 of 5</p>
+        <h2>What type of business do you have?</h2>
+        <div class="pills" id="pills-business">
+          <div class="pill" data-value="Photographer">Photographer</div>
+          <div class="pill" data-value="Salon">Salon</div>
+          <div class="pill" data-value="Auto Shop">Auto Shop</div>
+          <div class="pill" data-value="Event Vendor">Event Vendor</div>
+          <div class="pill" data-value="Med Spa">Med Spa</div>
+          <div class="pill" data-value="Other">Other</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-next" id="next-1" disabled>Continue</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Existing website -->
+      <div class="step" id="step-2">
+        <p class="step-label">Step 2 of 5</p>
+        <h2>Do you have an existing website?</h2>
+        <div class="yn-group" id="pills-website">
+          <div class="pill" data-value="Yes">Yes</div>
+          <div class="pill" data-value="No">No</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-back" onclick="goBack(2)">Back</button>
+          <button class="btn-next" id="next-2" disabled>Continue</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: What do you need -->
+      <div class="step" id="step-3">
+        <p class="step-label">Step 3 of 5</p>
+        <h2>What do you need? <span style="font-family:Inter;font-size:14px;font-weight:400;color:var(--muted)">(select all that apply)</span></h2>
+        <div class="pills" id="pills-needs">
+          <div class="pill" data-value="New design">New design</div>
+          <div class="pill" data-value="Redesign">Redesign</div>
+          <div class="pill" data-value="Hosting">Hosting</div>
+          <div class="pill" data-value="AI chat">AI chat</div>
+          <div class="pill" data-value="All of the above">All of the above</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-back" onclick="goBack(3)">Back</button>
+          <button class="btn-next" id="next-3" disabled>Continue</button>
+        </div>
+      </div>
+
+      <!-- STEP 4: Timeline -->
+      <div class="step" id="step-4">
+        <p class="step-label">Step 4 of 5</p>
+        <h2>What's your timeline?</h2>
+        <div class="pills" id="pills-timeline">
+          <div class="pill" data-value="ASAP">ASAP</div>
+          <div class="pill" data-value="Within a month">Within a month</div>
+          <div class="pill" data-value="Just exploring">Just exploring</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-back" onclick="goBack(4)">Back</button>
+          <button class="btn-next" id="next-4" disabled>Continue</button>
+        </div>
+      </div>
+
+      <!-- STEP 5: Contact info -->
+      <div class="step" id="step-5">
+        <p class="step-label">Step 5 of 5</p>
+        <h2>Last step — how do we reach you?</h2>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" placeholder="Jane Smith" autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="jane@yourbusiness.com" autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="notes">Anything else? (optional)</label>
+          <textarea id="notes" placeholder="Tell us a bit more about your project..."></textarea>
+        </div>
+        <div class="btn-row">
+          <button class="btn-back" onclick="goBack(5)">Back</button>
+          <button class="btn-next" id="next-5">Send it</button>
+        </div>
+        <p class="error-msg" id="error-msg">Something went wrong. Please try again or email cja@serrachat.com directly.</p>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="success-state" id="success">
+        <div class="success-icon">&#10003;</div>
+        <h2>You're all set.</h2>
+        <p>Your info has been received. You'll hear back within 24 hours with a clear plan and next steps.</p>
+        <a href="/">Back to Serra Studio</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const state = {
+      business_type: null,
+      has_website: null,
+      needs: [],
+      timeline: null,
+    };
+
+    let currentStep = 1;
+
+    // Progress bar
+    function updateProgress(step) {
+      const bars = document.querySelectorAll('#progress span');
+      bars.forEach((b, i) => {
+        b.classList.toggle('done', i < step);
+      });
+    }
+
+    // Single-select pills
+    function initSingleSelect(groupId, stateKey, nextBtnId) {
+      const group = document.getElementById(groupId);
+      const btn = document.getElementById(nextBtnId);
+      group.querySelectorAll('.pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          group.querySelectorAll('.pill').forEach(p => p.classList.remove('selected'));
+          pill.classList.add('selected');
+          state[stateKey] = pill.dataset.value;
+          btn.disabled = false;
+        });
+      });
+    }
+
+    // Multi-select pills
+    function initMultiSelect(groupId, stateKey, nextBtnId) {
+      const group = document.getElementById(groupId);
+      const btn = document.getElementById(nextBtnId);
+      group.querySelectorAll('.pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          const isAll = pill.dataset.value === 'All of the above';
+          if (isAll) {
+            group.querySelectorAll('.pill').forEach(p => p.classList.remove('selected'));
+            pill.classList.add('selected');
+            state[stateKey] = ['All of the above'];
+          } else {
+            group.querySelector('[data-value="All of the above"]').classList.remove('selected');
+            pill.classList.toggle('selected');
+            state[stateKey] = Array.from(group.querySelectorAll('.pill.selected')).map(p => p.dataset.value);
+          }
+          btn.disabled = state[stateKey].length === 0;
+        });
+      });
+    }
+
+    function goTo(step) {
+      document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+      document.getElementById('step-' + step).classList.add('active');
+      currentStep = step;
+      updateProgress(step - 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goBack(fromStep) {
+      goTo(fromStep - 1);
+    }
+
+    // Next buttons
+    document.getElementById('next-1').addEventListener('click', () => goTo(2));
+    document.getElementById('next-2').addEventListener('click', () => goTo(3));
+    document.getElementById('next-3').addEventListener('click', () => goTo(4));
+    document.getElementById('next-4').addEventListener('click', () => goTo(5));
+
+    document.getElementById('next-5').addEventListener('click', async () => {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const notes = document.getElementById('notes').value.trim();
+      const btn = document.getElementById('next-5');
+      const errEl = document.getElementById('error-msg');
+
+      if (!name || !email) {
+        errEl.textContent = 'Please fill in your name and email.';
+        errEl.classList.add('active');
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errEl.textContent = 'Please enter a valid email address.';
+        errEl.classList.add('active');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      errEl.classList.remove('active');
+
+      try {
+        const res = await fetch('/api/intake', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            business_type: state.business_type,
+            has_website: state.has_website,
+            needs: state.needs,
+            timeline: state.timeline,
+            name,
+            email,
+            notes,
+          }),
+        });
+
+        if (!res.ok) throw new Error('Server error');
+
+        document.querySelector('.progress-bar').style.display = 'none';
+        document.getElementById('step-5').classList.remove('active');
+        document.getElementById('success').classList.add('active');
+        updateProgress(5);
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Send it';
+        errEl.textContent = 'Something went wrong. Please try again or email cja@serrachat.com directly.';
+        errEl.classList.add('active');
+      }
+    });
+
+    // Init
+    initSingleSelect('pills-business', 'business_type', 'next-1');
+    initSingleSelect('pills-website', 'has_website', 'next-2');
+    initMultiSelect('pills-needs', 'needs', 'next-3');
+    initSingleSelect('pills-timeline', 'timeline', 'next-4');
+    updateProgress(0);
+  </script>
+
+</body>
+</html>
