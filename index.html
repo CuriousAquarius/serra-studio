@@ -582,6 +582,51 @@
       .demo-card-left { padding: 36px 28px; }
     }
 
+    /* ── PAIN POINTS ── */
+    .pain-section { background: var(--bg2); }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .pain-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .pain-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .pain-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .pain-card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .pain-bridge {
+      text-align: center;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .pain-bridge em { color: var(--gold); font-style: normal; }
+    @media (max-width: 768px) {
+      .pain-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── SERVICES ── */
     #services { background: var(--card); }
     .services-section { background: var(--card); }
@@ -1167,6 +1212,43 @@
       </div>
     </div>
   </div>
+
+  <hr class="divider" />
+
+  <!-- PAIN POINTS -->
+  <section class="pain-section">
+    <div class="section">
+      <p class="section-eyebrow">Sound Familiar?</p>
+      <h2 class="section-title">You're great at what you do.<br>Your website doesn't show it.</h2>
+      <p class="section-sub">Most small business owners have the same problem. It's not your fault — building a great website takes time you don't have.</p>
+
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">😬</div>
+          <div>
+            <h3>Your site looks outdated</h3>
+            <p>It was fine when you started, but now it doesn't reflect how far your business has come.</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">📋</div>
+          <div>
+            <h3>It's been on your to-do list forever</h3>
+            <p>You've been meaning to fix it for months. Other things always come first and it never gets done.</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">🤯</div>
+          <div>
+            <h3>You don't have time to figure it out</h3>
+            <p>You run a business — learning web design isn't something you have the bandwidth for right now.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="pain-bridge">That's exactly what I built <em>Serra Studio</em> for.</p>
+    </div>
+  </section>
 
   <hr class="divider" />
 
