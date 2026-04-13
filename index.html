@@ -627,6 +627,77 @@
       .pain-grid { grid-template-columns: 1fr; }
     }
 
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { background: var(--bg); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+    }
+    .testimonial-stars span {
+      color: var(--gold);
+      font-size: 15px;
+    }
+    .testimonial-quote {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.75;
+      font-style: italic;
+      flex: 1;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+    .testimonial-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .testimonial-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .testimonial-biz {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+    .testimonial-card.placeholder {
+      opacity: 0.5;
+      border-style: dashed;
+    }
+    @media (max-width: 768px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── SERVICES ── */
     #services { background: var(--card); }
     .services-section { background: var(--card); }
@@ -1289,6 +1360,63 @@
           </div>
           <div class="service-title">AI Chat Included</div>
           <p class="service-desc">Every managed site gets an AI chat widget (powered by Serra AI) that answers client questions automatically, day or night.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="section">
+      <p class="section-eyebrow">Client Love</p>
+      <h2 class="section-title">What clients say.</h2>
+      <p class="section-sub">Real feedback from real business owners who trusted me with their online presence.</p>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card placeholder">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Client reviews coming soon. Be one of the first."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">?</div>
+            <div>
+              <div class="testimonial-name">Coming Soon</div>
+              <div class="testimonial-biz">Your Industry Here</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card placeholder">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Client reviews coming soon. Be one of the first."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">?</div>
+            <div>
+              <div class="testimonial-name">Coming Soon</div>
+              <div class="testimonial-biz">Your Industry Here</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card placeholder">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Client reviews coming soon. Be one of the first."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">?</div>
+            <div>
+              <div class="testimonial-name">Coming Soon</div>
+              <div class="testimonial-biz">Your Industry Here</div>
+            </div>
+          </div>
         </div>
 
       </div>
