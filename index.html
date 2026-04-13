@@ -145,6 +145,20 @@
       font-style: italic;
       color: var(--gold);
     }
+    .rotating-word {
+      display: inline-block;
+      color: var(--gold);
+      font-style: italic;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .rotating-word.fade-out {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    .rotating-word.fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
     .hero-sub {
       font-size: 18px;
       color: var(--muted);
@@ -967,7 +981,6 @@
       <li><a href="#work">Work</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">Why Us</a></li>
-      <li><a href="#pricing">Pricing</a></li>
       <li><a href="mailto:cja@serrachat.com" class="nav-cta">Let's Talk</a></li>
     </ul>
   </nav>
@@ -980,11 +993,11 @@
           <span class="hero-eyebrow-dot"></span>
           Web Design &amp; Management
         </div>
-        <h1>Websites that work for your business, <em>not just look good.</em></h1>
+        <h1>Websites built for <span class="rotating-word fade-in" id="rotating-word">Photographers</span> that actually convert.</h1>
         <p class="hero-sub">Professional design, fully managed, with AI chat built in. Your site handled from start to finish.</p>
         <div class="hero-actions">
           <a href="#work" class="btn-primary">See My Work</a>
-          <a href="#pricing" class="btn-outline">View Pricing</a>
+          <a href="#start" class="btn-outline">Start a Project</a>
         </div>
       </div>
 
@@ -1242,98 +1255,16 @@
 
   <hr class="divider" />
 
-  <!-- PRICING -->
-  <section id="pricing">
+  <!-- PROJECT CTA -->
+  <section id="start">
     <div class="section" style="text-align:center;">
-      <p class="section-eyebrow">Pricing</p>
-      <h2 class="section-title">Simple, transparent pricing</h2>
-      <p class="section-sub" style="margin:0 auto 52px;">One-time design or ongoing management, you choose what works for your business right now.</p>
-
-      <div class="pricing-grid">
-
-        <!-- STARTER -->
-        <div class="pricing-card">
-          <div class="pricing-tier">Starter</div>
-          <div class="pricing-price"><sup>$</sup>750</div>
-          <p class="pricing-period">One-time · Design only</p>
-          <hr class="pricing-divider" />
-          <ul class="pricing-features">
-            <li class="pricing-feature">
-              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              Custom-designed website (up to 5 pages)
-            </li>
-            <li class="pricing-feature">
-              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              Mobile-responsive on all devices
-            </li>
-            <li class="pricing-feature">
-              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              Contact form included
-            </li>
-            <li class="pricing-feature">
-              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              Delivered deploy-ready
-            </li>
-          </ul>
-          <a href="mailto:cja@serrachat.com?subject=Serra Studio: Starter Package Inquiry" class="pricing-btn outline">Let's Talk First</a>
-        </div>
-
-        <!-- FULL STACK -->
-        <div class="pricing-card featured">
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-tier">Full Stack</div>
-          <div class="pricing-price"><sup>$</sup>750</div>
-          <p class="pricing-period">Design fee + <strong>$129/mo</strong> management</p>
-          <hr class="pricing-divider" />
-          <ul class="pricing-features">
-            <li class="pricing-feature">
-              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              Everything in Starter
-            </li>
-            <li class="pricing-feature">
-              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              Hosting &amp; domain management
-            </li>
-            <li class="pricing-feature">
-              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              Professional email setup (you@yourbusiness.com)
-            </li>
-            <li class="pricing-feature">
-              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              AI chat widget (Serra AI)
-            </li>
-            <li class="pricing-feature">
-              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              2 content updates/month
-            </li>
-            <li class="pricing-feature">
-              <span class="pricing-check"><svg fill="none" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              28-day free trial, no charge until day 29
-            </li>
-          </ul>
-          <a href="https://buy.stripe.com/3cIaEZd575TG4Xl1jdbQY06" target="_blank" rel="noopener" class="pricing-btn gold">Get Started</a>
-        </div>
-
-      </div>
-
-      <div class="payment-trust">
-        <p class="payment-trust-label">Secure payment via</p>
-        <div class="payment-badges">
-          <div class="pay-badge visa">VISA</div>
-          <div class="pay-badge mastercard">
-            <span class="pay-mc-red"></span>
-            <span class="pay-mc-orange"></span>
-          </div>
-          <div class="pay-badge apple">Apple Pay</div>
-          <div class="pay-badge google">Google Pay</div>
-          <div class="pay-badge klarna">Klarna</div>
-          <div class="pay-badge cashapp">Cash App</div>
-        </div>
-        <p class="payment-ssl">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          256-bit SSL encrypted
-        </p>
-      </div>
+      <p class="section-eyebrow">Let's Work Together</p>
+      <h2 class="section-title">Tell me about your project.</h2>
+      <p class="section-sub" style="margin:0 auto 36px;">Every site is scoped around what you actually need. Tell me what your business does and I'll put together a clear plan — no pressure, no commitment.</p>
+      <a href="mailto:cja@serrachat.com?subject=Serra Studio: Project Inquiry" class="btn-primary" style="font-size:16px; padding:16px 36px;">
+        Start the Conversation
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </section>
 
@@ -1408,7 +1339,6 @@
     <ul class="footer-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#pricing">Pricing</a></li>
       <li><a href="/privacy">Privacy Policy</a></li>
       <li><a href="/tos">Terms of Service</a></li>
     </ul>
@@ -1424,6 +1354,21 @@
         if (!isOpen) item.classList.add('open');
       });
     });
+
+    // Rotating hero word
+    const words = ['Photographers', 'Salons', 'Auto Shops', 'Event Vendors', 'Med Spas'];
+    const el = document.getElementById('rotating-word');
+    let i = 0;
+    setInterval(() => {
+      el.classList.add('fade-out');
+      el.classList.remove('fade-in');
+      setTimeout(() => {
+        i = (i + 1) % words.length;
+        el.textContent = words[i];
+        el.classList.remove('fade-out');
+        el.classList.add('fade-in');
+      }, 400);
+    }, 2500);
   </script>
 </body>
 </html>
