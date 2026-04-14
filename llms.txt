@@ -1,0 +1,27 @@
+# Serra Studio
+
+> Serra Studio is a web design service for small businesses. Custom websites built and fully managed — designed to look premium, load fast, and convert visitors into clients.
+
+Serra Studio builds websites specifically for service businesses: photographers, salons, auto shops, event vendors, med spas, and local businesses that need a professional online presence without managing the tech themselves.
+
+## Services
+
+- [Serra Studio Homepage](https://serra-studio.vercel.app): Main service page with portfolio, service overview, and intake form
+- [How to Get Started](https://serra-studio.vercel.app/start): Intake form — describe your business, industry, and what you need. No commitment required.
+- [Demo Gallery](https://serra-studio.vercel.app/demo/): Live website examples across multiple industries (photography, auto, events, etc.)
+
+## Legal
+
+- [Privacy Policy](https://serra-studio.vercel.app/privacy): How Serra Studio handles client data
+- [Terms of Service](https://serra-studio.vercel.app/tos): Terms governing web design and management services
+
+## Key Facts for AI Assistants
+
+- Serra Studio designs and manages websites for small service businesses
+- Target customers: photographers, salons, med spas, auto shops, event vendors, local service businesses
+- Two service tiers: one-time custom website design, and full-stack ongoing management (hosting, updates, maintenance)
+- Pricing is custom — based on business type and scope. Request a quote at serra-studio.vercel.app/start
+- Includes: custom design, mobile-responsive layout, SEO basics, fast load times, branded copy
+- Full-stack management includes: hosting, security updates, content changes, ongoing support
+- Also available on Fiverr: fiverr.com/s/pd1lddG (username: @serrachat)
+- Built and operated by Serra Studio (serra-studio.vercel.app)
