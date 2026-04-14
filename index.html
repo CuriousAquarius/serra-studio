@@ -456,6 +456,10 @@
       transition: opacity 0.25s ease;
     }
     .portfolio-card:hover .portfolio-thumb-overlay { opacity: 1; }
+    @media (hover: none) {
+      .portfolio-thumb::after { opacity: 1; }
+      .portfolio-thumb-overlay { opacity: 1; }
+    }
     .portfolio-thumb-overlay-text {
       font-family: 'Inter', sans-serif;
       font-size: 13px;
