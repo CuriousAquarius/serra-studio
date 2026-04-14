@@ -209,8 +209,19 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-lg);
+      box-shadow: 0 24px 64px rgba(14,76,138,0.14), 0 0 0 1px rgba(14,76,138,0.06), inset 0 1px 0 rgba(255,255,255,0.8);
       overflow: hidden;
+      position: relative;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold-border), transparent);
+      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+      z-index: 1;
+      pointer-events: none;
     }
     .hero-card-header {
       background: var(--navy);
@@ -239,7 +250,8 @@
       overflow: hidden;
     }
     .preview-site-bar {
-      background: var(--border);
+      background: #e8e3dc;
+      border-bottom: 1px solid #d4cec6;
       padding: 7px 12px;
       display: flex;
       align-items: center;
@@ -424,6 +436,38 @@
       color: var(--muted);
       font-style: italic;
     }
+    .portfolio-thumb::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(14,31,53,0.55);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .portfolio-card:hover .portfolio-thumb::after { opacity: 1; }
+    .portfolio-thumb-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .portfolio-card:hover .portfolio-thumb-overlay { opacity: 1; }
+    .portfolio-thumb-overlay-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 20px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
 
     /* ── DEMO CARD ── */
     .demo-card-wrap {
@@ -600,10 +644,17 @@
       align-items: flex-start;
     }
     .pain-icon {
-      font-size: 22px;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
-      margin-top: 2px;
     }
+    .pain-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
     .pain-card h3 {
       font-size: 15px;
       font-weight: 700;
@@ -709,11 +760,12 @@
     .service-card {
       background: var(--bg);
       border: 1px solid var(--border);
+      border-top: 3px solid var(--gold-border);
       border-radius: var(--radius-lg);
       padding: 32px 28px;
-      transition: box-shadow 0.2s, transform 0.2s;
+      transition: box-shadow 0.2s, transform 0.2s, border-top-color 0.2s;
     }
-    .service-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .service-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); border-top-color: var(--gold); }
     .service-icon {
       width: 52px; height: 52px;
       border-radius: 50%;
@@ -851,7 +903,23 @@
       background: var(--navy);
       padding: 64px 48px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
+    .cta-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        135deg,
+        rgba(255,255,255,0.025) 0px,
+        rgba(255,255,255,0.025) 1px,
+        transparent 1px,
+        transparent 28px
+      );
+      pointer-events: none;
+    }
+    .cta-strip > * { position: relative; z-index: 1; }
     .cta-strip h2 {
       font-family: 'DM Serif Display', serif;
       font-size: clamp(26px, 3vw, 40px);
@@ -885,13 +953,27 @@
     /* ── FOOTER ── */
     footer {
       background: var(--bg2);
-      border-top: 1px solid var(--border);
-      padding: 40px 48px;
+      border-top: 2px solid var(--gold-border);
+      padding: 40px 48px 32px;
+    }
+    .footer-top {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .footer-tagline {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .footer-bottom {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 12px;
     }
     .footer-logo {
       font-family: 'DM Serif Display', serif;
@@ -920,10 +1002,56 @@
       color: var(--muted);
     }
 
+    /* ── HAMBURGER NAV ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: var(--radius-sm);
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--navy);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(14,31,53,0.35);
+      z-index: 198;
+    }
+    .nav-overlay.active { display: block; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 960px) {
       .nav { padding: 14px 24px; }
-      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 260px; height: 100vh;
+        background: var(--card);
+        border-left: 1px solid var(--border);
+        flex-direction: column;
+        padding: 80px 32px 40px;
+        gap: 28px;
+        transition: right 0.3s ease;
+        z-index: 199;
+        display: flex;
+      }
+      .nav-links.open { right: 0; }
+      .nav-links:not(.open) { right: -100%; }
       .hero { grid-template-columns: 1fr; padding: 64px 24px 48px; gap: 40px; }
       .hero-card { max-width: 420px; }
       .section { padding: 64px 24px; }
@@ -931,7 +1059,9 @@
       .services-grid { grid-template-columns: 1fr; gap: 16px; }
       .pricing-grid { grid-template-columns: 1fr; max-width: 460px; }
       .cta-strip { padding: 48px 24px; }
-      footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+      footer { padding: 32px 24px 24px; }
+      .footer-top { flex-direction: column; gap: 6px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
     }
     @media (max-width: 640px) {
       .portfolio-grid { grid-template-columns: 1fr; }
@@ -1093,11 +1223,14 @@
   <!-- NAV -->
   <nav class="nav">
     <a href="/" class="nav-logo"><span>S</span>erra Studio</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">Why Us</a></li>
-      <li><a href="mailto:cja@serrachat.com" class="nav-cta">Let's Talk</a></li>
+      <li><a href="/start" class="nav-cta">Let's Talk</a></li>
     </ul>
   </nav>
 
@@ -1185,6 +1318,12 @@
               <span class="portfolio-thumb-initials">TF</span>
               <span class="portfolio-thumb-tagline">Film & Video</span>
             </div>
+            <div class="portfolio-thumb-overlay">
+              <span class="portfolio-thumb-overlay-text">
+                View Live Site
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
           </div>
           <div class="portfolio-info">
             <span class="portfolio-tag">Film & Video</span>
@@ -1203,6 +1342,12 @@
               <span class="portfolio-thumb-initials">Serra</span>
               <span class="portfolio-thumb-tagline">AI Platform</span>
             </div>
+            <div class="portfolio-thumb-overlay">
+              <span class="portfolio-thumb-overlay-text">
+                View Live Site
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
           </div>
           <div class="portfolio-info">
             <span class="portfolio-tag">SaaS</span>
@@ -1220,6 +1365,12 @@
             <div class="portfolio-thumb-label">
               <span class="portfolio-thumb-initials">AB</span>
               <span class="portfolio-thumb-tagline">Auto Body Shop</span>
+            </div>
+            <div class="portfolio-thumb-overlay">
+              <span class="portfolio-thumb-overlay-text">
+                View Concepts
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
             </div>
           </div>
           <div class="portfolio-info">
@@ -1295,21 +1446,27 @@
 
       <div class="pain-grid">
         <div class="pain-card">
-          <div class="pain-icon">😬</div>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
           <div>
             <h3>Your site looks outdated</h3>
             <p>It was fine when you started, but now it doesn't reflect how far your business has come.</p>
           </div>
         </div>
         <div class="pain-card">
-          <div class="pain-icon">📋</div>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>
+          </div>
           <div>
             <h3>It's been on your to-do list forever</h3>
             <p>You've been meaning to fix it for months. Other things always come first and it never gets done.</p>
           </div>
         </div>
         <div class="pain-card">
-          <div class="pain-icon">🤯</div>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
           <div>
             <h3>You don't have time to figure it out</h3>
             <p>You run a business — learning web design isn't something you have the bandwidth for right now.</p>
@@ -1545,14 +1702,19 @@
 
   <!-- FOOTER -->
   <footer>
-    <a href="/" class="footer-logo"><span>S</span>erra Studio</a>
-    <ul class="footer-links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="/privacy">Privacy Policy</a></li>
-      <li><a href="/tos">Terms of Service</a></li>
-    </ul>
-    <span class="footer-copy">© 2026 Serra Studio</span>
+    <div class="footer-top">
+      <a href="/" class="footer-logo"><span>S</span>erra Studio</a>
+      <p class="footer-tagline">Custom websites for small businesses.</p>
+    </div>
+    <div class="footer-bottom">
+      <ul class="footer-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 Serra Studio</span>
+    </div>
   </footer>
 
   <script>
@@ -1564,6 +1726,23 @@
         if (!isOpen) item.classList.add('open');
       });
     });
+
+    // Mobile nav
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+    function toggleNav(open) {
+      hamburger.classList.toggle('open', open);
+      navLinks.classList.toggle('open', open);
+      overlay.classList.toggle('active', open);
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    hamburger.addEventListener('click', () => toggleNav(!navLinks.classList.contains('open')));
+    overlay.addEventListener('click', () => toggleNav(false));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleNav(false)));
 
     // Rotating hero word
     const words = ['Photographers', 'Salons', 'Auto Shops', 'Event Vendors', 'Med Spas'];

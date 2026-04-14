@@ -242,6 +242,43 @@
       text-decoration: underline;
       text-underline-offset: 3px;
     }
+    .success-steps {
+      list-style: none;
+      text-align: left;
+      max-width: 400px;
+      margin: 0 auto 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      counter-reset: steps;
+      padding: 0;
+    }
+    .success-steps li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      counter-increment: steps;
+    }
+    .success-steps li::before {
+      content: counter(steps);
+      min-width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .success-steps strong { color: var(--navy); }
 
     /* ERROR */
     .error-msg {
@@ -361,7 +398,12 @@
       <div class="success-state" id="success">
         <div class="success-icon">&#10003;</div>
         <h2>You're all set.</h2>
-        <p>Your info has been received. You'll hear back within 24 hours with a clear plan and next steps.</p>
+        <p>Your details are in. Here's exactly what happens next:</p>
+        <ol class="success-steps">
+          <li><strong>Within 24 hours</strong> — You'll get a short email confirming receipt and asking any quick follow-up questions.</li>
+          <li><strong>Within 48 hours</strong> — A clear proposal lands in your inbox: scope, timeline, and what it will cost. No vague estimates.</li>
+          <li><strong>You decide</strong> — No pressure, no commitment until you say go.</li>
+        </ol>
         <a href="/">Back to Serra Studio</a>
       </div>
 
