@@ -332,7 +332,7 @@
     #work { background: var(--bg); }
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
     .portfolio-card {
@@ -1083,6 +1083,13 @@
       color: #e63946;
     }
 
+    /* ── PORTFOLIO: Mr. Chili Boi ── */
+    .portfolio-thumb.chilboi {
+      background: linear-gradient(135deg, #1a0500 0%, #3d0e00 50%, #1a0500 100%);
+    }
+    .portfolio-thumb.chilboi .portfolio-thumb-initials { color: #ff6b35; }
+    .portfolio-thumb.chilboi .portfolio-thumb-tagline { color: rgba(255,107,53,0.7); }
+
     /* ── WHY US ── */
     .why-intro {
       max-width: 620px;
@@ -1383,6 +1390,30 @@
             <p class="portfolio-desc">Three full design directions built for a local auto body client: Clean &amp; Modern, Bold &amp; Industrial, and Premium. Client picks the direction.</p>
             <a href="https://autobody-demo.vercel.app" target="_blank" rel="noopener" class="portfolio-link">
               View Concepts
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-thumb chilboi">
+            <div class="portfolio-thumb-label">
+              <span class="portfolio-thumb-initials">MCB</span>
+              <span class="portfolio-thumb-tagline">E-Commerce</span>
+            </div>
+            <div class="portfolio-thumb-overlay">
+              <span class="portfolio-thumb-overlay-text">
+                View Demo
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">E-Commerce</span>
+            <div class="portfolio-name">Mr. Chili Boi</div>
+            <p class="portfolio-desc">Full e-commerce store for a hot sauce brand — 12 pages, 20 SKUs across 6 categories, complete shopping experience.</p>
+            <a href="https://mr-chili-boi-demo.vercel.app" target="_blank" rel="noopener" class="portfolio-link">
+              View Demo
               <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -1749,7 +1780,7 @@
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleNav(false)));
 
     // Rotating hero word
-    const words = ['Photographers', 'Salons', 'Auto Shops', 'Event Vendors', 'Med Spas'];
+    const words = ['Photographers', 'Salons', 'Auto Shops', 'Event Vendors', 'Med Spas', 'Online Stores'];
     const el = document.getElementById('rotating-word');
     let i = 0;
     setInterval(() => {
