@@ -793,115 +793,6 @@
       line-height: 1.7;
     }
 
-    /* ── PRICING ── */
-    #pricing { background: var(--bg); }
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      max-width: 820px;
-      margin: 0 auto;
-    }
-    .pricing-card {
-      background: var(--card);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-xl);
-      padding: 44px 40px;
-      position: relative;
-    }
-    .pricing-card.featured {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 4px var(--gold-dim), var(--shadow-md);
-    }
-    .pricing-badge {
-      position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--gold);
-      color: var(--navy);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 5px 18px;
-      border-radius: 40px;
-      white-space: nowrap;
-    }
-    .pricing-tier {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 8px;
-    }
-    .pricing-price {
-      font-family: 'DM Serif Display', serif;
-      font-size: 44px;
-      font-weight: 400;
-      color: var(--navy);
-      line-height: 1;
-      letter-spacing: -1.5px;
-      margin-bottom: 6px;
-    }
-    .pricing-price sup {
-      font-family: 'Inter', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      vertical-align: top;
-      margin-top: 6px;
-      display: inline-block;
-    }
-    .pricing-period {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 24px;
-    }
-    .pricing-period strong { color: var(--navy); }
-    .pricing-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 24px; }
-    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
-    .pricing-feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 14px;
-      color: var(--text);
-      line-height: 1.5;
-    }
-    .pricing-check {
-      width: 20px; height: 20px;
-      border-radius: 50%;
-      background: var(--gold-dim);
-      border: 1px solid var(--gold-border);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .pricing-check svg { width: 11px; height: 11px; stroke: var(--gold); stroke-width: 2.5; }
-    .pricing-btn {
-      display: block;
-      text-align: center;
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      padding: 14px 28px;
-      border-radius: var(--radius-md);
-      text-decoration: none;
-      transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
-    }
-    .pricing-btn.gold {
-      background: var(--gold);
-      color: var(--navy);
-      box-shadow: 0 4px 20px rgba(232,160,32,0.35);
-    }
-    .pricing-btn.gold:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,160,32,0.45); }
-    .pricing-btn.outline {
-      border: 1.5px solid var(--border);
-      color: var(--navy);
-    }
-    .pricing-btn.outline:hover { border-color: var(--navy); transform: translateY(-1px); }
-
     /* ── CTA STRIP ── */
     .cta-strip {
       background: var(--navy);
@@ -1061,7 +952,6 @@
       .section { padding: 64px 24px; }
       .portfolio-grid { grid-template-columns: 1fr; gap: 16px; }
       .services-grid { grid-template-columns: 1fr; gap: 16px; }
-      .pricing-grid { grid-template-columns: 1fr; max-width: 460px; }
       .cta-strip { padding: 48px 24px; }
       footer { padding: 32px 24px 24px; }
       .footer-top { flex-direction: column; gap: 6px; }
