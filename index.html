@@ -332,7 +332,7 @@
     #work { background: var(--bg); }
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
     .portfolio-card {
@@ -950,7 +950,7 @@
       .hero { grid-template-columns: 1fr; padding: 64px 24px 48px; gap: 40px; }
       .hero-card { max-width: 420px; }
       .section { padding: 64px 24px; }
-      .portfolio-grid { grid-template-columns: 1fr; gap: 16px; }
+      .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
       .services-grid { grid-template-columns: 1fr; gap: 16px; }
       .cta-strip { padding: 48px 24px; }
       footer { padding: 32px 24px 24px; }
@@ -979,6 +979,12 @@
     }
     .portfolio-thumb.chilboi .portfolio-thumb-initials { color: #ff6b35; }
     .portfolio-thumb.chilboi .portfolio-thumb-tagline { color: rgba(255,107,53,0.7); }
+
+    /* ── PORTFOLIO: One Mind Legal ── */
+    .portfolio-thumb.onemind {
+      background: linear-gradient(135deg, #0f2d23 0%, #1a4a3a 50%, #0f2d23 100%);
+      color: #c9a84c;
+    }
 
     /* ── WHY US ── */
     .why-intro {
@@ -1303,6 +1309,30 @@
             <div class="portfolio-name">Mr. Chili Boi</div>
             <p class="portfolio-desc">Full e-commerce store for a hot sauce brand — 12 pages, 20 SKUs across 6 categories, complete shopping experience.</p>
             <a href="https://mr-chili-boi-demo.vercel.app" target="_blank" rel="noopener" class="portfolio-link">
+              View Demo
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-thumb onemind">
+            <div class="portfolio-thumb-label">
+              <span class="portfolio-thumb-initials">OML</span>
+              <span class="portfolio-thumb-tagline">Legal Services</span>
+            </div>
+            <div class="portfolio-thumb-overlay">
+              <span class="portfolio-thumb-overlay-text">
+                View Demo
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Legal Services</span>
+            <div class="portfolio-name">One Mind Legal</div>
+            <p class="portfolio-desc">Attorney-supervised paralegal services for family law and immigration — bilingual, flat fees, Serra chat widget included.</p>
+            <a href="https://onemindlegal-demo.vercel.app" target="_blank" rel="noopener" class="portfolio-link">
               View Demo
               <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -1670,7 +1700,7 @@
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleNav(false)));
 
     // Rotating hero word
-    const words = ['Photographers', 'Salons', 'Auto Shops', 'Event Vendors', 'Med Spas', 'Online Stores'];
+    const words = ['Photographers', 'Salons', 'Auto Shops', 'Event Vendors', 'Med Spas', 'Online Stores', 'Law Firms'];
     const el = document.getElementById('rotating-word');
     let i = 0;
     setInterval(() => {
