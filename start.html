@@ -389,7 +389,7 @@
         </div>
         <div class="btn-row">
           <button class="btn-back" onclick="goBack(5)">Back</button>
-          <button class="btn-next" id="next-5">Send it</button>
+          <button class="btn-next" id="next-5" disabled>Send it</button>
         </div>
         <p class="error-msg" id="error-msg">Something went wrong. Please try again or email cja@serrachat.com directly.</p>
       </div>
@@ -480,6 +480,14 @@
     document.getElementById('next-2').addEventListener('click', () => goTo(3));
     document.getElementById('next-3').addEventListener('click', () => goTo(4));
     document.getElementById('next-4').addEventListener('click', () => goTo(5));
+
+    function checkStep5() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      document.getElementById('next-5').disabled = !name || !email;
+    }
+    document.getElementById('name').addEventListener('input', checkStep5);
+    document.getElementById('email').addEventListener('input', checkStep5);
 
     document.getElementById('next-5').addEventListener('click', async () => {
       const name = document.getElementById('name').value.trim();

@@ -53,7 +53,7 @@ function switchIndustry(theme) {
       industryImg.style.transform = 'scale(1)';
       industryImg.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     };
-    industryImg.src = data.image;
+    industryImg.src = data.image; // src set after onload to catch cached-image case
     industryTitle.textContent = data.title;
     industryDesc.textContent = data.desc;
     industryFeatures.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');

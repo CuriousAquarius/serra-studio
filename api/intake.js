@@ -30,21 +30,26 @@ module.exports = async function handler(req, res) {
     notes ? `📝 *Notes:* ${notes}` : null,
   ].filter(Boolean).join('\n');
 
-  const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: CHAT_ID,
-      text: message,
-      parse_mode: 'Markdown',
-    }),
-  });
+  try {
+    const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: message,
+        parse_mode: 'Markdown',
+      }),
+    });
 
-  if (!response.ok) {
-    const err = await response.text();
-    console.error('Telegram error:', err);
+    if (!response.ok) {
+      const err = await response.text();
+      console.error('Telegram error:', err);
+      return res.status(500).json({ error: 'Failed to send notification' });
+    }
+
+    return res.status(200).json({ success: true });
+  } catch (err) {
+    console.error('Telegram fetch error:', err);
     return res.status(500).json({ error: 'Failed to send notification' });
   }
-
-  return res.status(200).json({ success: true });
 }
