@@ -1188,6 +1188,66 @@
       line-height: 1.75;
     }
     .faq-item.open .faq-answer { display: block; }
+
+    /* ── PROOF BAR ── */
+    .proof-bar {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .proof-bar span {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+    .proof-bar .dot { color: var(--border); font-size: 14px; }
+
+    /* ── CHAT PREVIEW ── */
+    .chat-preview {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      padding: 10px;
+    }
+    .chat-bubble {
+      max-width: 85%;
+      padding: 7px 11px;
+      border-radius: 12px;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+    .chat-bubble.visitor {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      align-self: flex-end;
+      border-bottom-right-radius: 3px;
+    }
+    .chat-bubble.ai {
+      background: var(--navy);
+      color: rgba(255,255,255,0.92);
+      align-self: flex-start;
+      border-bottom-left-radius: 3px;
+    }
+
+    /* ── REVEAL ANIMATIONS ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
@@ -1205,6 +1265,14 @@
       <li><a href="/start" class="nav-cta">Let's Talk</a></li>
     </ul>
   </nav>
+
+  <div class="proof-bar">
+    <span>Fully custom</span>
+    <span class="dot">·</span>
+    <span>2–3 day delivery</span>
+    <span class="dot">·</span>
+    <span>AI chat add-on available</span>
+  </div>
 
   <!-- HERO -->
   <section>
@@ -1243,10 +1311,10 @@
               <span class="preview-url">yourbusiness.com</span>
             </div>
             <div class="preview-content">
-              <div class="preview-bar gold"></div>
-              <div class="preview-bar short" style="margin-top:4px;"></div>
-              <div class="preview-bar med"></div>
-              <div class="preview-bar" style="width:65%;"></div>
+              <div class="chat-preview">
+                <div class="chat-bubble visitor">Hey, what's your turnaround?</div>
+                <div class="chat-bubble ai">Sites go live in 2–3 days once your assets are ready. Want to get started?</div>
+              </div>
             </div>
           </div>
           <p class="preview-label">Your results at a glance</p>
@@ -1273,7 +1341,6 @@
     </div>
   </section>
 
-  <hr class="divider" />
 
   <!-- PORTFOLIO -->
   <section id="work">
@@ -1479,7 +1546,6 @@
     </div>
   </div>
 
-  <hr class="divider" />
 
   <!-- PAIN POINTS -->
   <section class="pain-section">
@@ -1522,7 +1588,6 @@
     </div>
   </section>
 
-  <hr class="divider" />
 
   <!-- SERVICES -->
   <section id="services" class="services-section">
@@ -1567,7 +1632,6 @@
     </div>
   </section>
 
-  <hr class="divider" />
 
   <!-- TESTIMONIALS -->
   <section class="testimonials-section">
@@ -1596,7 +1660,6 @@
     </div>
   </section>
 
-  <hr class="divider" />
 
   <!-- WHY US -->
   <section id="about">
@@ -1636,7 +1699,6 @@
     </div>
   </section>
 
-  <hr class="divider" />
 
   <!-- PROJECT CTA -->
   <section id="start">
@@ -1651,7 +1713,6 @@
     </div>
   </section>
 
-  <hr class="divider" />
 
   <!-- FAQ -->
   <section id="faq">
@@ -1778,6 +1839,23 @@
         card.style.boxShadow = '';
       });
     });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll(
+      '.portfolio-card, .service-card, .pain-card, .about-card, .testimonial-card, .faq-item, .demo-card, .section-title, .section-eyebrow, .section-sub, .pain-bridge'
+    );
+    revealEls.forEach(el => {
+      el.classList.add('reveal');
+      const siblings = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+      const idx = siblings.indexOf(el);
+      if (idx > 0) el.style.transitionDelay = `${idx * 80}ms`;
+    });
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
     // Rotating hero word
     const words = ['Photographers', 'Salons', 'Auto Shops', 'Event Vendors', 'Med Spas', 'Online Stores', 'Law Firms'];
