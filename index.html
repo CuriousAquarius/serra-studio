@@ -1189,6 +1189,44 @@
     }
     .faq-item.open .faq-answer { display: block; }
 
+    /* ── HOW IT WORKS ── */
+    .hiw-section { background: var(--bg2); }
+    .hiw-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      counter-reset: hiw;
+    }
+    .hiw-step {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      position: relative;
+    }
+    .hiw-number {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .hiw-step h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .hiw-step p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    @media (max-width: 768px) { .hiw-grid { grid-template-columns: 1fr; } }
+
     /* ── PROOF BAR ── */
     .proof-bar {
       background: var(--bg2);
@@ -1286,7 +1324,7 @@
         <p class="hero-sub">Designed, managed, and kept running — so you can focus on your actual business.</p>
         <div class="hero-actions">
           <a href="#work" class="btn-primary">See My Work</a>
-          <a href="#start" class="btn-outline">Start a Project</a>
+          <a href="/start" class="btn-outline">Start a Project</a>
         </div>
       </div>
 
@@ -1509,7 +1547,7 @@
           Live Demo
         </span>
         <h2 class="demo-card-title">See it built<br>for <em>your industry</em></h2>
-        <p class="demo-card-desc">GSAP animations, parallax scrolling, glass morphism, and AI-generated imagery. All live. Click through 4 real industry builds.</p>
+        <p class="demo-card-desc">Smooth animations, polished visuals, and a modern look built for real industries. Click through 4 live examples and see what your site could look like.</p>
         <div class="demo-card-industries">
           <span class="demo-industry-pill">Salon & Med Spa</span>
           <span class="demo-industry-pill">Auto Body</span>
@@ -1588,6 +1626,32 @@
     </div>
   </section>
 
+
+  <!-- HOW IT WORKS -->
+  <section class="hiw-section">
+    <div class="section">
+      <p class="section-eyebrow">The Process</p>
+      <h2 class="section-title">Here's how it works.</h2>
+      <p class="section-sub">No long back-and-forth. No guessing what happens next. Three steps from first message to live site.</p>
+      <div class="hiw-grid">
+        <div class="hiw-step tilt-card"><div class="shimmer"></div>
+          <div class="hiw-number">1</div>
+          <h3>Tell us about your business</h3>
+          <p>Fill out a short form — your business name, what you do, and what you need. No tech knowledge required, just the basics.</p>
+        </div>
+        <div class="hiw-step tilt-card"><div class="shimmer"></div>
+          <div class="hiw-number">2</div>
+          <h3>We build your site</h3>
+          <p>You get a custom design in 2–3 days. Review it, request changes, and give the final sign-off before anything goes live.</p>
+        </div>
+        <div class="hiw-step tilt-card"><div class="shimmer"></div>
+          <div class="hiw-number">3</div>
+          <h3>Your site goes live</h3>
+          <p>We handle the launch, hosting, and everything after. You focus on your business — we keep the site running and up to date.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- SERVICES -->
   <section id="services" class="services-section">
