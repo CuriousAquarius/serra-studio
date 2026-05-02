@@ -385,12 +385,80 @@
       cursor: pointer;
       transition: border-color 0.4s, box-shadow 0.4s;
     }
+    #portfolioMobile { display: none; }
+
     @media (max-width: 640px) {
-      .portfolio-card {
-        width: 200px;
-        height: 240px;
-        left: -100px;
-        top: -120px;
+      #work { display: none; }
+      #portfolioMobile { display: block; padding: 72px 24px 64px; }
+      .pm-header { text-align: center; margin-bottom: 32px; }
+      .pm-carousel { position: relative; overflow: hidden; border-radius: 16px; }
+      .pm-track {
+        display: flex;
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+      }
+      .pm-slide { min-width: 100%; flex-shrink: 0; }
+      .pm-slide .portfolio-thumb {
+        width: 100%;
+        aspect-ratio: 16/10;
+        border-radius: 12px 12px 0 0;
+        font-size: 28px;
+      }
+      .pm-info {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-top: none;
+        border-radius: 0 0 12px 12px;
+        padding: 16px 18px 20px;
+      }
+      .pm-tag {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 6px;
+      }
+      .pm-name {
+        font-family: 'DM Serif Display', serif;
+        font-size: 1.15rem;
+        color: var(--text);
+        margin-bottom: 6px;
+      }
+      .pm-desc {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        line-height: 1.55;
+        margin-bottom: 14px;
+      }
+      .pm-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--gold);
+        text-decoration: none;
+        letter-spacing: 0.02em;
+      }
+      .pm-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        margin-top: 20px;
+      }
+      .pm-dot {
+        height: 6px;
+        width: 6px;
+        border-radius: 3px;
+        background: var(--border);
+        transition: width 0.25s ease, background 0.25s ease;
+        cursor: pointer;
+      }
+      .pm-dot.active {
+        width: 18px;
+        background: var(--gold);
       }
     }
     .portfolio-card.is-front {
@@ -1668,6 +1736,124 @@
     </div>
   </section>
 
+  <!-- PORTFOLIO MOBILE SWIPE -->
+  <section id="portfolioMobile">
+    <div class="pm-header">
+      <p class="section-eyebrow">Recent Work</p>
+      <h2 class="section-title" style="font-size:clamp(1.4rem,5vw,2rem);">Sites built for real clients</h2>
+    </div>
+    <div class="pm-carousel">
+      <div class="pm-track" id="pmTrack">
+
+        <div class="pm-slide">
+          <a class="portfolio-thumb films" href="https://timeless-films-demo.vercel.app" target="_blank" rel="noopener">
+            <div class="portfolio-thumb-label"><span class="portfolio-thumb-initials">TF</span><span class="portfolio-thumb-tagline">Film & Video</span></div>
+            <div class="portfolio-thumb-overlay"><span class="portfolio-thumb-overlay-text">View Live Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+          </a>
+          <div class="pm-info">
+            <div class="pm-tag">Film & Video</div>
+            <div class="pm-name">Timeless Films</div>
+            <p class="pm-desc">Three cinematic design directions for a wedding videography studio: dark &amp; dramatic, ivory editorial, and bold contrast.</p>
+            <a href="https://timeless-films-demo.vercel.app" target="_blank" rel="noopener" class="pm-link">View Concepts <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="pm-slide">
+          <a class="portfolio-thumb serra" href="https://serrachat.com" target="_blank" rel="noopener">
+            <div class="portfolio-thumb-label"><span class="portfolio-thumb-initials">Serra</span><span class="portfolio-thumb-tagline">AI Platform</span></div>
+            <div class="portfolio-thumb-overlay"><span class="portfolio-thumb-overlay-text">View Live Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+          </a>
+          <div class="pm-info">
+            <div class="pm-tag">SaaS</div>
+            <div class="pm-name">Serra AI</div>
+            <p class="pm-desc">Landing page for an AI chatbot platform, hero section, pricing cards, FAQ, and live chat demo widget.</p>
+            <a href="https://serrachat.com" target="_blank" rel="noopener" class="pm-link">View Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="pm-slide">
+          <a class="portfolio-thumb autobody" href="https://autobody-demo.vercel.app" target="_blank" rel="noopener">
+            <div class="portfolio-thumb-label"><span class="portfolio-thumb-initials">AB</span><span class="portfolio-thumb-tagline">Auto Body Shop</span></div>
+            <div class="portfolio-thumb-overlay"><span class="portfolio-thumb-overlay-text">View Live Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+          </a>
+          <div class="pm-info">
+            <div class="pm-tag">Design Concept</div>
+            <div class="pm-name">Auto Body Shop</div>
+            <p class="pm-desc">Three full design directions for a local auto body client: Clean &amp; Modern, Bold &amp; Industrial, and Premium.</p>
+            <a href="https://autobody-demo.vercel.app" target="_blank" rel="noopener" class="pm-link">View Concepts <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="pm-slide">
+          <a class="portfolio-thumb chilboi" href="https://mr-chili-boi-demo.vercel.app" target="_blank" rel="noopener">
+            <div class="portfolio-thumb-label"><span class="portfolio-thumb-initials">MCB</span><span class="portfolio-thumb-tagline">E-Commerce</span></div>
+            <div class="portfolio-thumb-overlay"><span class="portfolio-thumb-overlay-text">View Live Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+          </a>
+          <div class="pm-info">
+            <div class="pm-tag">E-Commerce</div>
+            <div class="pm-name">Mr. Chili Boi</div>
+            <p class="pm-desc">Full e-commerce store for a hot sauce brand: 12 pages, 20 SKUs across 6 categories, complete shopping experience.</p>
+            <a href="https://mr-chili-boi-demo.vercel.app" target="_blank" rel="noopener" class="pm-link">View Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="pm-slide">
+          <a class="portfolio-thumb onemind" href="https://onemindlegal-demo.vercel.app" target="_blank" rel="noopener">
+            <div class="portfolio-thumb-label"><span class="portfolio-thumb-initials">OML</span><span class="portfolio-thumb-tagline">Legal Services</span></div>
+            <div class="portfolio-thumb-overlay"><span class="portfolio-thumb-overlay-text">View Live Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+          </a>
+          <div class="pm-info">
+            <div class="pm-tag">Legal Services</div>
+            <div class="pm-name">One Mind Legal</div>
+            <p class="pm-desc">Attorney-supervised paralegal services for family law and immigration. Bilingual, flat fees, Serra chat widget included.</p>
+            <a href="https://onemindlegal-demo.vercel.app" target="_blank" rel="noopener" class="pm-link">View Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="pm-slide">
+          <a class="portfolio-thumb brooke" href="https://brooke-inez-demo.vercel.app" target="_blank" rel="noopener">
+            <div class="portfolio-thumb-label"><span class="portfolio-thumb-initials">BI</span><span class="portfolio-thumb-tagline">Photography</span></div>
+            <div class="portfolio-thumb-overlay"><span class="portfolio-thumb-overlay-text">View Live Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+          </a>
+          <div class="pm-info">
+            <div class="pm-tag">Photography</div>
+            <div class="pm-name">Brooke Inez Photography</div>
+            <p class="pm-desc">Portrait and lifestyle photography portfolio. Minimal, editorial feel with a full booking workflow and Serra chat widget.</p>
+            <a href="https://brooke-inez-demo.vercel.app" target="_blank" rel="noopener" class="pm-link">View Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="pm-slide">
+          <a class="portfolio-thumb events1595" href="https://1595events-demo.vercel.app" target="_blank" rel="noopener">
+            <div class="portfolio-thumb-label"><span class="portfolio-thumb-initials">1595</span><span class="portfolio-thumb-tagline">Events & Experiences</span></div>
+            <div class="portfolio-thumb-overlay"><span class="portfolio-thumb-overlay-text">View Live Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+          </a>
+          <div class="pm-info">
+            <div class="pm-tag">Events</div>
+            <div class="pm-name">1595 Events</div>
+            <p class="pm-desc">Three design directions for a luxury event planning brand: gold editorial, dark dramatic, and bold contrast.</p>
+            <a href="https://1595events-demo.vercel.app" target="_blank" rel="noopener" class="pm-link">View Concepts <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="pm-slide">
+          <a class="portfolio-thumb autolingo" href="https://autolingo-demo.vercel.app" target="_blank" rel="noopener">
+            <div class="portfolio-thumb-label"><span class="portfolio-thumb-initials">AL</span><span class="portfolio-thumb-tagline">Language Learning</span></div>
+            <div class="portfolio-thumb-overlay"><span class="portfolio-thumb-overlay-text">View Live Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+          </a>
+          <div class="pm-info">
+            <div class="pm-tag">EdTech</div>
+            <div class="pm-name">Autolingo</div>
+            <p class="pm-desc">Landing page for a German language learning platform helping non-German speakers enter the German job market.</p>
+            <a href="https://autolingo-demo.vercel.app" target="_blank" rel="noopener" class="pm-link">View Site <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="pm-dots" id="pmDots"></div>
+  </section>
+
   <!-- DEMO CARD -->
   <div class="demo-card-wrap">
     <div class="demo-card">
@@ -2114,6 +2300,36 @@
         el.classList.add('fade-in');
       }, 400);
     }, 2500);
+  </script>
+  <script>
+    // Mobile swipe carousel
+    (function () {
+      const track = document.getElementById('pmTrack');
+      const dotsEl = document.getElementById('pmDots');
+      if (!track || !dotsEl) return;
+      const slides = Array.from(track.children);
+      let current = 0;
+      let startX = 0;
+
+      slides.forEach((_, i) => {
+        const d = document.createElement('div');
+        d.className = 'pm-dot' + (i === 0 ? ' active' : '');
+        d.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(d);
+      });
+
+      function goTo(idx) {
+        current = Math.max(0, Math.min(slides.length - 1, idx));
+        track.style.transform = `translateX(-${current * 100}%)`;
+        Array.from(dotsEl.children).forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+
+      track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const delta = e.changedTouches[0].clientX - startX;
+        if (Math.abs(delta) > 50) goTo(current + (delta < 0 ? 1 : -1));
+      }, { passive: true });
+    })();
   </script>
 </body>
 </html>
