@@ -385,6 +385,14 @@
       cursor: pointer;
       transition: border-color 0.4s, box-shadow 0.4s;
     }
+    @media (max-width: 640px) {
+      .portfolio-card {
+        width: 200px;
+        height: 240px;
+        left: -100px;
+        top: -120px;
+      }
+    }
     .portfolio-card.is-front {
       border-color: var(--gold-border);
       box-shadow: var(--shadow-md);
@@ -2049,15 +2057,16 @@
       const workSection   = document.getElementById('work');
       const cards         = Array.from(document.querySelectorAll('#portfolioTrack .portfolio-card'));
       const N             = cards.length;
-      const RADIUS        = 340;
+      const RADIUS        = window.innerWidth <= 640 ? 180 : 340;
       const HELIX_Y       = 32;
+      const VH            = window.innerHeight;
       let targetProgress  = 0;
       let currentProgress = 0;
       let lastFront       = -1;
 
       function progress() {
         const top    = workSection.offsetTop;
-        const travel = workSection.offsetHeight - window.innerHeight;
+        const travel = workSection.offsetHeight - VH;
         return Math.max(0, Math.min(1, (window.scrollY - top) / travel));
       }
 
