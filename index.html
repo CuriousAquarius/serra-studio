@@ -2065,9 +2065,9 @@
       let lastFront       = -1;
 
       function progress() {
-        const top    = workSection.offsetTop;
+        const rect   = workSection.getBoundingClientRect();
         const travel = workSection.offsetHeight - VH;
-        return Math.max(0, Math.min(1, (window.scrollY - top) / travel));
+        return Math.max(0, Math.min(1, -rect.top / travel));
       }
 
       function setInfo(idx) {
