@@ -2048,8 +2048,6 @@
     (function () {
       const workSection   = document.getElementById('work');
       const cards         = Array.from(document.querySelectorAll('#portfolioTrack .portfolio-card'));
-      const tagEl         = document.getElementById('portfolioTag');
-      const nameEl        = document.getElementById('portfolioName');
       const N             = cards.length;
       const RADIUS        = 340;
       const HELIX_Y       = 32;
@@ -2066,9 +2064,6 @@
       function setInfo(idx) {
         if (idx === lastFront) return;
         lastFront = idx;
-        const c = cards[idx];
-        tagEl.textContent  = c.querySelector('.portfolio-tag')  ? c.querySelector('.portfolio-tag').textContent  : '';
-        nameEl.textContent = c.querySelector('.portfolio-name') ? c.querySelector('.portfolio-name').textContent : '';
       }
 
       function tick() {
