@@ -391,16 +391,17 @@
       #work { display: none; }
       #portfolioMobile { display: block; padding: 72px 24px 64px; }
       .pm-header { text-align: center; margin-bottom: 32px; }
-      .pm-carousel { position: relative; overflow: hidden; border-radius: 16px; touch-action: pan-y; overscroll-behavior-x: contain; }
+      .pm-carousel { position: relative; overflow: hidden; border-radius: 16px; touch-action: none; overscroll-behavior-x: contain; }
       .pm-track {
         display: flex;
         width: 100%;
+        gap: 12px;
         transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         will-change: transform;
         user-select: none;
         -webkit-user-select: none;
       }
-      .pm-slide { flex: 0 0 100%; min-width: 0; }
+      .pm-slide { flex: 0 0 calc(100% - 24px); min-width: 0; }
       .pm-slide .portfolio-thumb {
         width: 100%;
         aspect-ratio: 16/10;
@@ -462,6 +463,13 @@
       .pm-dot.active {
         width: 18px;
         background: var(--gold);
+      }
+      .pm-counter {
+        text-align: center;
+        font-size: 11px;
+        color: var(--text-muted);
+        margin-top: 10px;
+        letter-spacing: 0.05em;
       }
     }
     .portfolio-card.is-front {
@@ -1855,6 +1863,7 @@
       </div>
     </div>
     <div class="pm-dots" id="pmDots"></div>
+    <div class="pm-counter" id="pmCounter">1 / 8</div>
   </section>
 
   <!-- DEMO CARD -->
@@ -2309,11 +2318,14 @@
       const carousel = document.querySelector('.pm-carousel');
       const track = document.getElementById('pmTrack');
       const dotsEl = document.getElementById('pmDots');
+      const counterEl = document.getElementById('pmCounter');
       if (!carousel || !track || !dotsEl) return;
       const slides = Array.from(track.children);
       let current = 0;
       let startX = 0;
+      let startY = 0;
       let isDragging = false;
+      let lockDir = null;
 
       slides.forEach((_, i) => {
         const d = document.createElement('div');
@@ -2322,29 +2334,43 @@
         dotsEl.appendChild(d);
       });
 
+      function slideStep() {
+        return slides[0].offsetWidth + 12;
+      }
+
       function goTo(idx) {
         current = Math.max(0, Math.min(slides.length - 1, idx));
         track.style.transition = 'transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)';
-        track.style.transform = `translateX(-${current * carousel.offsetWidth}px)`;
+        track.style.transform = `translateX(-${current * slideStep()}px)`;
         Array.from(dotsEl.children).forEach((d, i) => d.classList.toggle('active', i === current));
+        if (counterEl) counterEl.textContent = `${current + 1} / ${slides.length}`;
       }
 
       carousel.addEventListener('touchstart', e => {
         startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
         isDragging = true;
+        lockDir = null;
         track.style.transition = 'none';
       }, { passive: true });
 
       carousel.addEventListener('touchmove', e => {
         if (!isDragging) return;
-        const delta = e.touches[0].clientX - startX;
-        const baseOffset = -(current * carousel.offsetWidth);
-        track.style.transform = `translateX(${baseOffset + delta}px)`;
-      }, { passive: true });
+        const deltaX = e.touches[0].clientX - startX;
+        const deltaY = e.touches[0].clientY - startY;
+        if (!lockDir) {
+          lockDir = Math.abs(deltaX) > Math.abs(deltaY) ? 'h' : 'v';
+        }
+        if (lockDir === 'v') { isDragging = false; return; }
+        e.preventDefault();
+        const baseOffset = -(current * slideStep());
+        track.style.transform = `translateX(${baseOffset + deltaX}px)`;
+      }, { passive: false });
 
       carousel.addEventListener('touchend', e => {
         if (!isDragging) return;
         isDragging = false;
+        if (lockDir === 'v') return;
         const delta = e.changedTouches[0].clientX - startX;
         if (Math.abs(delta) > 50) {
           goTo(current + (delta < 0 ? 1 : -1));
@@ -2352,6 +2378,11 @@
           goTo(current);
         }
       }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        lockDir = null;
+        goTo(current);
+      });
     })();
   </script>
 </body>
