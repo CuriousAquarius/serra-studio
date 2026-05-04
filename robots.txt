@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /privacy.html
+Disallow: /tos.html
+
+Sitemap: https://serra-studio.vercel.app/sitemap.xml
