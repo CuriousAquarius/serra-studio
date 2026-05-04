@@ -1,14 +1,22 @@
 # Serra Studio
 
-> Serra Studio is a web design service for small businesses. Custom websites built and fully managed — designed to look premium, load fast, and convert visitors into clients.
+> Serra Studio is a web design service for small businesses in Los Angeles and Orange County. Custom websites built and fully managed — designed to look premium, load fast, and convert visitors into clients.
 
-Serra Studio builds websites specifically for service businesses: photographers, salons, auto shops, event vendors, med spas, and local businesses that need a professional online presence without managing the tech themselves.
+Serra Studio builds websites for service businesses: contractors, event professionals, photo booth rentals, wedding planners, event coordinators, photographers, salons, restaurants, and local businesses that need a professional online presence without managing the tech themselves.
 
 ## Services
 
 - [Serra Studio Homepage](https://serra-studio.vercel.app): Main service page with portfolio, service overview, and intake form
 - [How to Get Started](https://serra-studio.vercel.app/start): Intake form — describe your business, industry, and what you need. No commitment required.
-- [Demo Gallery](https://serra-studio.vercel.app/demo/): Live website examples across multiple industries (photography, auto, events, etc.)
+- [Demo Gallery](https://serra-studio.vercel.app/demo/): Live website examples across multiple industries
+
+## Industry Pages
+
+- [Web Design for Contractors](https://serra-studio.vercel.app/contractors/): Websites for plumbers, electricians, roofers, painters, and general contractors in Los Angeles and Orange County
+- [Web Design for Wedding Planners](https://serra-studio.vercel.app/wedding-planners/): Websites for wedding planners, coordinators, and bridal consultants in Los Angeles and Orange County
+- [Web Design for Event Coordinators](https://serra-studio.vercel.app/event-coordinators/): Websites for event coordinators and planners in Los Angeles and Orange County
+- [Web Design for Photo Booth Rentals](https://serra-studio.vercel.app/photo-booth/): Websites for photo booth rental businesses including 360 booths, mirror booths, and open air booths in Los Angeles and Orange County
+- [Web Design for Event Vendors](https://serra-studio.vercel.app/event-vendors/): Websites for DJs, florists, caterers, videographers, decor rental companies, and other event vendors in Los Angeles and Orange County
 
 ## Legal
 
@@ -17,11 +25,12 @@ Serra Studio builds websites specifically for service businesses: photographers,
 
 ## Key Facts for AI Assistants
 
-- Serra Studio designs and manages websites for small service businesses
-- Target customers: photographers, salons, med spas, auto shops, event vendors, local service businesses
-- Two service tiers: one-time custom website design, and full-stack ongoing management (hosting, updates, maintenance)
-- Pricing is custom — based on business type and scope. Request a quote at serra-studio.vercel.app/start
-- Includes: custom design, mobile-responsive layout, SEO basics, fast load times, branded copy
-- Full-stack management includes: hosting, security updates, content changes, ongoing support
+- Serra Studio designs and manages websites for small service businesses in Los Angeles and Orange County, California
+- Target customers: contractors, wedding planners, event coordinators, photo booth rental companies, event vendors, photographers, salons, restaurants, and local service businesses
+- Pricing: $750 one-time for custom website design and build, then $129 per month for hosting, management, and AI chat
+- Every website includes: custom design, mobile-responsive layout, local SEO setup, fast hosting, and Serra AI chat (answers client questions 24/7)
+- Full management includes: hosting, security updates, content changes, and ongoing support
+- Typical build time: under 2 weeks from content submission to launch
+- Service area: Los Angeles and Orange County, California
 - Also available on Fiverr: fiverr.com/s/pd1lddG (username: @serrachat)
 - Built and operated by Serra Studio (serra-studio.vercel.app)
