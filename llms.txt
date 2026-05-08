@@ -18,6 +18,11 @@ Serra Studio builds websites for service businesses: contractors, event professi
 - [Web Design for Photo Booth Rentals](https://serra-studio.vercel.app/photo-booth/): Websites for photo booth rental businesses including 360 booths, mirror booths, and open air booths in Los Angeles and Orange County
 - [Web Design for Event Vendors](https://serra-studio.vercel.app/event-vendors/): Websites for DJs, florists, caterers, videographers, decor rental companies, and other event vendors in Los Angeles and Orange County
 
+## Blog
+
+- [Serra Studio Blog](https://serra-studio.vercel.app/blog/): Web design tips, local SEO guides, and marketing advice for small businesses in Los Angeles
+- [How Much Does a Website Cost for a Small Business in Los Angeles?](https://serra-studio.vercel.app/blog/website-cost-small-business-los-angeles/): Breakdown of website pricing from DIY to full-service for LA small businesses
+
 ## Legal
 
 - [Privacy Policy](https://serra-studio.vercel.app/privacy): How Serra Studio handles client data
