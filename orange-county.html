@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Design for Contractors | Los Angeles & Orange County | Serra Studio</title>
-  <meta name="description" content="Custom websites for contractors in Los Angeles and Orange County. Get found on Google, look professional, and win more jobs. Starting at $750. AI chat included." />
-  <meta property="og:title" content="Web Design for Contractors | Serra Studio" />
-  <meta property="og:description" content="Custom websites for contractors in Los Angeles. Get found on Google, look professional, and win more jobs. Starting at $750." />
+  <title>Web Design for Orange County Small Businesses | Serra Studio</title>
+  <meta name="description" content="Custom websites for small businesses in Orange County. Anaheim, Irvine, Santa Ana, Fullerton, Newport Beach, and more. Get found on Google and convert visitors into clients. Starting at $750." />
+  <meta property="og:title" content="Web Design for Orange County Small Businesses | Serra Studio" />
+  <meta property="og:description" content="Custom websites for Orange County small businesses. Get found on Google and convert visitors into clients. Starting at $750." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://serra-studio.vercel.app/contractors/" />
+  <meta property="og:url" content="https://serra-studio.vercel.app/orange-county/" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230E4C8A'/><text x='8' y='24' font-size='22' font-family='Georgia,serif' fill='%23E8A020'>S</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,20 +17,20 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Web Design for Contractors",
-    "description": "Custom website design and management for contractors in Los Angeles and Orange County. Plumbers, electricians, roofers, painters, and general contractors.",
+    "name": "Web Design for Orange County Small Businesses",
+    "description": "Custom website design and management for small businesses in Orange County, California.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Serra Studio",
       "url": "https://serra-studio.vercel.app",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Los Angeles",
+        "addressLocality": "Orange County",
         "addressRegion": "CA",
         "addressCountry": "US"
       }
     },
-    "areaServed": ["Los Angeles", "Orange County", "Anaheim", "Fullerton", "Santa Ana", "Huntington Beach", "Garden Grove", "Southern California"],
+    "areaServed": ["Orange County", "Anaheim", "Irvine", "Santa Ana", "Fullerton", "Newport Beach", "Huntington Beach", "Garden Grove", "Costa Mesa", "Orange", "Yorba Linda", "Los Angeles", "Southern California"],
     "offers": {
       "@type": "Offer",
       "price": "750",
@@ -75,7 +75,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* NAV */
     .nav {
       position: sticky;
       top: 0;
@@ -122,7 +121,6 @@
     }
     .nav-cta:hover { background: var(--navy-mid) !important; transform: translateY(-1px); }
 
-    /* BUTTONS */
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -156,7 +154,6 @@
     }
     .btn-outline:hover { border-color: var(--navy); transform: translateY(-1px); }
 
-    /* SECTION SHARED */
     .section {
       max-width: 1200px;
       margin: 0 auto;
@@ -196,7 +193,6 @@
     .section-header.centered { text-align: center; }
     .section-header.centered .section-sub { margin: 0 auto; }
 
-    /* HERO */
     .hero {
       max-width: 1200px;
       margin: 0 auto;
@@ -227,10 +223,7 @@
       margin-bottom: 20px;
       max-width: 720px;
     }
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold);
-    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
     .hero-sub {
       font-size: 18px;
       color: var(--muted);
@@ -238,24 +231,20 @@
       max-width: 520px;
       margin-bottom: 36px;
     }
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    .hero-industries {
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-cities {
       margin-top: 48px;
       display: flex;
       align-items: center;
       gap: 12px;
       flex-wrap: wrap;
     }
-    .hero-industries-label {
+    .hero-cities-label {
       font-size: 13px;
       color: var(--muted);
       font-weight: 500;
     }
-    .industry-pill {
+    .city-pill {
       font-size: 13px;
       font-weight: 500;
       color: var(--navy);
@@ -265,10 +254,7 @@
       border-radius: 40px;
     }
 
-    /* PAIN POINTS */
-    .pain-section {
-      background: var(--bg2);
-    }
+    .pain-section { background: var(--bg2); }
     .pain-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -303,13 +289,8 @@
       margin-bottom: 10px;
       letter-spacing: -0.3px;
     }
-    .pain-card p {
-      font-size: 15px;
-      color: var(--muted);
-      line-height: 1.65;
-    }
+    .pain-card p { font-size: 15px; color: var(--muted); line-height: 1.65; }
 
-    /* WHAT YOU GET */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -336,22 +317,10 @@
       font-size: 20px;
       flex-shrink: 0;
     }
-    .feature-card h3 {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-    .feature-card p {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
+    .feature-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .feature-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
-    /* PRICING */
-    .pricing-section {
-      background: var(--bg2);
-    }
+    .pricing-section { background: var(--bg2); }
     .pricing-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -378,21 +347,9 @@
       color: var(--muted);
       letter-spacing: 0;
     }
-    .pricing-label {
-      font-size: 14px;
-      color: var(--muted);
-      margin-top: 8px;
-    }
-    .pricing-monthly {
-      margin-top: 16px;
-      font-size: 17px;
-      color: var(--text);
-      font-weight: 600;
-    }
-    .pricing-monthly em {
-      font-style: normal;
-      color: var(--gold);
-    }
+    .pricing-label { font-size: 14px; color: var(--muted); margin-top: 8px; }
+    .pricing-monthly { margin-top: 16px; font-size: 17px; color: var(--text); font-weight: 600; }
+    .pricing-monthly em { font-style: normal; color: var(--gold); }
     .pricing-includes {
       list-style: none;
       display: flex;
@@ -414,11 +371,14 @@
       margin-top: 1px;
     }
 
-    /* CTA STRIP */
-    .cta-strip {
-      background: var(--navy);
-      text-align: center;
-    }
+    .faq-section { background: var(--bg); }
+    .faq-list { display: flex; flex-direction: column; gap: 24px; max-width: 720px; }
+    .faq-item { border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+    .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .faq-item h3 { font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .faq-item p { font-size: 15px; color: var(--muted); line-height: 1.7; }
+
+    .cta-strip { background: var(--navy); text-align: center; }
     .cta-strip .section {
       display: flex;
       flex-direction: column;
@@ -433,13 +393,8 @@
       color: var(--white);
       letter-spacing: -0.8px;
     }
-    .cta-strip p {
-      font-size: 16px;
-      color: rgba(255,255,255,0.65);
-      max-width: 480px;
-    }
+    .cta-strip p { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 480px; }
 
-    /* FOOTER */
     .footer {
       border-top: 1px solid var(--border);
       padding: 28px 48px;
@@ -449,30 +404,13 @@
       max-width: 1200px;
       margin: 0 auto;
     }
-    .footer-logo {
-      font-family: 'DM Serif Display', serif;
-      font-size: 18px;
-      color: var(--navy);
-      text-decoration: none;
-    }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--navy); text-decoration: none; }
     .footer-logo span { color: var(--gold); }
-    .footer-copy {
-      font-size: 13px;
-      color: var(--muted);
-    }
-    .footer-links {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-    }
-    .footer-links a {
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration: none;
-    }
+    .footer-copy { font-size: 13px; color: var(--muted); }
+    .footer-links { display: flex; gap: 20px; list-style: none; }
+    .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
     .footer-links a:hover { color: var(--navy); }
 
-    /* RESPONSIVE */
     @media (max-width: 960px) {
       .nav { padding: 14px 24px; }
       .pain-grid { grid-template-columns: 1fr; }
@@ -504,21 +442,25 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-eyebrow">Built for Contractors</div>
-    <h1>Your competitors are winning jobs<br><em>because of their website.</em></h1>
-    <p class="hero-sub">Plumbers, electricians, roofers, painters, and general contractors in Los Angeles and Orange County are losing leads every day to competitors with better websites. We fix that.</p>
+    <div class="hero-eyebrow">Orange County Web Design</div>
+    <h1>Websites for Orange County small businesses that <em>actually get found.</em></h1>
+    <p class="hero-sub">Custom websites built and fully managed for service businesses across Orange County. No templates. No ongoing tech headaches. Starting at $750.</p>
     <div class="hero-actions">
       <a href="/start" class="btn-primary">Get a Free Quote &rarr;</a>
       <a href="/demo/" class="btn-outline">See How It Works</a>
     </div>
-    <div class="hero-industries">
-      <span class="hero-industries-label">We work with:</span>
-      <span class="industry-pill">Plumbers</span>
-      <span class="industry-pill">Electricians</span>
-      <span class="industry-pill">Roofers</span>
-      <span class="industry-pill">Painters</span>
-      <span class="industry-pill">General Contractors</span>
-      <span class="industry-pill">Handymen</span>
+    <div class="hero-cities">
+      <span class="hero-cities-label">Serving:</span>
+      <span class="city-pill">Anaheim</span>
+      <span class="city-pill">Irvine</span>
+      <span class="city-pill">Santa Ana</span>
+      <span class="city-pill">Fullerton</span>
+      <span class="city-pill">Newport Beach</span>
+      <span class="city-pill">Huntington Beach</span>
+      <span class="city-pill">Garden Grove</span>
+      <span class="city-pill">Costa Mesa</span>
+      <span class="city-pill">Orange</span>
+      <span class="city-pill">Yorba Linda</span>
     </div>
   </section>
 
@@ -527,24 +469,24 @@
     <div class="section">
       <div class="section-header centered">
         <div class="section-eyebrow">The Problem</div>
-        <h2 class="section-title">Most contractor websites are costing them jobs</h2>
-        <p class="section-sub">If a homeowner searches for a contractor in Los Angeles or Orange County and your site looks outdated, they call someone else. It's that simple.</p>
+        <h2 class="section-title">Most OC small business websites are losing customers</h2>
+        <p class="section-sub">If someone searches for your service in Orange County and your site looks outdated or doesn't show up at all, they hire someone else. Every day.</p>
       </div>
       <div class="pain-grid">
         <div class="pain-card">
           <div class="pain-icon">🔍</div>
-          <h3>Customers can't find you on Google</h3>
-          <p>If your business isn't showing up in local searches, you're invisible. Every search is a potential job going to a competitor.</p>
+          <h3>You're not showing up on Google</h3>
+          <p>Most OC small business sites aren't built for local search. No SEO setup, no Google indexing, no local keywords. You're invisible to the people looking for you right now.</p>
         </div>
         <div class="pain-card">
-          <div class="pain-icon">📋</div>
-          <h3>You look less legit than your competitors</h3>
-          <p>Homeowners check your website before they call. A poor first impression means they move on before you even know they were there.</p>
+          <div class="pain-icon">📱</div>
+          <h3>Your site doesn't work on mobile</h3>
+          <p>Over 70% of local searches happen on a phone. If your site is slow or hard to navigate on mobile, people leave in seconds and call a competitor instead.</p>
         </div>
         <div class="pain-card">
-          <div class="pain-icon">📞</div>
-          <h3>You're missing calls while you're on the job</h3>
-          <p>Your Serra AI chat answers questions, captures leads, and books callbacks 24/7. So you never lose a job because you were busy working.</p>
+          <div class="pain-icon">💸</div>
+          <h3>You were quoted $3,000+ by local agencies</h3>
+          <p>Orange County web agencies charge $3,000 to $8,000 for small business sites. Serra Studio delivers the same quality at $750 flat, fully managed from day one.</p>
         </div>
       </div>
     </div>
@@ -554,36 +496,77 @@
   <div class="section">
     <div class="section-header">
       <div class="section-eyebrow">What's Included</div>
-      <h2 class="section-title">Everything your contracting business needs online</h2>
-      <p class="section-sub">One flat price. No hidden fees. No tech headaches. We handle everything so you can focus on the job.</p>
+      <h2 class="section-title">Everything your Orange County business needs online</h2>
+      <p class="section-sub">One flat price. We design it, build it, launch it, and manage it. You focus on running your business.</p>
     </div>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">🌐</div>
         <div>
-          <h3>Custom Website Built for Your Trade</h3>
-          <p>Designed to convert visitors into calls. Your services, your photos, your area. Done in under 2 weeks.</p>
+          <h3>Custom Website, Not a Template</h3>
+          <p>Built specifically for your business, your services, and your city. Designed to convert visitors into calls and form fills from day one.</p>
         </div>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🤖</div>
         <div>
           <h3>AI Chat That Captures Leads 24/7</h3>
-          <p>Serra AI answers questions about your services, pricing, and availability while you're on the job site. Every lead saved.</p>
+          <p>Serra AI answers questions, captures contact details, and books callbacks while you sleep. Never miss a lead because you were busy.</p>
         </div>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📍</div>
         <div>
-          <h3>Google-Ready from Day One</h3>
-          <p>Your site is built with local SEO in mind. We set up your sitemap, meta tags, and Google indexing so you start getting found faster.</p>
+          <h3>Built to Rank in Orange County Searches</h3>
+          <p>Local SEO setup included. Your site gets submitted to Google and structured to show up when people in your city search for your service.</p>
         </div>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🛠️</div>
         <div>
-          <h3>Full Management Included</h3>
-          <p>Hosting, updates, security, and support are all covered. You never touch a thing. If something breaks, we fix it.</p>
+          <h3>Fully Managed — Zero Tech Headaches</h3>
+          <p>Hosting, security, updates, and support all included in the monthly fee. If something breaks or you need a change, we handle it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDUSTRIES -->
+  <div class="pain-section">
+    <div class="section">
+      <div class="section-header centered">
+        <div class="section-eyebrow">Industries We Serve</div>
+        <h2 class="section-title">Built for Orange County service businesses</h2>
+        <p class="section-sub">We specialize in service businesses that need to get found locally and convert visitors into clients.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔧</div>
+          <div>
+            <h3><a href="/contractors/" style="color:var(--navy);text-decoration:none;">Contractors</a></h3>
+            <p>Plumbers, electricians, roofers, painters, HVAC, and general contractors across Anaheim, Fullerton, and greater OC.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💍</div>
+          <div>
+            <h3><a href="/wedding-planners/" style="color:var(--navy);text-decoration:none;">Wedding Planners</a></h3>
+            <p>Wedding planners and coordinators in Newport Beach, Laguna Beach, Irvine, and throughout Orange County.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎉</div>
+          <div>
+            <h3><a href="/event-coordinators/" style="color:var(--navy);text-decoration:none;">Event Coordinators</a></h3>
+            <p>Event planners, corporate event coordinators, and quinceañera planners serving Orange County families and businesses.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📸</div>
+          <div>
+            <h3><a href="/event-vendors/" style="color:var(--navy);text-decoration:none;">Event Vendors</a></h3>
+            <p>DJs, florists, caterers, photo booth rentals, videographers, and other event vendors throughout OC.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -595,20 +578,20 @@
       <div class="section-header centered">
         <div class="section-eyebrow">Pricing</div>
         <h2 class="section-title">Simple pricing, no surprises</h2>
-        <p class="section-sub">One investment to get started. One flat monthly fee to keep everything running. That's it.</p>
+        <p class="section-sub">OC agencies charge $3,000 to $8,000 for the same result. Serra Studio: $750 flat to launch, $129/mo to keep it running.</p>
       </div>
       <div class="pricing-card">
         <div>
           <div class="pricing-amount">$750 <span>one-time</span></div>
           <div class="pricing-label">Custom design + build + launch</div>
           <div class="pricing-monthly">Then <em>$129/mo</em> for hosting, management + AI chat</div>
-          <div style="margin-top:14px;font-size:13px;color:var(--muted);">OC agencies charge $3,000+ for contractor sites. Same result. A fraction of the price.</div>
+          <div style="margin-top:14px;font-size:13px;color:var(--muted);">Not built — managed. We stay with you after launch.</div>
         </div>
         <ul class="pricing-includes">
-          <li>Custom website designed for your trade</li>
+          <li>Custom website designed for your business</li>
           <li>Serra AI chat included (answers leads 24/7)</li>
           <li>Fast hosting on professional infrastructure</li>
-          <li>Google-ready SEO setup from day one</li>
+          <li>Local SEO setup for Orange County searches</li>
           <li>Unlimited content updates</li>
           <li>Security monitoring and backups</li>
           <li>Direct support from a real person</li>
@@ -617,11 +600,43 @@
     </div>
   </div>
 
-  <!-- CTA STRIP -->
+  <!-- FAQ -->
+  <div class="faq-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-eyebrow">FAQ</div>
+        <h2 class="section-title">Common questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>How much does a website cost for a small business in Orange County?</h3>
+          <p>Serra Studio charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most OC web agencies charge $3,000 to $8,000 for a comparable site with no ongoing support included.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long does it take to build my website?</h3>
+          <p>Most websites are designed and launched within 2 weeks of receiving your content, logo, and preferences. Some businesses are live faster.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Will my website show up when people search in my city?</h3>
+          <p>Yes. Every site Serra Studio builds is submitted to Google and set up with local SEO for searches in your city and service area across Orange County.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do I need technical knowledge to manage my site?</h3>
+          <p>None at all. Serra Studio handles all hosting, updates, and maintenance. If you need content changed, just ask and we take care of it the same day.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What is the AI chat and how does it help?</h3>
+          <p>Serra AI is a chat assistant built into your website. It answers questions from potential clients, captures their contact information, and books callbacks 24/7, even while you're with other customers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
   <div class="cta-strip">
     <div class="section">
-      <h2>Ready to get more leads from your website?</h2>
-      <p>Tell us about your contracting business and we'll put together a free quote. No pressure, no commitment.</p>
+      <h2>Ready to get found in Orange County?</h2>
+      <p>Tell us about your business and we'll put together a free quote. No pressure, no commitment.</p>
       <a href="/start" class="btn-primary">Get Your Free Quote &rarr;</a>
     </div>
   </div>
