@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USANA Health Supplements Los Angeles &amp; Orange County | Independent Associate</title>
+  <meta name="description" content="USANA health supplements available through a local Independent Associate in Los Angeles and Orange County. Pharmaceutical-grade vitamins, weight management, and skincare. Order online, shipped to your door." />
+  <meta property="og:title" content="USANA Health Supplements Los Angeles &amp; Orange County" />
+  <meta property="og:description" content="Pharmaceutical-grade USANA vitamins, weight management, and skincare from a local Independent Associate in LA and Orange County." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://serra-studio.vercel.app/health/" />
+  <link rel="canonical" href="https://serra-studio.vercel.app/health/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230E4C8A'/><text x='8' y='24' font-size='22' font-family='Georgia,serif' fill='%23E8A020'>S</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "OneHealth USANA — Los Angeles Independent Associate",
+    "description": "USANA health supplements, vitamins, and nutritional products available through an Independent Associate serving Los Angeles and Orange County.",
+    "url": "https://onehealth.usana.com",
+    "areaServed": [
+      {"@type": "City", "name": "Los Angeles", "containedInPlace": {"@type": "State", "name": "California"}},
+      {"@type": "City", "name": "Orange County", "containedInPlace": {"@type": "State", "name": "California"}}
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "USANA Health Products",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "USANA Cellsentials"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "USANA RESET Program"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "USANA BiOmega"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "USANA Sense Skincare"}}
+      ]
+    }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:        #E8A020;
+      --gold-light:  #F5C45A;
+      --gold-dim:    rgba(232,160,32,0.10);
+      --gold-border: rgba(232,160,32,0.25);
+      --navy:        #0E4C8A;
+      --navy-mid:    #1A5FA0;
+      --bg:          #F5F0EB;
+      --bg2:         #EDE7DF;
+      --card:        #FDFAF7;
+      --border:      #E0D8CC;
+      --text:        #0E1F35;
+      --muted:       #5A6B7E;
+      --white:       #FFFFFF;
+      --radius-sm:   8px;
+      --radius-md:   16px;
+      --radius-lg:   24px;
+      --radius-xl:   36px;
+      --shadow-sm:   0 2px 12px rgba(14,76,138,0.07);
+      --shadow-md:   0 8px 32px rgba(14,76,138,0.10);
+      --shadow-lg:   0 24px 64px rgba(14,76,138,0.13);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 48px;
+      background: rgba(245,240,235,0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white) !important;
+      font-weight: 700 !important;
+      padding: 9px 22px;
+      border-radius: var(--radius-sm);
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .nav-cta:hover { background: var(--navy-mid) !important; transform: translateY(-1px); }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 30px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,160,32,0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,160,32,0.45); }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      border: 1.5px solid var(--border);
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .btn-outline:hover { border-color: var(--navy); transform: translateY(-1px); }
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 48px;
+    }
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      padding: 6px 14px;
+      border-radius: 40px;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(30px, 3.5vw, 48px);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.8px;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 580px;
+    }
+    .section-header { margin-bottom: 56px; }
+    .section-header.centered { text-align: center; }
+    .section-header.centered .section-sub { margin: 0 auto; }
+
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 96px 48px 80px;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      padding: 6px 14px;
+      border-radius: 40px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(38px, 4.5vw, 62px);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      color: var(--navy);
+      margin-bottom: 20px;
+      max-width: 720px;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-tags {
+      margin-top: 48px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .hero-tags-label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .tag-pill {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--navy);
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 5px 14px;
+      border-radius: 40px;
+    }
+
+    .pain-section { background: var(--bg2); }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .pain-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pain-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .pain-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .pain-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
+    }
+    .pain-card p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 28px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--navy);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .feature-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .feature-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .feature-card a { color: var(--navy); text-decoration: none; }
+    .feature-card a:hover { color: var(--gold); }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .product-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .product-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--navy);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .product-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+    .product-card p { font-size: 15px; color: var(--muted); line-height: 1.65; margin-bottom: 20px; }
+    .product-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .product-link:hover { color: var(--navy); }
+
+    .faq-section { background: var(--bg); }
+    .faq-list { display: flex; flex-direction: column; gap: 24px; max-width: 720px; }
+    .faq-item { border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+    .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .faq-item h3 { font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .faq-item p { font-size: 15px; color: var(--muted); line-height: 1.7; }
+
+    .cta-strip { background: var(--navy); text-align: center; }
+    .cta-strip .section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      padding: 80px 48px;
+    }
+    .cta-strip h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: -0.8px;
+    }
+    .cta-strip p { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 480px; }
+
+    .disclaimer {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      padding: 16px 48px;
+      border-top: 1px solid var(--border);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--navy); text-decoration: none; }
+    .footer-logo span { color: var(--gold); }
+    .footer-copy { font-size: 13px; color: var(--muted); }
+    .footer-links { display: flex; gap: 20px; list-style: none; }
+    .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--navy); }
+
+    @media (max-width: 960px) {
+      .nav { padding: 14px 24px; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr; }
+      .hero { padding: 64px 24px 56px; }
+      .section { padding: 64px 24px; }
+      .footer { flex-direction: column; gap: 16px; text-align: center; padding: 28px 24px; }
+      .disclaimer { padding: 16px 24px; }
+    }
+    @media (max-width: 640px) {
+      .nav-links li:not(:last-child) { display: none; }
+      .hero h1 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo"><span>S</span>erra Studio</a>
+    <ul class="nav-links">
+      <li><a href="/#work">Work</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="https://onehealth.usana.com" target="_blank" rel="noopener" class="nav-cta">Shop USANA</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">USANA Independent Associate &mdash; Los Angeles &amp; Orange County</div>
+    <h1>Pharmaceutical-grade supplements that <em>actually work.</em></h1>
+    <p class="hero-sub">USANA health products available through a local associate in Los Angeles and Orange County. Vitamins, weight management, omega-3, and skincare. Shipped directly to your door.</p>
+    <div class="hero-actions">
+      <a href="https://onehealth.usana.com" target="_blank" rel="noopener" class="btn-primary">Shop Now &rarr;</a>
+      <a href="#products" class="btn-outline">Browse Products</a>
+    </div>
+    <div class="hero-tags">
+      <span class="hero-tags-label">Products:</span>
+      <span class="tag-pill">Vitamins &amp; Minerals</span>
+      <span class="tag-pill">Weight Management</span>
+      <span class="tag-pill">Omega-3</span>
+      <span class="tag-pill">Skincare</span>
+      <span class="tag-pill">Sports Nutrition</span>
+    </div>
+  </section>
+
+  <!-- WHY USANA -->
+  <div class="pain-section">
+    <div class="section">
+      <div class="section-header centered">
+        <div class="section-eyebrow">Why It Matters</div>
+        <h2 class="section-title">Most supplements are not what they claim to be</h2>
+        <p class="section-sub">The supplement aisle looks full of options, but most products are not independently tested or manufactured to pharmaceutical standards. USANA is different.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">🏭</div>
+          <h3>Generic brands cut corners on quality</h3>
+          <p>Most store supplements are produced in facilities with minimal quality oversight. Fillers, poor bioavailability, and inaccurate label claims are common in unverified products.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">🔬</div>
+          <h3>Not all vitamins are absorbed the same way</h3>
+          <p>The form a nutrient comes in determines how much your body actually uses. Cheap tablets often pass through without full absorption. USANA formulates for optimal bioavailability.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">🏅</div>
+          <h3>Athletes need NSF-certified products</h3>
+          <p>If you compete or drug test, you need supplements certified to contain no banned substances. USANA is NSF Certified for Sport, trusted by hundreds of professional athletes worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY USANA FEATURES -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">USANA Quality</div>
+      <h2 class="section-title">The standard other supplement companies do not meet</h2>
+      <p class="section-sub">USANA Health Sciences has been manufacturing nutritional products since 1992 with a pharmaceutical-grade approach to quality and testing.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🏭</div>
+        <div>
+          <h3>Pharmaceutical-Grade Manufacturing</h3>
+          <p>USANA's production facility meets the same standards as pharmaceutical drug manufacturers. Every batch is tested for potency, purity, and safety before it ships.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏅</div>
+        <div>
+          <h3>NSF Certified for Sport</h3>
+          <p>Every USANA product is tested for over 270 banned substances. Safe for professional athletes and anyone subject to drug testing. No guessing, no risk.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔬</div>
+        <div>
+          <h3>True Label Guarantee</h3>
+          <p>What's on the label is in the bottle. USANA guarantees potency and purity to the expiration date. Independent audits back this up every year.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌱</div>
+        <div>
+          <h3>Science-Based Formulations</h3>
+          <p>USANA has an in-house team of PhDs and researchers who continuously refine formulations based on the latest nutritional science. Not just reformulated generic blends.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div id="products" class="pain-section">
+    <div class="section">
+      <div class="section-header centered">
+        <div class="section-eyebrow">Product Lines</div>
+        <h2 class="section-title">USANA products for every health goal</h2>
+        <p class="section-sub">From core nutritional support to weight management and skincare, USANA covers the full spectrum of personal wellness.</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-icon">💊</div>
+          <h3>Cellsentials</h3>
+          <p>USANA's flagship vitamin and mineral system. Core Minerals and Vita Antioxidant work together to provide a complete foundation of essential nutrients your body uses every day. The most advanced multivitamin system USANA makes.</p>
+          <a href="/health/cellsentials/" class="product-link">Learn more &rarr;</a>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">⚖️</div>
+          <h3>RESET Program</h3>
+          <p>USANA's five-day jump-start for healthy weight management. Meal replacement shakes, snack bars, and supplements designed to help you build better nutrition habits and start seeing results fast.</p>
+          <a href="/health/reset/" class="product-link">Learn more &rarr;</a>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">🐟</div>
+          <h3>BiOmega</h3>
+          <p>High-quality omega-3 fish oil concentrate with EPA and DHA. Lemon-flavored to eliminate the fish taste. Supports heart health, brain function, and inflammation management.</p>
+          <a href="https://onehealth.usana.com" target="_blank" rel="noopener" class="product-link">Shop now &rarr;</a>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">✨</div>
+          <h3>Sense Skincare</h3>
+          <p>USANA's skincare line developed with the same nutritional science behind their supplements. Gentle, effective formulations for daily cleansing, moisturizing, and protection. No harsh chemicals.</p>
+          <a href="https://onehealth.usana.com" target="_blank" rel="noopener" class="product-link">Shop now &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-eyebrow">FAQ</div>
+        <h2 class="section-title">Common questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>What is USANA?</h3>
+          <p>USANA Health Sciences is a publicly traded nutritional products company founded in 1992. They manufacture vitamins, supplements, weight management products, and skincare in their own pharmaceutical-grade facility in Salt Lake City, Utah. Products are sold through a network of Independent Associates worldwide.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What makes USANA different from drugstore vitamins?</h3>
+          <p>USANA manufactures to pharmaceutical standards, not supplement standards. Every product is NSF Certified for Sport, meaning it is independently tested for banned substances and label accuracy. Most grocery store supplements are not held to this level of testing or quality control.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I order USANA products?</h3>
+          <p>You can order directly through my personal USANA store at onehealth.usana.com. Products ship straight from USANA to your door anywhere in the US. No minimum order required.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is USANA safe for professional athletes?</h3>
+          <p>Yes. USANA is NSF Certified for Sport, which means every product is tested for over 270 substances banned by major sports organizations. Hundreds of professional and Olympic athletes use USANA products and endorse them publicly.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What is the RESET program?</h3>
+          <p>RESET is USANA's five-day transformation kit designed to help you reset your nutrition habits. It includes USANA's Nutrimeal meal replacement shakes, snack bars, and supplements. It's a structured 1,200-calorie-per-day program to help you start building healthier eating patterns.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What is an Independent Associate?</h3>
+          <p>An Independent Associate is an authorized USANA distributor. I am personally enrolled with USANA to share their products with people in Los Angeles and Orange County. When you order through my store at onehealth.usana.com, you're buying genuine USANA products at the standard retail price, shipped directly from USANA.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <div class="section">
+      <h2>Ready to try USANA?</h2>
+      <p>Browse the full product catalog and order online. Ships anywhere in the US directly from USANA.</p>
+      <a href="https://onehealth.usana.com" target="_blank" rel="noopener" class="btn-primary">Shop the Full Catalog &rarr;</a>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    Independent USANA Associate. This is not an official USANA website. All products sold through onehealth.usana.com at standard USANA retail prices.
+  </div>
+
+  <footer>
+    <div class="footer">
+      <a href="/" class="footer-logo"><span>S</span>erra Studio</a>
+      <span class="footer-copy">&copy; 2026 OneHealth. Independent USANA Associate serving Los Angeles and Orange County.</span>
+      <ul class="footer-links">
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/tos">Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

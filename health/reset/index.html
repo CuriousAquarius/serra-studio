@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USANA RESET Weight Management Program | Los Angeles &amp; Orange County</title>
+  <meta name="description" content="USANA RESET: 5-day weight management jump-start program with meal replacement shakes, snack bars, and supplements. Available through a local Independent Associate in LA and Orange County. Order online." />
+  <meta property="og:title" content="USANA RESET Weight Management Program | Los Angeles &amp; Orange County" />
+  <meta property="og:description" content="USANA's 5-day RESET program for healthy weight management. Meal replacements, snack bars, and supplements. Local Independent Associate in LA and Orange County." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://serra-studio.vercel.app/health/reset/" />
+  <link rel="canonical" href="https://serra-studio.vercel.app/health/reset/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230E4C8A'/><text x='8' y='24' font-size='22' font-family='Georgia,serif' fill='%23E8A020'>S</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "USANA RESET Program",
+    "description": "USANA's 5-day weight management jump-start program. Includes Nutrimeal meal replacement shakes, snack bars, and nutritional supplements. Designed to build healthy eating habits.",
+    "brand": {
+      "@type": "Brand",
+      "name": "USANA Health Sciences"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "url": "https://onehealth.usana.com",
+      "seller": {
+        "@type": "Person",
+        "name": "USANA Independent Associate",
+        "areaServed": ["Los Angeles, CA", "Orange County, CA"]
+      }
+    }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:        #E8A020;
+      --gold-light:  #F5C45A;
+      --gold-dim:    rgba(232,160,32,0.10);
+      --gold-border: rgba(232,160,32,0.25);
+      --navy:        #0E4C8A;
+      --navy-mid:    #1A5FA0;
+      --bg:          #F5F0EB;
+      --bg2:         #EDE7DF;
+      --card:        #FDFAF7;
+      --border:      #E0D8CC;
+      --text:        #0E1F35;
+      --muted:       #5A6B7E;
+      --white:       #FFFFFF;
+      --radius-sm:   8px;
+      --radius-md:   16px;
+      --radius-lg:   24px;
+      --radius-xl:   36px;
+      --shadow-sm:   0 2px 12px rgba(14,76,138,0.07);
+      --shadow-md:   0 8px 32px rgba(14,76,138,0.10);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .nav {
+      position: sticky; top: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 48px;
+      background: rgba(245,240,235,0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--navy); text-decoration: none; letter-spacing: -0.5px; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta { background: var(--navy); color: var(--white) !important; font-weight: 700 !important; padding: 9px 22px; border-radius: var(--radius-sm); transition: background 0.2s, transform 0.15s !important; }
+    .nav-cta:hover { background: var(--navy-mid) !important; transform: translateY(-1px); }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: var(--navy);
+      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700;
+      padding: 14px 30px; border-radius: var(--radius-md);
+      text-decoration: none; box-shadow: 0 4px 20px rgba(232,160,32,0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,160,32,0.45); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--navy);
+      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600;
+      padding: 14px 28px; border-radius: var(--radius-md);
+      border: 1.5px solid var(--border); text-decoration: none;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .btn-outline:hover { border-color: var(--navy); transform: translateY(-1px); }
+
+    .section { max-width: 1200px; margin: 0 auto; padding: 80px 48px; }
+    .section-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 600; color: var(--gold);
+      text-transform: uppercase; letter-spacing: 1.8px;
+      background: var(--gold-dim); border: 1px solid var(--gold-border);
+      padding: 6px 14px; border-radius: 40px; margin-bottom: 20px;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(30px, 3.5vw, 48px); font-weight: 400;
+      line-height: 1.1; letter-spacing: -0.8px;
+      color: var(--navy); margin-bottom: 16px;
+    }
+    .section-sub { font-size: 17px; color: var(--muted); line-height: 1.7; max-width: 580px; }
+    .section-header { margin-bottom: 56px; }
+    .section-header.centered { text-align: center; }
+    .section-header.centered .section-sub { margin: 0 auto; }
+
+    .hero { max-width: 1200px; margin: 0 auto; padding: 96px 48px 80px; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 600; color: var(--gold);
+      text-transform: uppercase; letter-spacing: 1.8px;
+      background: var(--gold-dim); border: 1px solid var(--gold-border);
+      padding: 6px 14px; border-radius: 40px; margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(38px, 4.5vw, 62px); font-weight: 400;
+      line-height: 1.08; letter-spacing: -1.5px;
+      color: var(--navy); margin-bottom: 20px; max-width: 720px;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: 18px; color: var(--muted); line-height: 1.7; max-width: 520px; margin-bottom: 36px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .pain-section { background: var(--bg2); }
+    .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .pain-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 32px 28px;
+      box-shadow: var(--shadow-sm); transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pain-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .pain-icon {
+      width: 48px; height: 48px; background: var(--gold-dim);
+      border: 1px solid var(--gold-border); border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; margin-bottom: 20px;
+    }
+    .pain-card h3 { font-family: 'DM Serif Display', serif; font-size: 20px; font-weight: 400; color: var(--navy); margin-bottom: 10px; letter-spacing: -0.3px; }
+    .pain-card p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+
+    .steps-section { background: var(--bg); }
+    .steps-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    .step-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px 20px;
+      box-shadow: var(--shadow-sm); text-align: center;
+    }
+    .step-number {
+      width: 40px; height: 40px; background: var(--navy);
+      border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-size: 16px; font-weight: 700;
+      color: var(--white); margin: 0 auto 16px;
+    }
+    .step-card h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .step-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+    .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .feature-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px 28px;
+      box-shadow: var(--shadow-sm); display: flex; gap: 20px; align-items: flex-start;
+    }
+    .feature-icon {
+      width: 44px; height: 44px; background: var(--navy);
+      border-radius: var(--radius-md); display: flex; align-items: center;
+      justify-content: center; font-size: 20px; flex-shrink: 0;
+    }
+    .feature-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .feature-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .faq-section { background: var(--bg2); }
+    .faq-list { display: flex; flex-direction: column; gap: 24px; max-width: 720px; }
+    .faq-item { border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+    .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .faq-item h3 { font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .faq-item p { font-size: 15px; color: var(--muted); line-height: 1.7; }
+
+    .cta-strip { background: var(--navy); text-align: center; }
+    .cta-strip .section { display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 80px 48px; }
+    .cta-strip h2 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3vw, 42px); font-weight: 400; color: var(--white); letter-spacing: -0.8px; }
+    .cta-strip p { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 480px; }
+
+    .breadcrumb { padding: 16px 48px; max-width: 1200px; margin: 0 auto; font-size: 13px; color: var(--muted); }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--navy); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .disclaimer { font-size: 12px; color: var(--muted); text-align: center; padding: 16px 48px; border-top: 1px solid var(--border); max-width: 1200px; margin: 0 auto; }
+
+    .footer { border-top: 1px solid var(--border); padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--navy); text-decoration: none; }
+    .footer-logo span { color: var(--gold); }
+    .footer-copy { font-size: 13px; color: var(--muted); }
+    .footer-links { display: flex; gap: 20px; list-style: none; }
+    .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--navy); }
+
+    @media (max-width: 960px) {
+      .nav { padding: 14px 24px; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .hero { padding: 64px 24px 56px; }
+      .section { padding: 64px 24px; }
+      .breadcrumb { padding: 16px 24px; }
+      .footer { flex-direction: column; gap: 16px; text-align: center; padding: 28px 24px; }
+      .disclaimer { padding: 16px 24px; }
+    }
+    @media (max-width: 640px) {
+      .nav-links li:not(:last-child) { display: none; }
+      .hero h1 { font-size: 36px; }
+      .steps-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo"><span>S</span>erra Studio</a>
+    <ul class="nav-links">
+      <li><a href="/health/">Health Products</a></li>
+      <li><a href="/health/cellsentials/">Cellsentials</a></li>
+      <li><a href="https://onehealth.usana.com" target="_blank" rel="noopener" class="nav-cta">Shop USANA</a></li>
+    </ul>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="/health/">USANA Health Products</a>
+    <span>&rsaquo;</span>
+    RESET Program
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">USANA RESET &mdash; 5-Day Weight Management Program</div>
+    <h1>Five days to <em>reset your relationship with food.</em></h1>
+    <p class="hero-sub">USANA RESET is a structured five-day program built around meal replacement shakes, snack bars, and targeted supplements. It gives your body a clean nutritional foundation to build from.</p>
+    <div class="hero-actions">
+      <a href="https://onehealth.usana.com" target="_blank" rel="noopener" class="btn-primary">Order RESET &rarr;</a>
+      <a href="/health/" class="btn-outline">View All Products</a>
+    </div>
+  </section>
+
+  <!-- WHY RESET -->
+  <div class="pain-section">
+    <div class="section">
+      <div class="section-header centered">
+        <div class="section-eyebrow">Why RESET Works</div>
+        <h2 class="section-title">Most diets fail before they start</h2>
+        <p class="section-sub">Vague plans lead to vague results. RESET removes the guesswork by giving you exactly what to eat and when for five days straight.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">🎯</div>
+          <h3>No guessing what to eat</h3>
+          <p>Every meal and snack is planned. You get Nutrimeal shakes for breakfast and lunch, a healthy dinner, snack bars for between-meal hunger, and supplements timed throughout the day.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">🔄</div>
+          <h3>Breaks the sugar craving cycle</h3>
+          <p>Five days of low-glycemic eating is enough to start reducing the blood sugar spikes and crashes that drive cravings. RESET's low-GI Nutrimeal shakes are designed specifically for this.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">📐</div>
+          <h3>Controlled calories without counting</h3>
+          <p>The full RESET program is structured to approximately 1,200 calories per day without requiring you to log anything. The kit tells you exactly what to consume at each meal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE 5 DAYS -->
+  <div class="steps-section">
+    <div class="section">
+      <div class="section-header centered">
+        <div class="section-eyebrow">The Program</div>
+        <h2 class="section-title">What you do each day</h2>
+        <p class="section-sub">RESET is the same structured plan repeated for five days. Simple enough to follow without thinking about it.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h4>Morning</h4>
+          <p>Nutrimeal shake + Cellsentials vitamins. Low-GI, high-protein breakfast that keeps you full until lunch.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h4>Mid-Morning</h4>
+          <p>USANA Snack Bar or fresh fruit. Keeps blood sugar stable and prevents the energy crash before lunch.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h4>Lunch</h4>
+          <p>Second Nutrimeal shake. Quick, portable, and nutritionally complete. No cooking or prep required.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h4>Afternoon</h4>
+          <p>Second snack bar. Bridges the gap to dinner so you arrive at your evening meal without being starved.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <h4>Dinner</h4>
+          <p>A real, balanced meal of your choosing. Lean protein, vegetables, and whole grains. No shake required.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT IS IN THE KIT -->
+  <div class="pain-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-eyebrow">What's in the Kit</div>
+        <h2 class="section-title">Everything you need for five days</h2>
+        <p class="section-sub">RESET ships as a complete kit. No separate purchases, no trips to the store for extra items.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🥤</div>
+          <div>
+            <h3>Nutrimeal Shakes</h3>
+            <p>10 individual serving packets, enough for two shakes per day for five days. Low-glycemic, high-protein, and available in Dutch Chocolate and French Vanilla flavors. Mix with water or milk.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🍫</div>
+          <div>
+            <h3>USANA Snack Bars</h3>
+            <p>Peanut butter crunch and chocolate fusion bars. Low-GI, balanced in protein and fiber. One per day for each snack. Designed to keep you full without the sugar spike of regular snack bars.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💊</div>
+          <div>
+            <h3>Cellsentials Vitamins</h3>
+            <p>A five-day supply of USANA Cellsentials included with the kit. Core nutrition support during the program so your body has what it needs while you reduce overall calorie intake.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📖</div>
+          <div>
+            <h3>Program Guide</h3>
+            <p>A detailed meal plan and guide walks you through exactly what to eat, when to take supplements, and how to prepare for the five days. No prior experience with programs or tracking required.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-eyebrow">FAQ</div>
+        <h2 class="section-title">RESET questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>Is RESET only five days?</h3>
+          <p>The RESET kit is a structured five-day jump-start. After completing it, many people continue using Nutrimeal shakes as one or two meals per day as part of an ongoing weight management plan. The five days are a starting point, not the whole program.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How much weight can I lose on RESET?</h3>
+          <p>Results vary by individual. RESET is designed to help you build better eating habits and create a calorie deficit over five days, not to promise a specific number on the scale. People use it as a reset point before adopting a longer-term healthy eating plan.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I do RESET while exercising?</h3>
+          <p>Light exercise is fine during RESET. High-intensity training on 1,200 calories per day is not recommended. If you are training hard, talk to your doctor before starting any low-calorie program.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Are the shakes filling enough?</h3>
+          <p>Nutrimeal is formulated to be high in protein and fiber with a low glycemic index, which means it digests slowly and keeps you feeling full longer than a typical protein shake or meal replacement. Most people find the combination of shakes and snack bars manages hunger well.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I order RESET in Los Angeles or Orange County?</h3>
+          <p>Order through my personal USANA store at onehealth.usana.com. Ships directly from USANA to your home anywhere in the US. No minimum order. Preferred customer pricing available when you set up a free account.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <div class="section">
+      <h2>Ready to start RESET?</h2>
+      <p>Order the full kit through my USANA store. Ships to Los Angeles, Orange County, and anywhere in the US.</p>
+      <a href="https://onehealth.usana.com" target="_blank" rel="noopener" class="btn-primary">Order RESET &rarr;</a>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    Independent USANA Associate. This is not an official USANA website. All products sold through onehealth.usana.com at standard USANA retail prices.
+  </div>
+
+  <footer>
+    <div class="footer">
+      <a href="/" class="footer-logo"><span>S</span>erra Studio</a>
+      <span class="footer-copy">&copy; 2026 OneHealth. Independent USANA Associate serving Los Angeles and Orange County.</span>
+      <ul class="footer-links">
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/tos">Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

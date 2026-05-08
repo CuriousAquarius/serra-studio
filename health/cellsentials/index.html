@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USANA Cellsentials Vitamins | Los Angeles &amp; Orange County</title>
+  <meta name="description" content="USANA Cellsentials: pharmaceutical-grade vitamin and mineral system available through a local Independent Associate in Los Angeles and Orange County. NSF Certified for Sport. Order online, ships to your door." />
+  <meta property="og:title" content="USANA Cellsentials Vitamins | Los Angeles &amp; Orange County" />
+  <meta property="og:description" content="USANA's flagship vitamin and mineral system. NSF Certified for Sport. Available through a local Independent Associate in LA and Orange County." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://serra-studio.vercel.app/health/cellsentials/" />
+  <link rel="canonical" href="https://serra-studio.vercel.app/health/cellsentials/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230E4C8A'/><text x='8' y='24' font-size='22' font-family='Georgia,serif' fill='%23E8A020'>S</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "USANA Cellsentials",
+    "description": "USANA's flagship vitamin and mineral supplement system. Core Minerals and Vita Antioxidant provide a complete nutritional foundation. NSF Certified for Sport.",
+    "brand": {
+      "@type": "Brand",
+      "name": "USANA Health Sciences"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "url": "https://onehealth.usana.com",
+      "seller": {
+        "@type": "Person",
+        "name": "USANA Independent Associate",
+        "areaServed": ["Los Angeles, CA", "Orange County, CA"]
+      }
+    },
+    "additionalProperty": [
+      {"@type": "PropertyValue", "name": "Certification", "value": "NSF Certified for Sport"},
+      {"@type": "PropertyValue", "name": "Manufacturing Standard", "value": "Pharmaceutical-Grade"}
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:        #E8A020;
+      --gold-light:  #F5C45A;
+      --gold-dim:    rgba(232,160,32,0.10);
+      --gold-border: rgba(232,160,32,0.25);
+      --navy:        #0E4C8A;
+      --navy-mid:    #1A5FA0;
+      --bg:          #F5F0EB;
+      --bg2:         #EDE7DF;
+      --card:        #FDFAF7;
+      --border:      #E0D8CC;
+      --text:        #0E1F35;
+      --muted:       #5A6B7E;
+      --white:       #FFFFFF;
+      --radius-sm:   8px;
+      --radius-md:   16px;
+      --radius-lg:   24px;
+      --radius-xl:   36px;
+      --shadow-sm:   0 2px 12px rgba(14,76,138,0.07);
+      --shadow-md:   0 8px 32px rgba(14,76,138,0.10);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .nav {
+      position: sticky; top: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 48px;
+      background: rgba(245,240,235,0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--navy); text-decoration: none; letter-spacing: -0.5px; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta { background: var(--navy); color: var(--white) !important; font-weight: 700 !important; padding: 9px 22px; border-radius: var(--radius-sm); transition: background 0.2s, transform 0.15s !important; }
+    .nav-cta:hover { background: var(--navy-mid) !important; transform: translateY(-1px); }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: var(--navy);
+      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700;
+      padding: 14px 30px; border-radius: var(--radius-md);
+      text-decoration: none; box-shadow: 0 4px 20px rgba(232,160,32,0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,160,32,0.45); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--navy);
+      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600;
+      padding: 14px 28px; border-radius: var(--radius-md);
+      border: 1.5px solid var(--border); text-decoration: none;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .btn-outline:hover { border-color: var(--navy); transform: translateY(-1px); }
+
+    .section { max-width: 1200px; margin: 0 auto; padding: 80px 48px; }
+    .section-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 600; color: var(--gold);
+      text-transform: uppercase; letter-spacing: 1.8px;
+      background: var(--gold-dim); border: 1px solid var(--gold-border);
+      padding: 6px 14px; border-radius: 40px; margin-bottom: 20px;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(30px, 3.5vw, 48px); font-weight: 400;
+      line-height: 1.1; letter-spacing: -0.8px;
+      color: var(--navy); margin-bottom: 16px;
+    }
+    .section-sub { font-size: 17px; color: var(--muted); line-height: 1.7; max-width: 580px; }
+    .section-header { margin-bottom: 56px; }
+    .section-header.centered { text-align: center; }
+    .section-header.centered .section-sub { margin: 0 auto; }
+
+    .hero { max-width: 1200px; margin: 0 auto; padding: 96px 48px 80px; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 600; color: var(--gold);
+      text-transform: uppercase; letter-spacing: 1.8px;
+      background: var(--gold-dim); border: 1px solid var(--gold-border);
+      padding: 6px 14px; border-radius: 40px; margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(38px, 4.5vw, 62px); font-weight: 400;
+      line-height: 1.08; letter-spacing: -1.5px;
+      color: var(--navy); margin-bottom: 20px; max-width: 720px;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: 18px; color: var(--muted); line-height: 1.7; max-width: 520px; margin-bottom: 36px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .pain-section { background: var(--bg2); }
+    .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .feature-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px 28px;
+      box-shadow: var(--shadow-sm); display: flex; gap: 20px; align-items: flex-start;
+    }
+    .feature-icon {
+      width: 44px; height: 44px; background: var(--navy);
+      border-radius: var(--radius-md); display: flex; align-items: center;
+      justify-content: center; font-size: 20px; flex-shrink: 0;
+    }
+    .feature-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .feature-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .what-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .what-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .what-icon {
+      width: 48px; height: 48px; background: var(--gold-dim);
+      border: 1px solid var(--gold-border); border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; margin-bottom: 20px;
+    }
+    .what-card h3 { font-family: 'DM Serif Display', serif; font-size: 20px; font-weight: 400; color: var(--navy); margin-bottom: 10px; letter-spacing: -0.3px; }
+    .what-card p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+
+    .includes-section { background: var(--bg2); }
+    .includes-list { display: flex; flex-direction: column; gap: 0; max-width: 680px; }
+    .includes-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 20px 0; border-bottom: 1px solid var(--border);
+    }
+    .includes-item:last-child { border-bottom: none; }
+    .includes-check { color: var(--gold); font-weight: 700; font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+    .includes-item h4 { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .includes-item p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .faq-section { background: var(--bg); }
+    .faq-list { display: flex; flex-direction: column; gap: 24px; max-width: 720px; }
+    .faq-item { border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+    .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .faq-item h3 { font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .faq-item p { font-size: 15px; color: var(--muted); line-height: 1.7; }
+
+    .cta-strip { background: var(--navy); text-align: center; }
+    .cta-strip .section { display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 80px 48px; }
+    .cta-strip h2 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3vw, 42px); font-weight: 400; color: var(--white); letter-spacing: -0.8px; }
+    .cta-strip p { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 480px; }
+
+    .breadcrumb { padding: 16px 48px; max-width: 1200px; margin: 0 auto; font-size: 13px; color: var(--muted); }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--navy); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .disclaimer { font-size: 12px; color: var(--muted); text-align: center; padding: 16px 48px; border-top: 1px solid var(--border); max-width: 1200px; margin: 0 auto; }
+
+    .footer { border-top: 1px solid var(--border); padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--navy); text-decoration: none; }
+    .footer-logo span { color: var(--gold); }
+    .footer-copy { font-size: 13px; color: var(--muted); }
+    .footer-links { display: flex; gap: 20px; list-style: none; }
+    .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--navy); }
+
+    @media (max-width: 960px) {
+      .nav { padding: 14px 24px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .what-grid { grid-template-columns: 1fr; }
+      .hero { padding: 64px 24px 56px; }
+      .section { padding: 64px 24px; }
+      .breadcrumb { padding: 16px 24px; }
+      .footer { flex-direction: column; gap: 16px; text-align: center; padding: 28px 24px; }
+      .disclaimer { padding: 16px 24px; }
+    }
+    @media (max-width: 640px) {
+      .nav-links li:not(:last-child) { display: none; }
+      .hero h1 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo"><span>S</span>erra Studio</a>
+    <ul class="nav-links">
+      <li><a href="/health/">Health Products</a></li>
+      <li><a href="/health/reset/">RESET Program</a></li>
+      <li><a href="https://onehealth.usana.com" target="_blank" rel="noopener" class="nav-cta">Shop USANA</a></li>
+    </ul>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="/health/">USANA Health Products</a>
+    <span>&rsaquo;</span>
+    Cellsentials
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">USANA Cellsentials &mdash; Vitamins &amp; Minerals</div>
+    <h1>The most complete vitamin system <em>your body actually absorbs.</em></h1>
+    <p class="hero-sub">USANA Cellsentials combines Core Minerals and Vita Antioxidant into a comprehensive daily nutritional system. NSF Certified for Sport. Manufactured to pharmaceutical standards.</p>
+    <div class="hero-actions">
+      <a href="https://onehealth.usana.com" target="_blank" rel="noopener" class="btn-primary">Order Cellsentials &rarr;</a>
+      <a href="/health/" class="btn-outline">View All Products</a>
+    </div>
+  </section>
+
+  <!-- WHAT IS IT -->
+  <div class="pain-section">
+    <div class="section">
+      <div class="section-header centered">
+        <div class="section-eyebrow">What Is Cellsentials</div>
+        <h2 class="section-title">Two products. One complete nutritional foundation.</h2>
+        <p class="section-sub">Cellsentials is not a single multivitamin. It is a two-part system designed so both products work together to fill the gaps in your diet.</p>
+      </div>
+      <div class="what-grid">
+        <div class="what-card">
+          <div class="what-icon">💊</div>
+          <h3>Vita Antioxidant</h3>
+          <p>A comprehensive blend of vitamins, antioxidants, and plant-based nutrients. Vitamin C, D, E, B-complex, plus botanicals like olive extract and alpha-lipoic acid to fight oxidative stress.</p>
+        </div>
+        <div class="what-card">
+          <div class="what-icon">🪨</div>
+          <h3>Core Minerals</h3>
+          <p>Full-spectrum mineral support including calcium, magnesium, zinc, selenium, chromium, and more. Formulated for absorption, not just label counts. Supports bones, immune function, and metabolism.</p>
+        </div>
+        <div class="what-card">
+          <div class="what-icon">🔬</div>
+          <h3>InCelligence Technology</h3>
+          <p>USANA's proprietary nutrient delivery system. Specific compounds are included at amounts scientifically shown to activate your cells' own protective and renewal pathways, not just fill basic deficiency gaps.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY IT IS DIFFERENT -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">Why Cellsentials</div>
+      <h2 class="section-title">Not all multivitamins are the same quality</h2>
+      <p class="section-sub">Most vitamins are tested once and sold. Cellsentials is held to a standard most supplement brands would not survive.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🏅</div>
+        <div>
+          <h3>NSF Certified for Sport</h3>
+          <p>Every batch is independently tested for 270+ banned substances. Safe for professional athletes, military, and anyone subject to drug screening. No other major multivitamin brand matches this standard.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏭</div>
+        <div>
+          <h3>Pharmaceutical-Grade Manufacturing</h3>
+          <p>Made in USANA's own facility under cGMP pharmaceutical standards, not supplement standards. Every tablet is tested for potency, dissolution, and purity before it ships.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <div>
+          <h3>Ranked in Top Supplement Studies</h3>
+          <p>The Nutrisearch Comparative Guide to Nutritional Supplements has consistently ranked USANA's foundational supplements among the highest quality products available on the North American market.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚖️</div>
+        <div>
+          <h3>Balanced, Not Just High-Dose</h3>
+          <p>More is not always better with vitamins. Cellsentials uses research-backed ratios designed for synergy, so nutrients work together instead of competing for absorption at megadose levels.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT IS INCLUDED -->
+  <div class="includes-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-eyebrow">What's Included</div>
+        <h2 class="section-title">Key nutrients in the Cellsentials system</h2>
+      </div>
+      <div class="includes-list">
+        <div class="includes-item">
+          <div class="includes-check">&#10003;</div>
+          <div>
+            <h4>Full B-Complex (B1, B2, B3, B5, B6, B7, B9, B12)</h4>
+            <p>Complete coverage for energy production, nervous system function, and healthy red blood cell formation. Includes methylfolate and methylcobalamin for superior absorption.</p>
+          </div>
+        </div>
+        <div class="includes-item">
+          <div class="includes-check">&#10003;</div>
+          <div>
+            <h4>Vitamins C, D3, E, and K</h4>
+            <p>Immune support, bone health, and antioxidant protection. Vitamin D3 at meaningful levels for people in LA and OC who still may not get adequate sun exposure year-round.</p>
+          </div>
+        </div>
+        <div class="includes-item">
+          <div class="includes-check">&#10003;</div>
+          <div>
+            <h4>Calcium, Magnesium, and Zinc</h4>
+            <p>The three most commonly deficient minerals in modern diets. Properly balanced so calcium and magnesium do not compete, and zinc is included at immune-supportive levels.</p>
+          </div>
+        </div>
+        <div class="includes-item">
+          <div class="includes-check">&#10003;</div>
+          <div>
+            <h4>Antioxidant Botanicals</h4>
+            <p>Olive fruit extract, alpha-lipoic acid, and mixed carotenoids alongside standard vitamins to provide a broader spectrum of oxidative stress protection than vitamins alone.</p>
+          </div>
+        </div>
+        <div class="includes-item">
+          <div class="includes-check">&#10003;</div>
+          <div>
+            <h4>Selenium, Chromium, Manganese, Iodine</h4>
+            <p>Trace minerals that are easy to miss in a typical diet but essential for thyroid function, glucose metabolism, and antioxidant enzyme activity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-eyebrow">FAQ</div>
+        <h2 class="section-title">Cellsentials questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>How do I take Cellsentials?</h3>
+          <p>Take four Vita Antioxidant tablets and two Core Minerals tablets per day. Most people split them between morning and evening with meals. Both products come in a 28-day supply when taken as directed.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I take Cellsentials if I already take other vitamins?</h3>
+          <p>Cellsentials is a complete system, so most people do not need to stack additional vitamins on top. If you are taking prescription medications or have a specific health condition, consult your doctor before starting any new supplement.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is Cellsentials safe for athletes who get drug tested?</h3>
+          <p>Yes. Cellsentials is NSF Certified for Sport, which means it is independently tested for substances banned by major sports organizations including WADA, NFL, MLB, and NCAA. Many professional and Olympic athletes use it.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long before I notice a difference?</h3>
+          <p>Most people notice improved energy levels within 2 to 4 weeks. The broader protective benefits of consistent supplementation build over months of daily use. Results vary by individual starting nutrient levels and diet.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I order Cellsentials in Los Angeles or Orange County?</h3>
+          <p>Order through my personal USANA store at onehealth.usana.com. Ships directly from USANA anywhere in the US. Preferred customer pricing is available when you set up a free account.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <div class="section">
+      <h2>Ready to try Cellsentials?</h2>
+      <p>Order through my USANA store. Ships to Los Angeles, Orange County, and anywhere in the US.</p>
+      <a href="https://onehealth.usana.com" target="_blank" rel="noopener" class="btn-primary">Order Cellsentials &rarr;</a>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    Independent USANA Associate. This is not an official USANA website. All products sold through onehealth.usana.com at standard USANA retail prices.
+  </div>
+
+  <footer>
+    <div class="footer">
+      <a href="/" class="footer-logo"><span>S</span>erra Studio</a>
+      <span class="footer-copy">&copy; 2026 OneHealth. Independent USANA Associate serving Los Angeles and Orange County.</span>
+      <ul class="footer-links">
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/tos">Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

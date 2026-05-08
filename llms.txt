@@ -24,6 +24,13 @@ Serra Studio builds websites for service businesses: contractors, event professi
 - [Serra Studio Blog](https://serra-studio.vercel.app/blog/): Web design tips, local SEO guides, and marketing advice for small businesses in Los Angeles
 - [How Much Does a Website Cost for a Small Business in Los Angeles?](https://serra-studio.vercel.app/blog/website-cost-small-business-los-angeles/): Breakdown of website pricing from DIY to full-service for LA small businesses
 
+## USANA Health Products
+
+- [USANA Health Products](https://serra-studio.vercel.app/health/): Pharmaceutical-grade USANA supplements available through an Independent Associate in Los Angeles and Orange County — vitamins, weight management, omega-3, skincare, and sports nutrition
+- [USANA Cellsentials](https://serra-studio.vercel.app/health/cellsentials/): USANA's flagship vitamin and mineral system — Core Minerals and Vita Antioxidant, NSF Certified for Sport, pharmaceutical-grade manufacturing
+- [USANA RESET Program](https://serra-studio.vercel.app/health/reset/): 5-day weight management jump-start with Nutrimeal shakes, snack bars, and supplements — structured low-glycemic program
+- [Order USANA Online](https://serra-studio.vercel.app/health/order/): Full product catalog by category — vitamins, weight management, skincare, active nutrition, kids products, and targeted supplements — ships anywhere in the US
+
 ## Legal
 
 - [Privacy Policy](https://serra-studio.vercel.app/privacy): How Serra Studio handles client data
