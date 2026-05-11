@@ -7,6 +7,12 @@
       "has": [{ "type": "host", "value": "www.studio-serra.com" }],
       "destination": "https://studio-serra.com/$1",
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "serra-studio.vercel.app" }],
+      "destination": "https://studio-serra.com/$1",
+      "permanent": true
     }
   ]
 }
