@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Start Your Project | Serra Studio</title>
+  <link rel="canonical" href="https://studio-serra.com/start/" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230E4C8A'/><text x='8' y='24' font-size='22' font-family='Georgia,serif' fill='%23E8A020'>S</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -387,6 +388,7 @@
           <label for="notes">Anything else? (optional)</label>
           <textarea id="notes" placeholder="Tell us a bit more about your project..."></textarea>
         </div>
+        <input type="text" id="honeypot" name="website" style="display:none" tabindex="-1" autocomplete="off" />
         <div class="btn-row">
           <button class="btn-back" onclick="goBack(5)">Back</button>
           <button class="btn-next" id="next-5" disabled>Send it</button>
@@ -523,6 +525,7 @@
             name,
             email,
             notes,
+            website: document.getElementById('honeypot').value,
           }),
         });
 

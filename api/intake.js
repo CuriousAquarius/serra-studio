@@ -3,10 +3,30 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { business_type, has_website, needs, timeline, name, email, notes } = req.body;
+  const { business_type, has_website, needs, timeline, name, email, notes, website } = req.body;
+
+  // Honeypot — bots fill this, real users never see it
+  if (website) {
+    return res.status(200).json({ success: true });
+  }
 
   if (!name || !email || !business_type) {
     return res.status(400).json({ error: 'Missing required fields' });
+  }
+
+  const strip = s => String(s || '').replace(/<[^>]*>/g, '').trim();
+  const safeName         = strip(name).slice(0, 100);
+  const safeEmail        = strip(email).slice(0, 200);
+  const safeBusinessType = strip(business_type).slice(0, 100);
+  const safeHasWebsite   = strip(has_website).slice(0, 10);
+  const safeTimeline     = strip(timeline).slice(0, 100);
+  const safeNotes        = strip(notes).slice(0, 2000);
+  const safeNeeds        = Array.isArray(needs)
+    ? needs.map(n => strip(n).slice(0, 100))
+    : [strip(needs).slice(0, 100)];
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(safeEmail)) {
+    return res.status(400).json({ error: 'Invalid email' });
   }
 
   const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
@@ -16,18 +36,16 @@ module.exports = async function handler(req, res) {
     return res.status(500).json({ error: 'Server configuration error' });
   }
 
-  const needsList = Array.isArray(needs) ? needs.join(', ') : needs;
-
   const message = [
     '🆕 *New Serra Studio Inquiry*',
     '',
-    `👤 *Name:* ${name}`,
-    `📧 *Email:* ${email}`,
-    `🏢 *Business type:* ${business_type}`,
-    `🌐 *Has existing website:* ${has_website}`,
-    `📋 *Needs:* ${needsList}`,
-    `⏰ *Timeline:* ${timeline}`,
-    notes ? `📝 *Notes:* ${notes}` : null,
+    `👤 *Name:* ${safeName}`,
+    `📧 *Email:* ${safeEmail}`,
+    `🏢 *Business type:* ${safeBusinessType}`,
+    `🌐 *Has existing website:* ${safeHasWebsite}`,
+    `📋 *Needs:* ${safeNeeds.join(', ')}`,
+    `⏰ *Timeline:* ${safeTimeline}`,
+    safeNotes ? `📝 *Notes:* ${safeNotes}` : null,
   ].filter(Boolean).join('\n');
 
   try {
