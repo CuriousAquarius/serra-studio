@@ -37,7 +37,7 @@ module.exports = async function handler(req, res) {
   }
 
   const message = [
-    '🆕 *New Serra Studio Inquiry*',
+    '🆕 *New Studio-Serra Inquiry*',
     '',
     `👤 *Name:* ${safeName}`,
     `📧 *Email:* ${safeEmail}`,
