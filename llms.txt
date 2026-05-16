@@ -18,6 +18,9 @@ Serra Studio builds websites for service businesses: contractors, event professi
 - [Web Design for Photo Booth Rentals](https://studio-serra.com/photo-booth/): Websites for photo booth rental businesses including 360 booths, mirror booths, and open air booths in Los Angeles and Orange County
 - [Web Design for Event Vendors](https://studio-serra.com/event-vendors/): Websites for DJs, florists, caterers, videographers, decor rental companies, and other event vendors in Los Angeles and Orange County
 - [Web Design for Orange County Small Businesses](https://studio-serra.com/orange-county/): Custom websites for small businesses across Orange County — Anaheim, Irvine, Santa Ana, Fullerton, Newport Beach, Huntington Beach, Garden Grove, Costa Mesa, Orange, and Yorba Linda
+- [Web Design for Salons and Barbershops](https://studio-serra.com/salons/): Websites for hair salons, barbershops, nail salons, lash studios, and waxing studios in Los Angeles and Orange County
+- [Web Design for Photographers](https://studio-serra.com/photographers/): Websites for wedding photographers, portrait photographers, videographers, and event photographers in Los Angeles and Orange County
+- [Web Design for Restaurants](https://studio-serra.com/restaurants/): Websites for restaurants, food trucks, cafes, and catering companies in Los Angeles and Orange County
 
 ## Blog
 
