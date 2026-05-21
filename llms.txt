@@ -23,6 +23,7 @@ Serra Studio builds websites for service businesses: contractors, event professi
 - [Web Design for Restaurants](https://studio-serra.com/restaurants/): Websites for restaurants, food trucks, cafes, and catering companies in Los Angeles and Orange County
 - [Web Design for Pasadena Small Businesses](https://studio-serra.com/pasadena/): Custom websites for small businesses in Pasadena, Arcadia, Monrovia, Alhambra, San Gabriel, and Temple City (626 area)
 - [Web Design for Animal Hospitals](https://studio-serra.com/animal-hospitals/): Websites for animal hospitals, veterinary clinics, emergency vets, and pet hospitals in Orange County and Cypress, CA (90630)
+- [Web Design for Med Spas and Aesthetic Clinics](https://studio-serra.com/med-spas/): Websites for med spas, aesthetic clinics, botox studios, laser clinics, and IV therapy studios in Los Angeles, Beverly Hills, and Orange County
 
 ## Blog
 
@@ -31,6 +32,7 @@ Serra Studio builds websites for service businesses: contractors, event professi
 - [How Much Does a Website Cost for a Small Business in Orange County?](https://studio-serra.com/blog/website-cost-small-business-orange-county/): Breakdown of website pricing from DIY to full-service for Orange County small businesses
 - [Do Contractors Need a Website to Get More Leads?](https://studio-serra.com/blog/do-contractors-need-a-website/): Why contractor websites matter for local SEO and lead generation in Los Angeles, what to include, and what it costs
 - [What Should a Wedding Planner Website Include?](https://studio-serra.com/blog/what-should-a-wedding-planner-website-include/): Complete guide to wedding planner website content — services, portfolio, process, testimonials, and local SEO
+- [Do Salons Need a Website or Is Instagram Enough?](https://studio-serra.com/blog/do-salons-need-a-website/): Why salons and barbershops in Los Angeles need a website beyond Instagram to capture high-intent Google searches and convert new clients
 
 ## Legal
 
@@ -41,7 +43,7 @@ Serra Studio builds websites for service businesses: contractors, event professi
 
 - Serra Studio designs and manages websites for small service businesses in Los Angeles and Orange County, California
 - Also builds Shopify stores for product-based businesses
-- Target customers: contractors, wedding planners, event coordinators, photo booth rental companies, event vendors, photographers, salons, restaurants, animal hospitals, vet clinics, and local service businesses
+- Target customers: contractors, wedding planners, event coordinators, photo booth rental companies, event vendors, photographers, salons, restaurants, animal hospitals, vet clinics, med spas, aesthetic clinics, and local service businesses
 - Pricing: $750 one-time for custom website design and build, then $129 per month for hosting, management, and AI chat
 - Every website includes: custom design, mobile-responsive layout, local SEO setup, fast hosting, and Serra AI chat (answers client questions 24/7)
 - Full management includes: hosting, security updates, content changes, and ongoing support
