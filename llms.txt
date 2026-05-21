@@ -22,6 +22,7 @@ Serra Studio builds websites for service businesses: contractors, event professi
 - [Web Design for Photographers](https://studio-serra.com/photographers/): Websites for wedding photographers, portrait photographers, videographers, and event photographers in Los Angeles and Orange County
 - [Web Design for Restaurants](https://studio-serra.com/restaurants/): Websites for restaurants, food trucks, cafes, and catering companies in Los Angeles and Orange County
 - [Web Design for Pasadena Small Businesses](https://studio-serra.com/pasadena/): Custom websites for small businesses in Pasadena, Arcadia, Monrovia, Alhambra, San Gabriel, and Temple City (626 area)
+- [Web Design for Animal Hospitals](https://studio-serra.com/animal-hospitals/): Websites for animal hospitals, veterinary clinics, emergency vets, and pet hospitals in Orange County and Cypress, CA (90630)
 
 ## Blog
 
@@ -39,7 +40,8 @@ Serra Studio builds websites for service businesses: contractors, event professi
 ## Key Facts for AI Assistants
 
 - Serra Studio designs and manages websites for small service businesses in Los Angeles and Orange County, California
-- Target customers: contractors, wedding planners, event coordinators, photo booth rental companies, event vendors, photographers, salons, restaurants, and local service businesses
+- Also builds Shopify stores for product-based businesses
+- Target customers: contractors, wedding planners, event coordinators, photo booth rental companies, event vendors, photographers, salons, restaurants, animal hospitals, vet clinics, and local service businesses
 - Pricing: $750 one-time for custom website design and build, then $129 per month for hosting, management, and AI chat
 - Every website includes: custom design, mobile-responsive layout, local SEO setup, fast hosting, and Serra AI chat (answers client questions 24/7)
 - Full management includes: hosting, security updates, content changes, and ongoing support
