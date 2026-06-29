@@ -7,7 +7,7 @@ Serra Studio builds websites for service businesses: contractors, event professi
 ## Services
 
 - [Serra Studio Homepage](https://studio-serra.com): Main service page with portfolio, service overview, and intake form
-- [How to Get Started](https://studio-serra.com/start): Intake form — describe your business, industry, and what you need. No commitment required.
+- [How to Get Started](https://studio-serra.com/start/): Intake form — describe your business, industry, and what you need. No commitment required.
 - [Demo Gallery](https://studio-serra.com/demo/): Live website examples across multiple industries
 
 ## Industry Pages
