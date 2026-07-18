@@ -34,6 +34,10 @@ It has: industry palettes (ready to paste), config field explanations, current w
 
 ---
 
+## Checking Pages
+
+- Need to actually look at a page (does it load, does a form work, does a flow go through) → try Playwright or Claude-in-Chrome first, before a manual screenshot walkthrough.
+
 ## Design Rules
 
 - Colors: match serrachat.com exactly (gold `#e8c97e`, navy `#1a1a2e`, cream `#fdf6f0`)
