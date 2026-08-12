@@ -1,6 +1,6 @@
-# CLAUDE.md — Serra Studio
+# CLAUDE.md — Studio Serra
 
-Local source for the Serra Studio website at `serra-studio.vercel.app`.
+Local source for the Studio Serra website at `serra-studio.vercel.app`.
 GitHub: `CuriousAquarius/serra-studio` · Deploy: push to GitHub → Vercel auto-deploys.
 
 ---

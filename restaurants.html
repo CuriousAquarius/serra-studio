@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Design for Restaurants | Los Angeles | Studio-Serra</title>
+  <title>Web Design for Restaurants | Los Angeles | Studio Serra</title>
   <meta name="description" content="Custom websites for restaurants, food trucks, and cafes in Los Angeles and Orange County. Show your menu, drive more orders, and get found on Google. Starting at $750." />
-  <meta property="og:title" content="Web Design for Restaurants | Studio-Serra" />
+  <meta property="og:title" content="Web Design for Restaurants | Studio Serra" />
   <meta property="og:description" content="Custom websites for restaurants in Los Angeles. Show your menu, drive more orders, and get found on Google. Starting at $750." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://studio-serra.com/restaurants/" />
   <meta property="og:image" content="https://studio-serra.com/Images/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Studio-Serra - Web Design for Small Businesses" />
+  <meta property="og:image:alt" content="Studio Serra - Web Design for Small Businesses" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Web Design for Restaurants | Studio-Serra" />
+  <meta name="twitter:title" content="Web Design for Restaurants | Studio Serra" />
   <meta name="twitter:description" content="Custom websites for restaurants in Los Angeles. Show your menu, drive more orders, and get found on Google. Starting at $750." />
   <meta name="twitter:image" content="https://studio-serra.com/Images/og-image.jpg" />
   <link rel="canonical" href="https://studio-serra.com/restaurants/" />
@@ -28,9 +28,9 @@
     "@type": "FAQPage",
     "mainEntity": [
       {"@type":"Question","name":"Do restaurants need a website?","acceptedAnswer":{"@type":"Answer","text":"Yes. Google Maps gets you found, but a website is where customers go to check your menu, hours, and ordering options before they decide. Without one, you lose customers to competitors who make it easier to say yes."}},
-      {"@type":"Question","name":"How much does a restaurant website cost in Los Angeles?","acceptedAnswer":{"@type":"Answer","text":"Studio-Serra charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most LA web agencies charge $2,000 to $6,000 for restaurant sites with no ongoing support."}},
-      {"@type":"Question","name":"What should a restaurant website include?","acceptedAnswer":{"@type":"Answer","text":"A restaurant website should include your full menu, online ordering or reservation links, hours and location, photos of your food, and a way for customers to contact you. Studio-Serra builds all of this into every restaurant site."}},
-      {"@type":"Question","name":"Can my website connect to my online ordering system?","acceptedAnswer":{"@type":"Answer","text":"Yes. Studio-Serra integrates your ordering platform (Toast, Square, ChowNow, or any other) directly into your website so customers can order in one tap without leaving your page."}},
+      {"@type":"Question","name":"How much does a restaurant website cost in Los Angeles?","acceptedAnswer":{"@type":"Answer","text":"Studio Serra charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most LA web agencies charge $2,000 to $6,000 for restaurant sites with no ongoing support."}},
+      {"@type":"Question","name":"What should a restaurant website include?","acceptedAnswer":{"@type":"Answer","text":"A restaurant website should include your full menu, online ordering or reservation links, hours and location, photos of your food, and a way for customers to contact you. Studio Serra builds all of this into every restaurant site."}},
+      {"@type":"Question","name":"Can my website connect to my online ordering system?","acceptedAnswer":{"@type":"Answer","text":"Yes. Studio Serra integrates your ordering platform (Toast, Square, ChowNow, or any other) directly into your website so customers can order in one tap without leaving your page."}},
       {"@type":"Question","name":"How long does it take to build a restaurant website?","acceptedAnswer":{"@type":"Answer","text":"Most restaurant websites are designed and launched within 2 weeks of receiving your menu, photos, and hours."}}
     ]
   }
@@ -43,7 +43,7 @@
     "description": "Custom website design and management for restaurants, food trucks, cafes, and catering companies in Los Angeles and Orange County.",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Studio-Serra",
+      "name": "Studio Serra",
       "url": "https://studio-serra.com",
       "address": {
         "@type": "PostalAddress",
@@ -123,13 +123,22 @@
     }
     .nav-logo {
       font-family: 'DM Serif Display', serif;
-      font-size: 22px;
       font-weight: 400;
       color: var(--navy);
       text-decoration: none;
       letter-spacing: -0.5px;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
     }
-    .nav-logo span { color: var(--gold); }
+    .nav-logo .kicker {
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      opacity: 0.6;
+      margin-bottom: 2px;
+    }
+    .nav-logo .mark { font-size: 22px; }
+    .nav-logo .mark span { color: var(--gold); }
     .nav-links {
       display: flex;
       align-items: center;
@@ -483,11 +492,20 @@
     }
     .footer-logo {
       font-family: 'DM Serif Display', serif;
-      font-size: 18px;
       color: var(--navy);
       text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
     }
-    .footer-logo span { color: var(--gold); }
+    .footer-logo .kicker {
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      opacity: 0.6;
+      margin-bottom: 2px;
+    }
+    .footer-logo .mark { font-size: 18px; }
+    .footer-logo .mark span { color: var(--gold); }
     .footer-copy {
       font-size: 13px;
       color: var(--muted);
@@ -524,7 +542,7 @@
 <body>
 
   <nav class="nav">
-    <a href="/" class="nav-logo"><span>S</span>erra</a>
+    <a href="/" class="nav-logo" aria-label="Studio Serra home"><span class="kicker">Studio</span><span class="mark"><span>S</span>erra</span></a>
     <ul class="nav-links">
       <li><a href="/#work">Work</a></li>
       <li><a href="/#services">Services</a></li>
@@ -661,15 +679,15 @@
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;">
           <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;">How much does a restaurant website cost in Los Angeles?</h3>
-          <p style="font-size:15px;color:var(--muted);line-height:1.65;">Studio-Serra charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most LA web agencies charge $2,000 to $6,000 for restaurant sites with no ongoing support.</p>
+          <p style="font-size:15px;color:var(--muted);line-height:1.65;">Studio Serra charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most LA web agencies charge $2,000 to $6,000 for restaurant sites with no ongoing support.</p>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;">
           <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;">What should a restaurant website include?</h3>
-          <p style="font-size:15px;color:var(--muted);line-height:1.65;">A restaurant website should include your full menu, online ordering or reservation links, hours and location, photos of your food, and a way for customers to contact you. Studio-Serra builds all of this into every restaurant site.</p>
+          <p style="font-size:15px;color:var(--muted);line-height:1.65;">A restaurant website should include your full menu, online ordering or reservation links, hours and location, photos of your food, and a way for customers to contact you. Studio Serra builds all of this into every restaurant site.</p>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;">
           <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;">Can my website connect to my online ordering system?</h3>
-          <p style="font-size:15px;color:var(--muted);line-height:1.65;">Yes. Studio-Serra integrates your ordering platform (Toast, Square, ChowNow, or any other) directly into your website so customers can order in one tap without leaving your page.</p>
+          <p style="font-size:15px;color:var(--muted);line-height:1.65;">Yes. Studio Serra integrates your ordering platform (Toast, Square, ChowNow, or any other) directly into your website so customers can order in one tap without leaving your page.</p>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;">
           <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;">How long does it take to build a restaurant website?</h3>
@@ -702,8 +720,8 @@
 
   <footer>
     <div class="footer">
-      <a href="/" class="footer-logo"><span>S</span>erra</a>
-      <span class="footer-copy">&copy; 2026 Studio-Serra. Web design for small businesses in Los Angeles and Orange County.</span>
+      <a href="/" class="footer-logo" aria-label="Studio Serra home"><span class="kicker">Studio</span><span class="mark"><span>S</span>erra</span></a>
+      <span class="footer-copy">&copy; 2026 Studio Serra. Web design for small businesses in Los Angeles and Orange County.</span>
       <ul class="footer-links">
         <li><a href="/privacy/">Privacy</a></li>
         <li><a href="/tos/">Terms</a></li>

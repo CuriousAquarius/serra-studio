@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Design for Small Businesses | Los Angeles | Studio-Serra</title>
+  <title>Web Design for Small Businesses | Los Angeles | Studio Serra</title>
   <meta name="description" content="Custom website design + full management for small businesses in Los Angeles and Orange County. AI chat included. Let's talk about your project." />
-  <meta property="og:title" content="Studio-Serra: Web Design & Management" />
+  <meta property="og:title" content="Studio Serra: Web Design & Management" />
   <meta property="og:description" content="Custom websites for small businesses. Design + hosting + AI chat. Let's talk about your project." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://studio-serra.com" />
   <meta property="og:image" content="https://studio-serra.com/Images/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Studio-Serra - Web Design for Small Businesses" />
+  <meta property="og:image:alt" content="Studio Serra - Web Design for Small Businesses" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Studio-Serra: Web Design &amp; Management" />
+  <meta name="twitter:title" content="Studio Serra: Web Design &amp; Management" />
   <meta name="twitter:description" content="Custom websites for small businesses. Design + hosting + AI chat. Let's talk about your project." />
   <meta name="twitter:image" content="https://studio-serra.com/Images/og-image.jpg" />
   <link rel="canonical" href="https://studio-serra.com/" />
@@ -76,13 +76,22 @@
     }
     .nav-logo {
       font-family: 'DM Serif Display', serif;
-      font-size: 22px;
       font-weight: 400;
       color: var(--navy);
       text-decoration: none;
       letter-spacing: -0.5px;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
     }
-    .nav-logo span { color: var(--gold); }
+    .nav-logo .kicker {
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      opacity: 0.6;
+      margin-bottom: 2px;
+    }
+    .nav-logo .mark { font-size: 22px; }
+    .nav-logo .mark span { color: var(--gold); }
     .nav-links {
       display: flex;
       align-items: center;
@@ -1023,7 +1032,7 @@
     }
     .footer-top {
       display: flex;
-      align-items: baseline;
+      align-items: flex-end;
       gap: 16px;
       margin-bottom: 24px;
       padding-bottom: 24px;
@@ -1042,13 +1051,22 @@
     }
     .footer-logo {
       font-family: 'DM Serif Display', serif;
-      font-size: 18px;
       font-weight: 400;
       color: var(--navy);
       text-decoration: none;
       letter-spacing: -0.5px;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
     }
-    .footer-logo span { color: var(--gold); }
+    .footer-logo .kicker {
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      opacity: 0.6;
+      margin-bottom: 2px;
+    }
+    .footer-logo .mark { font-size: 18px; }
+    .footer-logo .mark span { color: var(--gold); }
     .footer-links {
       display: flex;
       gap: 24px;
@@ -1464,8 +1482,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Studio-Serra",
-    "alternateName": "Serra Studio",
+    "name": "Studio Serra",
+    "alternateName": ["Serra Studio", "Studio-Serra"],
     "url": "https://studio-serra.com",
     "logo": "https://studio-serra.com/Images/og-image.jpg",
     "email": "cja@serrachat.com",
@@ -1483,10 +1501,10 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Studio-Serra",
+    "name": "Studio Serra",
     "url": "https://studio-serra.com",
     "description": "Custom website design and full management for small businesses in Los Angeles and Orange County.",
-    "publisher": { "@type": "Organization", "name": "Studio-Serra" }
+    "publisher": { "@type": "Organization", "name": "Studio Serra" }
   }
   </script>
   <script type="application/ld+json">
@@ -1507,7 +1525,7 @@
   {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "How to Get a Website Built by Studio-Serra",
+    "name": "How to Get a Website Built by Studio Serra",
     "description": "Three steps from first message to live site. No long back-and-forth, no guessing what happens next.",
     "totalTime": "P14D",
     "step": [
@@ -1522,7 +1540,7 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <a href="/" class="nav-logo"><span>S</span>erra</a>
+    <a href="/" class="nav-logo" aria-label="Studio Serra home"><span class="kicker">Studio</span><span class="mark"><span>S</span>erra</span></a>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -2353,7 +2371,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-top">
-      <a href="/" class="footer-logo"><span>S</span>erra</a>
+      <a href="/" class="footer-logo" aria-label="Studio Serra home"><span class="kicker">Studio</span><span class="mark"><span>S</span>erra</span></a>
       <p class="footer-tagline">Custom websites for small businesses.</p>
     </div>
     <div class="footer-bottom">
@@ -2363,7 +2381,7 @@
         <li><a href="/privacy/">Privacy Policy</a></li>
         <li><a href="/tos/">Terms of Service</a></li>
       </ul>
-      <span class="footer-copy">© 2026 Serra. Web design for small businesses in Los Angeles and Orange County.</span>
+      <span class="footer-copy">© 2026 Studio Serra. Web design for small businesses in Los Angeles and Orange County.</span>
     </div>
   </footer>
 

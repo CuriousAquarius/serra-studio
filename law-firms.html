@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Design for Law Firms | Los Angeles | Studio-Serra</title>
+  <title>Web Design for Law Firms | Los Angeles | Studio Serra</title>
   <meta name="description" content="Custom websites for solo attorneys and small law firms in Los Angeles and Orange County. Get found on Google, build trust, and capture consult requests. Starting at $750. AI chat included." />
-  <meta property="og:title" content="Web Design for Law Firms | Studio-Serra" />
+  <meta property="og:title" content="Web Design for Law Firms | Studio Serra" />
   <meta property="og:description" content="Custom websites for law firms in Los Angeles. Get found on Google, build trust, and capture consult requests. Starting at $750." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://studio-serra.com/law-firms/" />
   <meta property="og:image" content="https://studio-serra.com/Images/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Studio-Serra - Web Design for Small Businesses" />
+  <meta property="og:image:alt" content="Studio Serra - Web Design for Small Businesses" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Web Design for Law Firms | Studio-Serra" />
+  <meta name="twitter:title" content="Web Design for Law Firms | Studio Serra" />
   <meta name="twitter:description" content="Custom websites for law firms in Los Angeles. Get found on Google, build trust, and capture consult requests. Starting at $750." />
   <meta name="twitter:image" content="https://studio-serra.com/Images/og-image.jpg" />
   <link rel="canonical" href="https://studio-serra.com/law-firms/" />
@@ -27,10 +27,10 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"How much does a law firm website cost in Los Angeles?","acceptedAnswer":{"@type":"Answer","text":"Studio-Serra charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most LA and OC web agencies charge $3,000 to $8,000 for attorney websites with no ongoing support."}},
+      {"@type":"Question","name":"How much does a law firm website cost in Los Angeles?","acceptedAnswer":{"@type":"Answer","text":"Studio Serra charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most LA and OC web agencies charge $3,000 to $8,000 for attorney websites with no ongoing support."}},
       {"@type":"Question","name":"What should a law firm website include?","acceptedAnswer":{"@type":"Answer","text":"A law firm website should include an attorney profile, practice areas, a clear call to action for consultations, case results or client reviews where permitted, and local SEO so people searching for an attorney in your city can find you on Google."}},
       {"@type":"Question","name":"How long does it take to build my law firm website?","acceptedAnswer":{"@type":"Answer","text":"Most law firm websites are designed and launched within 2 weeks of receiving your bio, practice areas, and photos."}},
-      {"@type":"Question","name":"Will my website show up when people search for attorneys near me?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every site Studio-Serra builds is submitted to Google with local SEO targeting searches like 'family law attorney Los Angeles' and 'immigration lawyer Orange County' in your practice areas and service cities."}},
+      {"@type":"Question","name":"Will my website show up when people search for attorneys near me?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every site Studio Serra builds is submitted to Google with local SEO targeting searches like 'family law attorney Los Angeles' and 'immigration lawyer Orange County' in your practice areas and service cities."}},
       {"@type":"Question","name":"What is the AI chat and how does it help my law practice?","acceptedAnswer":{"@type":"Answer","text":"Serra AI is a chat assistant built into your website. It answers basic questions about your practice areas, captures the visitor's name and contact info, and schedules consultation requests 24/7, even when your office is closed."}}
     ]
   }
@@ -43,7 +43,7 @@
     "description": "Custom website design and management for solo attorneys and small law firms in Los Angeles and Orange County.",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Studio-Serra",
+      "name": "Studio Serra",
       "url": "https://studio-serra.com",
       "address": {
         "@type": "PostalAddress",
@@ -123,13 +123,22 @@
     }
     .nav-logo {
       font-family: 'DM Serif Display', serif;
-      font-size: 22px;
       font-weight: 400;
       color: var(--navy);
       text-decoration: none;
       letter-spacing: -0.5px;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
     }
-    .nav-logo span { color: var(--gold); }
+    .nav-logo .kicker {
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      opacity: 0.6;
+      margin-bottom: 2px;
+    }
+    .nav-logo .mark { font-size: 22px; }
+    .nav-logo .mark span { color: var(--gold); }
     .nav-links {
       display: flex;
       align-items: center;
@@ -483,11 +492,20 @@
     }
     .footer-logo {
       font-family: 'DM Serif Display', serif;
-      font-size: 18px;
       color: var(--navy);
       text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
     }
-    .footer-logo span { color: var(--gold); }
+    .footer-logo .kicker {
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      opacity: 0.6;
+      margin-bottom: 2px;
+    }
+    .footer-logo .mark { font-size: 18px; }
+    .footer-logo .mark span { color: var(--gold); }
     .footer-copy {
       font-size: 13px;
       color: var(--muted);
@@ -524,7 +542,7 @@
 <body>
 
   <nav class="nav">
-    <a href="/" class="nav-logo"><span>S</span>erra</a>
+    <a href="/" class="nav-logo" aria-label="Studio Serra home"><span class="kicker">Studio</span><span class="mark"><span>S</span>erra</span></a>
     <ul class="nav-links">
       <li><a href="/#work">Work</a></li>
       <li><a href="/#services">Services</a></li>
@@ -659,7 +677,7 @@
       <div style="display:flex;flex-direction:column;gap:16px;max-width:780px;">
         <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;">
           <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;">How much does a law firm website cost in Los Angeles?</h3>
-          <p style="font-size:15px;color:var(--muted);line-height:1.65;">Studio-Serra charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most LA and OC web agencies charge $3,000 to $8,000 for attorney websites with no ongoing support.</p>
+          <p style="font-size:15px;color:var(--muted);line-height:1.65;">Studio Serra charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most LA and OC web agencies charge $3,000 to $8,000 for attorney websites with no ongoing support.</p>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;">
           <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;">What should a law firm website include?</h3>
@@ -671,7 +689,7 @@
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;">
           <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;">Will my website show up when people search for attorneys near me?</h3>
-          <p style="font-size:15px;color:var(--muted);line-height:1.65;">Yes. Every site Studio-Serra builds is submitted to Google with local SEO targeting searches like "family law attorney Los Angeles" and "immigration lawyer Orange County" in your specific practice areas and service cities.</p>
+          <p style="font-size:15px;color:var(--muted);line-height:1.65;">Yes. Every site Studio Serra builds is submitted to Google with local SEO targeting searches like "family law attorney Los Angeles" and "immigration lawyer Orange County" in your specific practice areas and service cities.</p>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;">
           <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;">What is the AI chat and how does it help my law practice?</h3>
@@ -693,8 +711,8 @@
 
   <footer>
     <div class="footer">
-      <a href="/" class="footer-logo"><span>S</span>erra</a>
-      <span class="footer-copy">&copy; 2026 Studio-Serra. Web design for small businesses in Los Angeles and Orange County.</span>
+      <a href="/" class="footer-logo" aria-label="Studio Serra home"><span class="kicker">Studio</span><span class="mark"><span>S</span>erra</span></a>
+      <span class="footer-copy">&copy; 2026 Studio Serra. Web design for small businesses in Los Angeles and Orange County.</span>
       <ul class="footer-links">
         <li><a href="/privacy/">Privacy</a></li>
         <li><a href="/tos/">Terms</a></li>

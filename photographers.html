@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Design for Photographers | Los Angeles | Studio-Serra</title>
+  <title>Web Design for Photographers | Los Angeles | Studio Serra</title>
   <meta name="description" content="Custom websites for photographers and videographers in Los Angeles and Orange County. Show your portfolio, rank on Google, and win more bookings. Starting at $750." />
-  <meta property="og:title" content="Web Design for Photographers | Studio-Serra" />
+  <meta property="og:title" content="Web Design for Photographers | Studio Serra" />
   <meta property="og:description" content="Custom websites for photographers in Los Angeles. Show your portfolio, rank on Google, and win more bookings. Starting at $750." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://studio-serra.com/photographers/" />
   <meta property="og:image" content="https://studio-serra.com/Images/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Studio-Serra - Web Design for Small Businesses" />
+  <meta property="og:image:alt" content="Studio Serra - Web Design for Small Businesses" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Web Design for Photographers | Studio-Serra" />
+  <meta name="twitter:title" content="Web Design for Photographers | Studio Serra" />
   <meta name="twitter:description" content="Custom websites for photographers in Los Angeles. Show your portfolio, rank on Google, and win more bookings. Starting at $750." />
   <meta name="twitter:image" content="https://studio-serra.com/Images/og-image.jpg" />
   <link rel="canonical" href="https://studio-serra.com/photographers/" />
@@ -27,8 +27,8 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"What should a photographer website include?","acceptedAnswer":{"@type":"Answer","text":"A photographer website should include a portfolio gallery organized by specialty (weddings, portraits, events), a clear list of packages and pricing, a contact or inquiry form, client testimonials, and your service area. Studio-Serra builds all of this into every photographer site."}},
-      {"@type":"Question","name":"How much does a photographer website cost in Los Angeles?","acceptedAnswer":{"@type":"Answer","text":"Studio-Serra charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most LA web agencies charge $2,500 to $7,000 for photographer portfolio sites."}},
+      {"@type":"Question","name":"What should a photographer website include?","acceptedAnswer":{"@type":"Answer","text":"A photographer website should include a portfolio gallery organized by specialty (weddings, portraits, events), a clear list of packages and pricing, a contact or inquiry form, client testimonials, and your service area. Studio Serra builds all of this into every photographer site."}},
+      {"@type":"Question","name":"How much does a photographer website cost in Los Angeles?","acceptedAnswer":{"@type":"Answer","text":"Studio Serra charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most LA web agencies charge $2,500 to $7,000 for photographer portfolio sites."}},
       {"@type":"Question","name":"Do photographers need a website or is Instagram enough?","acceptedAnswer":{"@type":"Answer","text":"Instagram is great for discovery among existing followers, but it does not help you rank when someone searches 'wedding photographer Los Angeles' on Google. A website with local SEO is what wins those searches and converts them into bookings."}},
       {"@type":"Question","name":"How long does it take to build a photography website?","acceptedAnswer":{"@type":"Answer","text":"Most photographer websites are designed and launched within 2 weeks of receiving your gallery images, packages, and contact information."}},
       {"@type":"Question","name":"What is the AI chat and how does it help my photography business?","acceptedAnswer":{"@type":"Answer","text":"Serra AI is a chat assistant built into your website. It answers questions about packages, availability, and pricing, and captures inquiry details from potential clients 24/7, even when you're on a shoot."}}
@@ -43,7 +43,7 @@
     "description": "Custom website design and management for wedding photographers, portrait photographers, videographers, and event photographers in Los Angeles and Orange County.",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Studio-Serra",
+      "name": "Studio Serra",
       "url": "https://studio-serra.com",
       "address": {
         "@type": "PostalAddress",
@@ -123,13 +123,22 @@
     }
     .nav-logo {
       font-family: 'DM Serif Display', serif;
-      font-size: 22px;
       font-weight: 400;
       color: var(--navy);
       text-decoration: none;
       letter-spacing: -0.5px;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
     }
-    .nav-logo span { color: var(--gold); }
+    .nav-logo .kicker {
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      opacity: 0.6;
+      margin-bottom: 2px;
+    }
+    .nav-logo .mark { font-size: 22px; }
+    .nav-logo .mark span { color: var(--gold); }
     .nav-links {
       display: flex;
       align-items: center;
@@ -483,11 +492,20 @@
     }
     .footer-logo {
       font-family: 'DM Serif Display', serif;
-      font-size: 18px;
       color: var(--navy);
       text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
     }
-    .footer-logo span { color: var(--gold); }
+    .footer-logo .kicker {
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      opacity: 0.6;
+      margin-bottom: 2px;
+    }
+    .footer-logo .mark { font-size: 18px; }
+    .footer-logo .mark span { color: var(--gold); }
     .footer-copy {
       font-size: 13px;
       color: var(--muted);
@@ -524,7 +542,7 @@
 <body>
 
   <nav class="nav">
-    <a href="/" class="nav-logo"><span>S</span>erra</a>
+    <a href="/" class="nav-logo" aria-label="Studio Serra home"><span class="kicker">Studio</span><span class="mark"><span>S</span>erra</span></a>
     <ul class="nav-links">
       <li><a href="/#work">Work</a></li>
       <li><a href="/#services">Services</a></li>
@@ -657,11 +675,11 @@
       <div style="display:flex;flex-direction:column;gap:16px;max-width:780px;">
         <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;">
           <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;">What should a photographer website include?</h3>
-          <p style="font-size:15px;color:var(--muted);line-height:1.65;">A photographer website should include a portfolio gallery organized by specialty (weddings, portraits, events), a clear list of packages and pricing, a contact or inquiry form, client testimonials, and your service area. Studio-Serra builds all of this into every photographer site.</p>
+          <p style="font-size:15px;color:var(--muted);line-height:1.65;">A photographer website should include a portfolio gallery organized by specialty (weddings, portraits, events), a clear list of packages and pricing, a contact or inquiry form, client testimonials, and your service area. Studio Serra builds all of this into every photographer site.</p>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;">
           <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;">How much does a photographer website cost in Los Angeles?</h3>
-          <p style="font-size:15px;color:var(--muted);line-height:1.65;">Studio-Serra charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most LA web agencies charge $2,500 to $7,000 for photographer portfolio sites.</p>
+          <p style="font-size:15px;color:var(--muted);line-height:1.65;">Studio Serra charges $750 one-time for the custom design and build, then $129 per month for hosting, management, and AI chat. Most LA web agencies charge $2,500 to $7,000 for photographer portfolio sites.</p>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;">
           <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;">Do photographers need a website or is Instagram enough?</h3>
@@ -702,8 +720,8 @@
 
   <footer>
     <div class="footer">
-      <a href="/" class="footer-logo"><span>S</span>erra</a>
-      <span class="footer-copy">&copy; 2026 Studio-Serra. Web design for small businesses in Los Angeles and Orange County.</span>
+      <a href="/" class="footer-logo" aria-label="Studio Serra home"><span class="kicker">Studio</span><span class="mark"><span>S</span>erra</span></a>
+      <span class="footer-copy">&copy; 2026 Studio Serra. Web design for small businesses in Los Angeles and Orange County.</span>
       <ul class="footer-links">
         <li><a href="/privacy/">Privacy</a></li>
         <li><a href="/tos/">Terms</a></li>

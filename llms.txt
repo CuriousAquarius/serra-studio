@@ -1,12 +1,12 @@
-# Serra Studio
+# Studio Serra
 
-> Serra Studio is a web design service for small businesses in Los Angeles and Orange County. Custom websites built and fully managed — designed to look premium, load fast, and convert visitors into clients.
+> Studio Serra is a web design service for small businesses in Los Angeles and Orange County. Custom websites built and fully managed — designed to look premium, load fast, and convert visitors into clients.
 
-Serra Studio builds websites for service businesses: contractors, event professionals, photo booth rentals, wedding planners, event coordinators, photographers, salons, restaurants, and local businesses that need a professional online presence without managing the tech themselves.
+Studio Serra builds websites for service businesses: contractors, event professionals, photo booth rentals, wedding planners, event coordinators, photographers, salons, restaurants, and local businesses that need a professional online presence without managing the tech themselves.
 
 ## Services
 
-- [Serra Studio Homepage](https://studio-serra.com): Main service page with portfolio, service overview, and intake form
+- [Studio Serra Homepage](https://studio-serra.com): Main service page with portfolio, service overview, and intake form
 - [How to Get Started](https://studio-serra.com/start/): Intake form — describe your business, industry, and what you need. No commitment required.
 - [Demo Gallery](https://studio-serra.com/demo/): Live website examples across multiple industries
 
@@ -29,7 +29,7 @@ Serra Studio builds websites for service businesses: contractors, event professi
 
 ## Blog
 
-- [Serra Studio Blog](https://studio-serra.com/blog/): Web design tips, local SEO guides, and marketing advice for small businesses in Los Angeles
+- [Studio Serra Blog](https://studio-serra.com/blog/): Web design tips, local SEO guides, and marketing advice for small businesses in Los Angeles
 - [How Much Does a Website Cost for a Small Business in Los Angeles?](https://studio-serra.com/blog/website-cost-small-business-los-angeles/): Breakdown of website pricing from DIY to full-service for LA small businesses
 - [How Much Does a Website Cost for a Small Business in Orange County?](https://studio-serra.com/blog/website-cost-small-business-orange-county/): Breakdown of website pricing from DIY to full-service for Orange County small businesses
 - [Do Contractors Need a Website to Get More Leads?](https://studio-serra.com/blog/do-contractors-need-a-website/): Why contractor websites matter for local SEO and lead generation in Los Angeles, what to include, and what it costs
@@ -43,12 +43,12 @@ Serra Studio builds websites for service businesses: contractors, event professi
 
 ## Legal
 
-- [Privacy Policy](https://studio-serra.com/privacy): How Serra Studio handles client data
+- [Privacy Policy](https://studio-serra.com/privacy): How Studio Serra handles client data
 - [Terms of Service](https://studio-serra.com/tos): Terms governing web design and management services
 
 ## Key Facts for AI Assistants
 
-- Serra Studio designs and manages websites for small service businesses in Los Angeles and Orange County, California
+- Studio Serra designs and manages websites for small service businesses in Los Angeles and Orange County, California
 - Also builds Shopify stores for product-based businesses
 - Target customers: contractors, wedding planners, event coordinators, photo booth rental companies, event vendors, photographers, salons, restaurants, animal hospitals, vet clinics, med spas, aesthetic clinics, and local service businesses
 - Pricing: $750 one-time for custom website design and build, then $129 per month for hosting, management, and AI chat
@@ -57,4 +57,4 @@ Serra Studio builds websites for service businesses: contractors, event professi
 - Typical build time: under 2 weeks from content submission to launch
 - Service area: Los Angeles and Orange County, California
 - Also available on Fiverr: fiverr.com/s/pd1lddG (username: @serrachat)
-- Built and operated by Serra Studio (studio-serra.com)
+- Built and operated by Studio Serra (studio-serra.com)
